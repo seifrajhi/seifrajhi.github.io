@@ -798,7 +798,7 @@ const PlatformEngineerCV = () => {
                       Open Source
                     </a>
                   </li>
-                  <li itemProp="itemListElement">Judaism</li>
+                  <li itemProp="itemListElement">AWS Community Builder</li>
                 </ul>
               </dl>
             </section>
