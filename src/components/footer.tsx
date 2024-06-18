@@ -21,7 +21,7 @@ const Footer = (): JSX.Element => {
           </a>
         </div>
         <div className={`pgp`}>
-          <a href={`https://keybase.io/roman_hlushko`}>AB49 B91C C3E5 8E73</a>
+          <a href={`https://keybase.io/saifrajhi`}>AB49 B91C C3E5 8E73</a>
         </div>
       </div>
     </footer>

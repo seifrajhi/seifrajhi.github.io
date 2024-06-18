@@ -44,7 +44,7 @@ const SocialLinks = ({
             eventCategory="social"
             eventAction="click"
             eventLabel="linkedin"
-            href="https://www.linkedin.com/in/glushko-roman"
+            href="https://www.linkedin.com/in/rajhi-saif/"
             title="Saifeddine Rajhi on LinkedIn"
             target="blank"
           >

@@ -1,11 +1,11 @@
 const siteMetadata = {
     title: `Saifeddine Rajhi`,
-    description: `Hey 👋 My name is Roman and I'm a Machine Learning and Software Engineer, Life Explorer 🧔🛠👨‍💻📚`,
+    description: `Hey 👋 My name is Saifeddine and I'm a Senior Platform and Site reliability Engineer, Life Explorer 🧔🛠👨‍💻📚`,
     keywords: [
       "Saifeddine Rajhi",
-      "Roma Glushko",
-      "Saifeddine Rajhi",
-      "Roma Hlushko",
+      "Saif Rajhi",
+      "Seifeddine Rajhi",
+      "Saif",
       "machine learning",
       "deep learning",
       "magento",

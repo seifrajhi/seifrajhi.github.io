@@ -3,7 +3,7 @@
     "private": true,
     "description": "Saifeddine Rajhi - Personal Blog",
     "version": "1.0.0",
-    "author": "Saifeddine Rajhi <roman.glushko.m@gmail.com>",
+    "author": "Saifeddine Rajhi <rajhiseif@gmail.com>",
     "dependencies": {
         "@fortawesome/fontawesome-svg-core": "^6.1.1",
         "@fortawesome/free-brands-svg-icons": "^6.1.1",
