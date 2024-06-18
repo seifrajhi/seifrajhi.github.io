@@ -19,7 +19,7 @@ const MachineLearningEngineerCV = () => {
         isUniqueTitle={true}
         title={"Saifeddine Rajhi's Machine Learning Engineer CV"}
         className="cv-view-page"
-        pagePath="/cv/machine-learning-engineer"
+        pagePath="/cv/software-engineer"
         ogType="website"
         description="Saifeddine Rajhi's Machine Learning Engineer CV"
         keywords={[
@@ -33,7 +33,7 @@ const MachineLearningEngineerCV = () => {
       <main
         itemScope
         itemType="http://schema.org/Person"
-        className="cv cv-machine-learning-engineer"
+        className="cv cv-software-engineer"
       >
         <div
           className="pdf-badge"
@@ -694,7 +694,7 @@ const MachineLearningEngineerCV = () => {
         </div>
       </main>
       <BreadcrumbsSnippet
-        crumbs={[{ "/cv/machine-learning-engineer/": "ML/DL Engineer CV" }]}
+        crumbs={[{ "/cv/software-engineer/": "ML/DL Engineer CV" }]}
       />
     </Layout>
   )

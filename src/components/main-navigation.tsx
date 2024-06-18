@@ -36,7 +36,7 @@ const MainNavigation = ({ space }: Props): JSX.Element => {
           </Link>
         </li>
         <li>
-          <Link to="/cv/machine-learning-engineer/" title="Review My CVs">
+          <Link to="/cv/software-engineer/" title="Review My CVs">
             CV
           </Link>
         </li>

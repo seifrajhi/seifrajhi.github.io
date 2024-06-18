@@ -147,7 +147,7 @@ const IndexPage = (): JSX.Element => {
               My name is Saifeddine <span role="img">👋</span>
             </p>
             <p>
-              I'm a Senior Platform Engineer, DevOps Geek and
+              I'm a Senior Platform Engineer, Containers Geek and
               Life Explorer.
             </p>
           </div>
