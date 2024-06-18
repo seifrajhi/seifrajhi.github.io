@@ -73,7 +73,7 @@ const SocialLinks = ({
             eventCategory="social"
             eventAction="click"
             eventLabel="email"
-            href="mailto:roman.glushko.m@gmail.com"
+            href="mailto:rajhiseif@gmail.com"
             title="Saifeddine Rajhi's Email"
           >
             <FontAwesomeIcon icon={faEnvelope} size={iconSize} />

@@ -15,7 +15,7 @@ const ViewPageHeader = ({ spaceTitle, spaceLink, isListing = false }) => {
           </div>
           <div className="name">
             <a href={spaceLink} title="back to blog">
-              Roman <br /> Glushko
+              Saifeddine <br /> Rajhi
             </a>
           </div>
         </div>

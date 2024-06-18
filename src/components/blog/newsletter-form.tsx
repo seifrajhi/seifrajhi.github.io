@@ -6,7 +6,7 @@ const NewsletterForm = (): JSX.Element => {
   return (
     <div data-nosnippet="" className="newsletter-form">
       <iframe
-        src="https://romanglushko.substack.com/embed"
+        src="https://rajhisaif.substack.com/embed"
         loading="lazy"
         width="100%"
         height="320"

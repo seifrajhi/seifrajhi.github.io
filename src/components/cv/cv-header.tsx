@@ -17,7 +17,7 @@ const CvHeader = ({ position }: Props): JSX.Element => {
       </div>
       <hgroup>
         <h2 itemProp="name" className="cv-name">
-          Roman <strong>Glushko</strong>
+          Saifeddine <strong>Rajhi</strong>
         </h2>
         <h1 itemProp="jobTitle" className="cv-position">
           {position}
