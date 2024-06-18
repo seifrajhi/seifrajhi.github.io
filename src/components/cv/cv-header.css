@@ -1,0 +1,51 @@
+.cv-header-wrapper {
+    text-align: center;
+}
+
+.cv-header-wrapper .avatar {
+    border: none;
+    margin: 0 auto;
+    width: 8rem;
+    height: 8rem;
+}
+
+.cv-header-wrapper .logo-img {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    transform: translate(5px, 5px);
+    -ms-transform: translate(5px, 5px);
+    -webkit-transform: translate(5px, 5px);
+}
+
+.cv-header-wrapper .cv-name {
+    font-size: 3rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+}
+
+.cv-header-wrapper .cv-position {
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+@media print {
+    .cv-header-wrapper .avatar {
+        width: 4.2rem;
+        height: 4.2rem;
+    }
+
+    .cv-header-wrapper .logo-img {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .cv-header-wrapper .cv-name {
+        font-size: 1.5rem;
+    }
+
+    .cv-header-wrapper .cv-position {
+        font-size: 0.7rem;
+    }
+}

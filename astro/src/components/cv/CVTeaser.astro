@@ -1,0 +1,19 @@
+---
+import { getCVUrl } from 'src/content/routing';
+
+import "./CVTeaser.css"
+
+export interface Props {
+    slug: string;
+    position: string;
+    excerpt: string;
+}
+
+const {slug, position, excerpt} = Astro.props;
+---
+<a class="resume-item" href={getCVUrl(slug)}>
+    <article class="resume">
+        <h2>{position}</h2>
+        <p>{excerpt}</p>
+    </article>
+</a>

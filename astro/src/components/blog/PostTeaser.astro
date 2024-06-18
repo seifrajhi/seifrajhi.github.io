@@ -1,0 +1,67 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { Image, getImage } from "astro:assets"
+
+import { getBlogUrl } from 'src/content/routing';
+import PostKeywords from "@components/blog/PostKeywords.astro"
+import ReadingStatusBadge from "@components/blog/ReadingStatusBadge"
+import NewPostBadge from "@components/blog/NewPostBadge"
+import Date from "@components/Date.astro"
+
+import './PostTeaser.css'
+
+export interface Props {
+  post: CollectionEntry<'blog'>
+}
+
+const {post} = Astro.props;
+const {id, title, excerpt, pubDate, keywords, cover: {image, aspectRatio}} = post.data;
+const {remarkPluginFrontmatter: {timeToReadMin}} = (await post.render())
+const slug = post.slug
+
+const postId = id || slug;
+const postURL = getBlogUrl(slug)
+
+const optimizedImage = await getImage({
+  src: image,
+  width: 336,
+  height: 200,
+  format: "webp",
+});
+---
+<article class="blog-item">
+  <a class="article-header" href={postURL}>
+    <div class="cover-filter">
+      {image && 
+        <div class="cover">
+          <Image 
+            class="cover-image"
+            loading="lazy" 
+            src={optimizedImage.src} 
+            alt={title} 
+            width={336}
+            height={200}
+            decoding="async"
+            format="webp" 
+          />
+        </div>
+        }
+    </div>
+    <NewPostBadge publishDate={pubDate} client:only />
+  </a>
+  <div class="article-details">
+    <h2>
+      <a href={postURL}>{title}</a>
+    </h2>
+    <div class="blog-details">
+      <Date date={pubDate} />
+      <span> • </span>
+      <span class={`blog-time2read`}>
+        {timeToReadMin}
+      </span>
+      <ReadingStatusBadge contentID={postId} client:only />
+    </div>
+    <p class="blog-digest">{excerpt}</p>
+    <PostKeywords keywords={keywords} />
+  </div>
+</article>

@@ -1,0 +1,36 @@
+---
+import BaseHead from '@components/BaseHead.astro';
+import Footer from '@components/Footer.astro';
+
+import ThoughtHeader from '@components/thoughts/ThoughtHeader.astro';
+
+import "@styles/theme.css"
+import "@styles/general.css"
+import "@styles/blogPost.css"
+
+export interface Props {
+	title: string;
+	description: string;
+	keywords: string[];
+	image: string;
+}
+
+const { title, description, keywords, image } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en" class="thought-view-page">
+	<head>
+		<BaseHead 
+			title={`${title} - Thought`} 
+			description={description} 
+			keywords={keywords} 
+			ogType={`article`}
+			image={image}
+		/>
+	</head>
+	<body>
+    <ThoughtHeader listing={false} />
+		<slot />
+    <Footer />
+  </body>
+</html>

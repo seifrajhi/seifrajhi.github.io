@@ -1,0 +1,51 @@
+---
+interface Link {
+    title: string;
+    url: string;
+}
+
+interface Project {
+    title: string;
+    description: string;
+    links?: Link[];
+}
+
+export interface Props {
+    projects: Project[];
+    otherProjects?: Project[];
+}
+
+const {projects, otherProjects} = Astro.props;
+---
+<section class="open-source-projects">
+    <h2>
+        <span>Open Source</span>
+    </h2>
+    <ul>
+        {projects && projects.map(project => 
+            <li>
+                <h3>{project.title}</h3>
+                <div>{project.description}</div>
+                {project.links && <strong>Links: </strong>} {project.links && project.links.map((link: Link) => <><span> • </span><a target="_blank" rel="noopener" href={link.url}>{link.title}</a></>)}
+            </li>
+        )}
+    </ul>
+    <div class="other-projects">
+        <input
+            type="checkbox"
+            id="other-open-source-projects-switcher"
+        />
+        <label for="other-open-source-projects-switcher">
+            <a>..click to show/hide other projects</a>
+        </label>
+        <ul class="other-projects-list">
+            {otherProjects && otherProjects.map(project =>
+                <li>
+                    <h3>{project.title}</h3>
+                    <div>{project.description}</div>
+                    {project.links && <strong>Links:</strong>} {project.links.map((link: Link) => <><span> • </span><a target="_blank" rel="noopener" href={link.url}>{link.title}</a></>)}
+                </li>
+            )}
+        </ul>
+    </div>
+</section>

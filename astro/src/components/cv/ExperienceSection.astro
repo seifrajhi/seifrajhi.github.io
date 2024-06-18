@@ -1,0 +1,46 @@
+---
+interface Job {
+    title: string;
+    company: string;
+    location: string;
+    period: string;
+    description?: string;
+    highlights?: string[];
+    final_words?: string;
+    skills: string[];
+}
+
+export interface Props {
+    topMargin: boolean;
+    jobs: Job[];
+}
+
+const {topMargin = true, jobs} = Astro.props;
+---
+<section class="jobs">
+    <h2 class={topMargin ? `` : `notop-margin`}>
+        <span>Work Experience</span>
+    </h2>
+    <ul>
+        {jobs && jobs.map(job => (
+            <li
+                itemscope
+                itemtype="http://schema.org/Organization"
+                class="job"
+            >
+                <strong itemprop="jobTitle">{job.title}</strong>, <span itemprop="name">{job.company}</span>; {job.period}
+                <br />
+                {job.description && <div class="job-description" set:html={job.description}></div>}
+                {job.highlights && <ul>
+                    {job.highlights.map(highlight => <li set:html={highlight}></li>)}
+                </ul>}
+                {job.final_words && <div class="job-description" set:html={job.final_words}></div>}
+                {job.skills && <ul class="project-details">
+                    <li>
+                        <strong>Experience: </strong> {job.skills.join(", ")}
+                    </li>
+                </ul>}
+            </li>
+        ))}
+    </ul>
+</section>

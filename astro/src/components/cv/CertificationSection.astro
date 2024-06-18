@@ -1,0 +1,29 @@
+---
+interface Certification {
+    title: string;
+    url: string;
+    description: string;
+}
+
+export interface Props {
+    credits: Certification[];
+}
+
+const {credits} = Astro.props;
+---
+<section class="certifications">
+    <h2>
+        <span>Certifications</span>
+    </h2>
+    <ul>
+        {credits && credits.map(credit => (
+            <li class="certification">
+                <strong>
+                    <a target="_blank" rel="noopener" href={credit.url}>{credit.title}</a>
+                </strong>
+                <br />
+                <div set:html={credit.description} />
+            </li>
+        ))}
+    </ul>
+</section>

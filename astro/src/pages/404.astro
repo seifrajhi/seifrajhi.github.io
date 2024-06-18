@@ -1,0 +1,30 @@
+---
+import NotFoundLayout from "@layouts/NotFoundLayout.astro";
+import MainNavigation from "@components/MainNavigation.astro";
+import ThemeSwitcher from "@components/ThemeSwitcher";
+
+import Pokemon from "@components/404/pokemon.tsx";
+
+import "@styles/404.css"
+
+---
+<NotFoundLayout title={"404: Not Found"} bodyClass={"not-found-page"}>
+    <div class="container">
+        <main class="row not-found-wrapper">
+            <div class="not-found-content">
+                <Pokemon client:load>
+                    <h1>Not Found</h1>
+                    <MainNavigation space="404" />
+                    <p>
+                    You just hit a route that <strong>doesn&#39;t exist</strong>.
+                    </p>
+                    <p class={`pokemon-intro`}>
+                    At least you have found a pokemon:
+                    </p>
+                </Pokemon>
+                <ThemeSwitcher client:only />
+            </div>
+        </main>
+        <!-- <BreadcrumbsSnippet crumbs={[]} /> -->
+    </div>
+</NotFoundLayout>

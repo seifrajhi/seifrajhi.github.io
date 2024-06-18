@@ -1,0 +1,35 @@
+html {
+    --cvItemColor: var(--black);
+    --cvItemHighlightColor: var(--white);
+    --cvItemHighlightBgColor: var(--black);
+}
+
+html.dark {
+    --cvItemColor: var(--white);
+    --cvItemHighlightColor: var(--midnight);
+    --cvItemHighlightBgColor: var(--white);
+}
+
+.resume-item {
+    color: var(--cvItemColor);
+    border: 3px solid var(--cvItemColor);
+    border-radius: 0.3rem;
+}
+
+a.resume-item article {
+    padding: 2rem;
+}
+
+a.resume-item {
+    transition: 0.15s;
+    transition-delay: 0s;
+    transition-duration: 0.2s;
+    transition-property: all;
+    transition-timing-function: ease;
+    font-weight: 100;
+}
+
+a.resume-item:hover {
+    color: var(--cvItemHighlightColor);
+    background-color: var(--cvItemHighlightBgColor);
+}

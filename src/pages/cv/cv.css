@@ -1,0 +1,247 @@
+body {
+    --nameColor: var(--red);
+    --pdfBadgeColor: var(--brownDarker);
+    --pdfBadgeHoverColor: var(--red);
+}
+
+body.dark {
+    --nameColor: var(--pink);
+    --pdfBadgeColor: var(--midnightDarker);
+    --pdfBadgeHoverColor: var(--pink);
+}
+
+.cv {
+    margin-top: 1rem;
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cv .pdf-badge {
+    border-width: 50px;
+    border-style: solid;
+    border-color: var(--pdfBadgeColor) var(--pdfBadgeColor) transparent transparent;
+    position: fixed;
+    top:0;
+    right:0;
+    width:0;
+    height:0;
+    cursor: pointer;
+}
+
+.cv .cv-name {
+    color: var(--nameColor);
+}
+
+.cv ul {
+    padding-left: 1.5rem;
+}
+
+.cv .pdf-badge:hover {
+    border-color: var(--pdfBadgeHoverColor) var(--pdfBadgeHoverColor) transparent transparent;
+}
+
+.cv .pdf-badge a {
+    color: white;
+    font-weight: bold;
+    height: 100%;
+    left: 1rem;
+    position: absolute;
+    top: -2.3rem;
+    transform: rotate(45deg);
+    text-transform: uppercase;
+    text-decoration: none;
+    user-select: none;
+    width: 100%;
+}
+
+.cv a {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.cv .main-navigation a {
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.cv .social-list .social-item {
+    margin-left: 1rem;
+}
+
+.cv .social-list .social-item svg {
+    font-size: 1.5rem;
+}
+
+
+.cv-content {
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    margin-top: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .cv-content {
+        grid-template-columns: none;
+    }
+}
+
+.cv-content .cv-content-column {
+    padding: 1rem;
+}
+
+.cv-content section h2 {
+    position: relative;
+    font-size: 2rem;
+    overflow: hidden;
+    text-align: center;
+    z-index: 1;
+}
+
+.cv-content section h2 span {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.cv-content section h2:before, 
+.cv-content section h2:after {
+    position: absolute;
+    top: 51%;
+    overflow: hidden;
+    width: 50%;
+    height: 2px;
+    content: '\a0';
+    background-color: var(--bodyTextColor);
+}
+
+.cv-content section h2:before {
+    margin-left: -50%;
+    text-align: right;
+}
+
+.notop-margin {
+    margin-top: 0;
+}
+
+.cv .projects .project .project-details,
+.cv .jobs .project-details,
+.cv .certifications .certification {
+    list-style-type: "★";
+}
+
+.cv .jobs .job-description,
+.cv .projects .project-description {
+    margin-bottom: 0.8rem;
+}
+
+.cv .projects .project-details li,
+.cv .open-source-projects li,
+.cv .certifications li,
+.cv .skills li,
+.cv .education li,
+.cv .jobs li,
+.cv .leadership li,
+.cv .profile li {
+    padding-left: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.cv .other-projects input {
+    opacity: 0;
+}
+
+.cv .other-projects-link {
+    text-align: right;
+    display: none;
+}
+
+.cv .other-projects .other-projects-list {
+    display: none;
+}
+
+.cv .other-projects label {
+    cursor: pointer;
+}
+
+.cv .projects .other-projects input[type="checkbox"]:checked ~ .other-projects-list {
+    display: block;
+}
+
+.cv .open-source-projects .other-projects input[type="checkbox"]:checked ~ .other-projects-list {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .cv-header-wrapper .cv-name {
+        font-size: 2.5rem;
+    }
+
+    .cv-content section h2 {
+        font-size: 1.5rem;
+    }
+
+    .cv .pdf-badge {
+        display: none;
+    }
+}
+
+@media print {
+    body.dark {
+        --nameColor: var(--red);
+        --pdfBadgeColor: var(--brownDarker);
+        --pdfBadgeHoverColor: var(--red);
+        --bodyBackgroundColor: var(--white);
+        --bodyTextColor: var(--black);
+        --linkColor: var(--black);
+        --linkHoverColor: var(--red);
+    }
+
+    .cv {
+        font-size: 0.7rem;
+    }
+
+    .cv ul {
+        padding-left: 1rem;
+    }
+
+    .cv .social-list .social-item a svg {
+        display: none;
+    }
+
+    .cv .social-list .social-item a span {
+        display: block;
+    }
+
+    .cv-content section h2 {
+        font-size: 1rem;
+        border-bottom: 2px solid var(--bodyTextColor);
+    }
+
+    .cv .pdf-badge {
+        display: none;
+    }
+
+    .cv .theme-switcher {
+        display: none;
+    }
+
+    .cv .main-navigation {
+        display: none;
+    }
+
+    .cv-content .cv-content-column {
+        padding: 0.5rem;
+    }
+
+    .cv .social-list .social-item {
+        margin-left: 1rem;
+    }
+
+    .cv .other-projects {
+        display: none;
+    }
+
+    .cv .other-projects-link {
+        display: block;
+    }
+}  

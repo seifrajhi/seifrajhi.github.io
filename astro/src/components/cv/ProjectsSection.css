@@ -1,0 +1,44 @@
+.projects .project .project-details {
+    list-style-type: "★";
+}
+
+.projects .project-description {
+    margin-bottom: 0.8rem;
+    padding-left: 1rem;
+}
+
+.projects .project-details li {
+    padding-left: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.projects .other-projects input {
+    opacity: 0;
+}
+
+.projects .other-projects-link {
+    text-align: right;
+    display: none;
+}
+
+.projects .other-projects .other-projects-list {
+    display: none;
+}
+
+.projects .other-projects label {
+    cursor: pointer;
+}
+
+.projects .other-projects input[type="checkbox"]:checked ~ .other-projects-list {
+    display: block;
+}
+
+@media print {
+    .projects .other-projects {
+        display: none;
+    }
+
+    .projects .other-projects-link {
+        display: block;
+    }
+}  

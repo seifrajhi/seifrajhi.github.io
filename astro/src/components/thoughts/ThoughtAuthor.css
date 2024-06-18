@@ -1,0 +1,24 @@
+.thought-author-wrapper {
+    text-align: center;
+}
+
+.thought-author-wrapper .avatar {
+    width: 122px;
+    height: 122px;
+}
+
+.thought-author-wrapper .avatar .logo-img {
+    width: 7rem;
+}
+
+.thought-author-wrapper .name {
+    font-size: 1.5rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+}
+
+.thought-author-wrapper .thought-section-descr {
+    max-width: 350px;
+    font-size: 0.9rem;
+    margin: 0 auto;
+}

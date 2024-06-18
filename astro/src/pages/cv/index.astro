@@ -1,0 +1,28 @@
+---
+import { getResumes } from 'src/content/collections';
+
+import personMetadata from '@data/personMetadata';
+
+import CvListLayout from "@layouts/CvListLayout.astro";
+import CVTeaser from "@components/cv/CVTeaser.astro";
+
+import "@styles/cvList.css";
+
+const resumes = await getResumes()
+---
+<CvListLayout 
+    title={"Saifeddine Rajhi's Resumes"}
+    intro={"TBU"}
+    description={""} 
+    keywords={[]}
+>
+    <main class={`resumes`}>
+        <p>I have divided almost a decade of my experience into the following role-specific resumes for your convinience:</p>
+        <div class="resume-list">
+            {resumes && resumes.map((resume) => (
+                <CVTeaser slug={resume.slug} excerpt={resume.data.excerpt} position={resume.data.position} />
+            ))}
+            <p>Have not found what you were looking for? Free free to connect with me in <a href={personMetadata.linkedinUrl} target="_blank">LinkedIn</a>.</p>
+        </div>
+    </main>
+</CvListLayout>

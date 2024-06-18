@@ -1,0 +1,79 @@
+/** Theme variables **/
+
+body {
+    --thoughtHeaderColor: var(--red);
+    --imageTitleColor: gray;
+}
+
+body.dark {
+    --thoughtHeaderColor: var(--pink);
+    --imageTitleColor: #8b949e;
+}
+
+
+/** Thought Styling **/
+
+.thought-wrapper h1 {
+    color: var(--thoughtHeaderColor);
+    font-size: 3rem;
+    line-height: 4rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+@media (max-width: 575px) {
+    .thought-wrapper h1 {
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+}
+
+.thought-wrapper .thought-details {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.thought-wrapper .thought-createdat {
+    font-weight: normal;
+}
+
+.thought-wrapper .theme-switcher {
+    float: right;
+    margin-left: 1rem;
+    margin-top: 0;
+}
+
+.thought-wrapper .cover {
+    margin: 0;
+}
+
+.thought-wrapper .cover .cover-filter {
+    left: 50%;
+    margin-left: -50vw;
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+}
+
+.thought-wrapper .cover .cover-image {
+    left: 50%;
+    margin-left: -50vw;
+    overflow: hidden;
+    position: relative;
+    max-height: 600px;
+    width: 100vw;
+}
+
+.thought-wrapper .cover .image-title {
+    color: var(--imageTitleColor);
+    font-size: 1rem;
+    margin: 0.5rem;
+    text-align: center;
+}
+
+.thought-wrapper .cover .image-title a{
+    color: var(--imageTitleColor);
+    font-size: 1rem;
+    text-decoration: underline;
+}

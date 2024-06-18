@@ -1,0 +1,229 @@
+/** Theme variables **/
+
+body {
+    --socialBackgroundColor: var(--white);
+    --activityTitleColor: var(--red);
+    --allPostsButtonColor: var(--black);
+    --allPostsButtonTextHoverColor: var(--white);
+    --avatarBorderColor: var(--grey);
+    --secondNameColor: var(--red);
+    --storyLinkColor: var(--red);
+    --socialLinkBorderColor: var(--grey);
+    --socialLinkBorderHoverColor: var(--red);
+}
+
+body.dark {
+    --socialBackgroundColor: var(--midnight);
+    --activityTitleColor: var(--pink);
+    --allPostsButtonColor: var(--grey);
+    --allPostsButtonTextHoverColor: var(--midnight);
+    --avatarBorderColor: var(--grey);
+    --secondNameColor: var(--pink);
+    --storyLinkColor: var(--pink);
+    --socialLinkBorderColor: var(--grey);
+    --socialLinkBorderHoverColor: var(--pink);
+}
+
+.homepagev2 .social {
+    margin-bottom: 20px;
+}
+
+.homepagev2 .hero-intro {
+    margin: 0 auto;
+    pointer-events: none;
+    position: absolute;
+    top: 30%;
+    width: 100%;
+}
+
+.homepagev2 .hero-header {
+    height: 50rem;
+}
+
+.homepagev2 .hero-header .name {
+    font-family: 'Dancing Script', cursive;
+    font-size: 5rem;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.homepagev2 .hero-header .title {
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+}
+
+.homepagev2 .hero-header .second-name {
+    color: var(--secondNameColor);
+}
+
+.homepagev2 .hero-header .social {
+    margin-top: 20px;
+}
+
+.homepagev2 .hero-header .social .social-list {
+    display: flex;
+    flex-flow: row wrap;
+    flex-grow: 0;
+    flex-shrink: 0;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.homepagev2 .hero-header .social .social-list .social-item {
+    border: 1px solid var(--socialLinkBorderColor);
+    border-radius: 50%;
+    margin: .25rem;
+}
+
+.homepagev2 .hero-header .social .social-list .social-item:hover {
+    border: 1px solid var(--socialLinkBorderHoverColor);
+}
+
+.homepagev2 .hero-header .social .social-list .social-item>a>svg {
+    height: 14px;
+    padding: 10px;
+    vertical-align: middle;
+    width: 14px;
+}
+
+.homepagev2 .mylife {
+    font-size: 1.4rem;
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+.homepagev2 .mylife p {
+    line-height: 1.8;
+}
+
+.homepagev2 .read-all-button {
+    display: inline-block;
+    background: transparent;
+    border: 2px solid var(--allPostsButtonColor);
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 1rem;
+    transition: 0.15s;
+
+    transition-delay: 0s;
+    transition-duration: 0.2s;
+    transition-property: all;
+    transition-timing-function: ease;
+}
+
+.homepagev2 .all-button-wrapper {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+}
+
+.homepagev2 .read-all-button:hover {
+    color: var(--allPostsButtonTextHoverColor);
+    background-color: var(--allPostsButtonColor);
+}
+
+.homepagev2 .mylife .activity-title {
+    color: var(--activityTitleColor);
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.homepagev2 .mylife .recent-posts {
+    display: flex;
+    flex-direction: column;
+}
+
+.homepagev2 .mylife .recent-posts .blog-item {
+    display: flex;
+    padding: 10px;
+}
+
+.homepagev2 .mylife .recent-posts .blog-item .article-header {
+    flex: 1;
+    max-width: 25rem;
+}
+
+.homepagev2 .mylife .recent-posts .blog-item .article-header .cover {
+    max-height: 200px;
+}
+
+.homepagev2 .mylife .recent-posts .blog-item .article-details {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    padding-left: 1.5rem;
+}
+
+.homepagev2 .avatar {
+    background-color: var(--socialBackgroundColor);
+}
+
+.homepagev2 .main-navigation ul li {
+    pointer-events: all;
+}
+
+.homepagev2 .social-list .social-item {
+    background-color: var(--socialBackgroundColor);
+    pointer-events: all;
+}
+
+.homepagev2 .theme-switcher {
+    pointer-events: all;
+}
+
+.homepagev2 .recent-thoughts {
+    display: flex;
+}
+
+.homepagev2 .recent-thoughts .thought-item {
+    width: 33.33%;
+    padding-right: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.homepagev2 .recent-thoughts .thought-item h2 {
+    font-size: 1.3rem;
+}
+
+.homepagev2 .recent-thoughts .thought-item .cover,
+.homepagev2 .recent-thoughts .thought-item .cover-filter {
+    max-height: 200px;
+}
+
+
+
+@media screen and (max-width: 980px) {
+    .homepagev2 .mylife {
+        margin: 1rem;
+    }
+
+    .homepagev2 .mylife .recent-posts .blog-item {
+        flex-direction: column;
+    }
+
+    .homepagev2 .mylife .recent-thoughts {
+        flex-direction: column;
+    }
+
+    .homepagev2 .mylife .recent-posts .blog-item .article-header {
+        max-width: 100%;
+    }
+
+    .homepagev2 .mylife .recent-posts .blog-item .article-details {
+        padding-left: 0;
+    }
+
+    .homepagev2 .recent-thoughts .thought-item {
+        padding-right: 0;
+        width: 100%;
+    }
+}
+

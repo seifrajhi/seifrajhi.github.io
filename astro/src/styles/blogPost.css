@@ -1,0 +1,238 @@
+/**
+** Blog Post Page
+**/
+
+html {
+    --thoughtQuoteColor: var(--red);
+}
+
+html.dark {
+    --thoughtQuoteColor: var(--pink);
+}
+
+.blogpost-view-page .blogpost-header {
+    margin: 1rem 0;
+}
+
+.blogpost-view-page .blog-header-wrapper .logo {
+    width: 90px;
+    height: 90px;
+}
+
+.blogpost-view-page .blog-header-wrapper .logo-img {
+    width: 5rem;
+}
+
+.blogpost-view-page .blog-header-wrapper .name {
+    font-size: 1.5rem;
+}
+
+.blogpost-view-page .blog-header-wrapper .blog-title {
+    font-size: 3rem;
+    padding-left: 1rem;
+}
+
+.thought-wrapper,
+.blogpost-view-page .thought-sidebar {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 43rem;
+}
+
+@media (max-width: 767px) {
+    .thought-wrapper {
+        display: block;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        width: auto;
+    }
+}
+
+.blogpost-view-page .thoughts-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 575px) {
+    .blogpost-view-page .thoughts-title {
+        font-size: 2rem;
+    }
+}
+
+.blogpost-view-page .thought-divider {
+    clear: both;
+}
+
+.blogpost-view-page .thought-content {
+    margin-top: 2rem;
+}
+
+.blogpost-view-page .thought-author-wrapper {
+    margin-bottom: 2rem;
+}
+
+.blogpost-view-page .thought-navigation-wrapper {
+    margin-bottom: 2rem;
+}
+
+.blogpost-view-page hr {
+    border: none;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.blogpost-view-page hr::before {
+    letter-spacing: 0.6em;
+    text-indent: 0.6em;
+    content: "***";
+}
+
+/** Theme variables **/
+
+html {
+    --blogHeaderColor: var(--red);
+    --blogTagColor: gray;
+    --imageTitleColor: gray;
+}
+
+html.dark {
+    --blogHeaderColor: var(--pink);
+    --blogTagColor: var(--grey);
+    --imageTitleColor: #8b949e;
+}
+
+
+/** Thought Styling **/
+
+.blog-wrapper > header {
+    max-width: 43rem;
+    margin: auto;
+    padding: 1rem;
+}
+
+.blog-wrapper h1 {
+    color: var(--blogHeaderColor);
+    font-size: 3rem;
+    line-height: 4rem;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+@media (max-width: 575px) {
+    .blog-wrapper h1 {
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+}
+
+.blog-wrapper .blog-details {
+    margin-bottom: 1rem;
+}
+
+.blog-wrapper .blog-createdat {
+    font-weight: normal;
+}
+
+.blog-wrapper .theme-switcher {
+    float: right;
+    margin-left: 1rem;
+    margin-top: 0;
+}
+
+.blog-wrapper .cover {
+    margin: 0;
+}
+
+.blog-wrapper .cover .cover-filter {
+    left: 50%;
+    margin-left: -50vw;
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+}
+
+.blog-wrapper .cover .cover-image {
+    left: 50%;
+    margin-left: -50vw;
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+}
+
+.blog-wrapper .cover .cover-image {
+    height: 600px;
+    width: 100%;
+    object-fit: cover;
+    vertical-align: top;
+}
+
+.blog-wrapper .cover .image-title {
+    color: var(--imageTitleColor);
+    font-size: 1rem;
+    margin: 0.5rem;
+    text-align: center;
+}
+
+.blog-wrapper .cover .image-title a{
+    color: var(--imageTitleColor);
+    font-size: 1rem;
+    text-decoration: underline;
+}
+
+ul.blog-tags {
+    display: flex;
+    font-size: 0.9rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+ul.blog-tags li {
+    border: 1px solid var(--blogTagColor);
+    border-radius: 4px;
+    color: var(--blogTagColor);
+    padding: 5px 10px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    white-space: nowrap;
+}
+
+.blog-wrapper .content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 43rem 1fr;
+    margin: auto 0;
+    padding: 1rem;
+}
+
+.sidebar-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 43rem 1fr;
+    margin: auto 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .blog-wrapper .cover .cover-image {
+        height: auto;
+    }
+
+    .blog-wrapper .cover .image-title, .blog-wrapper .cover .image-title a {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .blog-wrapper .content-wrapper {
+        display: block;
+    }
+    
+    .sidebar-wrapper {
+        display: block;
+    }
+}

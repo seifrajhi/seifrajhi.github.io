@@ -1,0 +1,25 @@
+---
+import BaseHead from '@components/BaseHead.astro';
+
+import "@styles/theme.css"
+import "@styles/general.css"
+import ConsoleBanner from '@components/ConsoleBanner';
+
+export interface Props {
+	title: string;
+	description: string;
+	bodyClass: string;
+}
+
+const { title, description, bodyClass } = Astro.props
+---
+<!DOCTYPE html>
+<html lang="en" class={bodyClass}>
+  <head>
+    <BaseHead title={title} description={description} robotsDirective="noindex,nofollow" />
+  </head>
+  <body>
+    <slot />
+    <ConsoleBanner client:only />
+  </body>
+</html>

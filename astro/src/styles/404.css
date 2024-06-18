@@ -1,0 +1,50 @@
+html.not-found-page,
+.not-found-page body,
+.not-found-page #___gatsby,
+.not-found-page #gatsby-focus-wrapper,
+.not-found-page #gatsby-focus-wrapper > div {
+    height: 100%;
+}
+
+.not-found-page .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100%;
+}
+
+@media (max-width: 600px) {
+    .not-found-page .container {
+        height: auto;
+    }
+}
+
+.not-found-page .row {
+    flex-direction: column;
+}
+
+.not-found-wrapper h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.not-found-wrapper {
+    text-align: center;
+}
+
+.not-found-wrapper p {
+    margin: 0;
+}
+
+.not-found-wrapper .not-found-img {
+    width: 10rem;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.not-found-wrapper .theme-switcher-toggler {
+    margin-bottom: 1rem;
+}

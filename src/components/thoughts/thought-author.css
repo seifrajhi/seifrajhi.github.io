@@ -1,0 +1,33 @@
+.thought-author-wrapper {
+    text-align: center;
+}
+
+.thought-author-wrapper .avatar {
+    margin: 0 auto;
+    border-radius: 50%;
+    width: 122px;
+    height: 122px;
+    border: 2px solid var(--avatarBorderColor);
+}
+
+.thought-author-wrapper .logo-img {
+    width: 7rem;
+    height: auto;
+    display: block;
+    border-radius: 50%;
+    transform: translate(5px, 5px);
+    -ms-transform: translate(5px, 5px);
+    -webkit-transform: translate(5px, 5px);
+}
+
+.thought-author-wrapper .name {
+    font-size: 1.5rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+}
+
+.thought-author-wrapper .thought-section-descr {
+    font-size: 0.9rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}

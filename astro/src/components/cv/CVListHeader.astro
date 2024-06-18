@@ -1,0 +1,33 @@
+---
+import Avatar from '@components/Avatar.astro';
+
+import MainNavigation from '@components/MainNavigation.astro';
+import ThemeSwitcher from '@components/ThemeSwitcher';
+import NetworkBackground from '@components/home/NetworkBackground';
+
+import './CVListHeader.css';
+---
+<aside class="cv-sidebar">
+    <div id="hero-header" class="hero-header homepage-sidebar">
+        <NetworkBackground client:only />
+        <div class="hero-content-wrapper">
+            <div class="cv-header">
+                <div class="cv-header-wrapper">
+                    <div class="logo-wrapper">
+                        <div class="logo">
+                            <Avatar />
+                        </div>
+                    </div>
+                    <h1>
+                        Let's built something <br/> cool, <span class="highlight">together</span>
+                    </h1>
+                    <MainNavigation space={"cv"} />
+                </div>
+            </div>
+            <div class="misc">
+                <ThemeSwitcher client:only />
+            </div>
+        </div>
+    </div>
+</aside>
+

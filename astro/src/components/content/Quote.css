@@ -1,0 +1,49 @@
+html {
+    --quoteBorderColor: var(--blackLigher);
+    --quoteIconBgColor: var(--white);
+    --quoteBgColor: #f6f8fa;
+}
+
+html.dark {
+    --quoteBorderColor: var(--grey);
+    --quoteIconBgColor: #383c48;
+    --quoteBgColor: var(--midnightDarker);
+}
+
+blockquote.quote {
+    background-color: var(--quoteBgColor);
+    position: relative;
+    margin-left: -32px;
+    margin-right: -32px;
+    padding: 24px 32px;
+    border-right: 3px solid var(--quoteBorderColor);
+    border-radius: 5px;
+}
+
+.quote .quote-icon {
+    color: var(--quoteBorderColor);
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 32px;
+    height: 32px;
+    transform: translate(50%, -50%);
+    padding: 8px;
+    background: var(--quoteIconBgColor);
+    border-radius: 50%;
+    transition: background 350ms ease 0s;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.quote .quote-icon svg {
+    width: 32px;
+    height: 32px;
+}
+
+@media (max-width: 768px) {
+    blockquote.quote {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}

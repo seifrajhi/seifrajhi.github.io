@@ -1,0 +1,65 @@
+/** Theme variables **/
+
+body {
+    --themeSwitcherTrackBackgroundColor: var(--grey);
+    --themeSwitcherThumbBackgroundColor: var(--white);
+}
+
+body.dark {
+    --themeSwitcherTrackBackgroundColor: var(--midnightDarker);
+    --themeSwitcherThumbBackgroundColor: var(--grey);
+}
+
+
+/** Theme Switcher Styles **/
+
+.theme-switcher {
+    text-align: center;
+}
+
+.theme-switcher-toggler {
+    touch-action: pan-x;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.theme-switcher-track {
+    width: 50px;
+    height: 24px;
+    padding: 0;
+    border-radius: 30px;
+    background-color: var(--themeSwitcherTrackBackgroundColor);
+    transition: all .2s ease;
+}
+
+.theme-switcher-toggler--checked .theme-switcher-thumb {
+    -webkit-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.theme-switcher-thumb {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: var(--themeSwitcherThumbBackgroundColor);
+    box-sizing: border-box;
+    transition: all .5s cubic-bezier(.23, 1, .32, 1) 0ms;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.theme-switcher-input {
+    display: none;
+}

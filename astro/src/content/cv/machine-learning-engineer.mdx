@@ -1,0 +1,241 @@
+---
+title: Saifeddine Rajhi's Machine Learning Engineer CV
+description: Saifeddine Rajhi's Machine Learning Engineer CV
+excerpt: "Applied statistics and ML when the classic software engineering is not enough"
+position: Machine Learning Engineer
+order: 2
+keywords:
+    - machine learning engineer
+    - cv
+    - machine learning cv
+    - machine learning resume
+---
+import ProfileSection from "@components/cv/ProfileSection.astro"
+import ProjectsSection from "@components/cv/ProjectsSection.astro"
+import ExperienceSection from "@components/cv/ExperienceSection.astro"
+import OpenSourceSection from "@components/cv/OpenSourceSection.astro"
+import ManagementSection from "@components/cv/ManagementSection.astro"
+import CertificationSection from "@components/cv/CertificationSection.astro"
+import EducationSection from "@components/cv/EducationSection.astro"
+import SkillsSection from "@components/cv/SkillsSection.astro"
+import HobbySection from "@components/cv/HobbySection.astro"
+
+<div className="cv-content-column additional-column">
+    <ProfileSection
+        items={[
+            "Aspiring <strong>problem solver</strong> & ML engineer",
+            "<strong>7+ years</strong> of experience in <strong>software engineering</strong>",
+            "<strong>5+ years</strong> of experience in eCommerce domain",
+            "<strong>3+ years</strong> of experience in <strong>technical management of scrum teams</strong>",
+            "Expertise in a broad variety of technical and business topics",
+            "Constant, quick & curious learner",
+            "Positive attitudes",
+        ]}
+    /> 
+
+    <SkillsSection
+        skills={[
+            {
+                title: "Experience",
+                items: [
+                    "tabular data processing",
+                    "image processing",
+                    "classification", 
+                    "regression", 
+                    "time series forecasting", 
+                    "image object detection", 
+                    "data analysis",
+                ],
+            },
+            {
+                title: "Languages",
+                items: [
+                    "Python", 
+                    "Golang", 
+                    "WebDev Stack (JS/ReactJS/TypeScript & HTML5 & CSS3)",
+                ],
+            },
+            {
+                title: "ML Frameworks",
+                items: [
+                    "PyTorch", 
+                    "XGBoost", 
+                    "Keras", 
+                    "Scikit-Learn",
+                    "HuggingFace",
+                    "langchain",
+                ],
+            },
+            {
+                title: "MLOps",
+                items: [
+                    "Kubernetes",
+                ]
+            },
+            {
+                title: "DataViz & Processing",
+                items: [
+                    "Pandas",
+                    "Seaborn", 
+                    "Plotly", 
+                ]
+            }
+        ]}
+    />
+
+    <EducationSection 
+        educations={[
+            {
+                title: "Machine Learning Nanodegree",
+                institution: "self-paced",
+                period: "2020-2021",
+            },
+            {
+                title: "M.S. Computer Engineering",
+                institution: "Khmelnytskyi National University",
+                location: "Ukraine",
+                period: "2018",
+            },
+        ]}
+    />
+</div>
+
+<div className="cv-content-column main-column">
+    <ProjectsSection 
+        projects={[
+            {
+                title: "[Kaggle] Shopee - Price Match Guarantee",
+                description: 
+                    "The Shopee marketplace has a price match guarantee program. They needed a model that could automate the process of finding marketplace lots with similar product offerings and prices, despite marketing strategy, product titles and images which merchants might use. <br/><br/>" +
+                    "Got to Top 45% of submitters on Kaggle. Got <a href='https://www.kaggle.com/c/shopee-product-matching/discussion/236496' target='blank'>gold and silver medals</a> for providing deep insights on the domain and problem goal.",
+                skills: [
+                    "eCommerce", 
+                    "Tabular & Image Data", 
+                    "Python", 
+                    "Keras", 
+                    "Data Processing", 
+                    "embeddings",
+                ],
+                links: [
+                    {
+                        title: "Competition",
+                        url: "https://www.kaggle.com/c/shopee-product-matching",
+                    }
+                ]
+            },
+            {
+                title: "[Kaggle] HPA - Single Cell Classification",
+                description: 
+                    "Human Protein Atlas organization was interested in finding patterns of protein distribution inside of the single cell. This helped to understand role of different proteins in disease development, medical treatment impact, etc. <br/><br/>" +
+                    "Based on 150Gb of 4-layers human cells images, it was needed to segment each cell and predict in which organelle of the cell the protein of interest were located. Provided dataset contained only inaccurate image-level labels (not directly connected to particular cells).<br/><br/>" +
+                    "Got to Top 15% of submitters on Kaggle.",
+                skills: [
+                    "Biology", 
+                    "Image Medical Data", 
+                    "Weakly-Supervised Learning", 
+                    "Data Analysis", 
+                    "Data Processing", 
+                    "Instance Segmentation",
+                    "Multi-Label Classification",
+                ],
+                links: [
+                    {
+                        title: "Competition",
+                        url: "https://www.kaggle.com/c/hpa-single-cell-image-classification",
+                    }
+                ]
+            }
+        ]}
+
+        otherProjects={[
+            {
+                title: "Rock, Paper, Scissors Game",
+                description: 
+                    "Trained a model to recognize hand forms of rock, paper, scissors and incorporate it into a game. Collected hundreds of images in order to improve the model accuracy. <br/><br/>" +
+                    "Ended up with a model that is <strong>90% accurate</strong> and recognizes common ways to shape RPS forms. The model was <strong>deployed as a serverless</strong> application using Tensorflow.js.",
+                skills: [
+                    "Problem Framing", 
+                    "Data Collection", 
+                    "Image Data", 
+                    "Python", 
+                    "Tensorflow", 
+                    "Tensorflow.js",
+                ],
+                links: [
+                    {
+                        title: "Live Demo",
+                        url: "/blog/rock-paper-scissors/"
+                    },
+                    {
+                        title: "GitHub",
+                        url: "https://github.com/seifrajhi/rock-paper-scissors",
+                    }
+                ],
+            }
+        ]}
+    />
+
+    <ExperienceSection jobs={[
+        {
+            title: "Senior Software Engineer (R&D, AI Apps, Notebooks)",
+            company: "DataRobot",
+            location: "Ukraine",
+            period: "2021-Present (2+ years)",
+            highlights: [
+                "Designed and implement an internal framework for building ML-enabled applications using DataRobot platform powered by modern Python stack (Flask, Pydantic, FastAPI)",
+                "Using the framework, I have took part in implementation a complaint review application for a US company from the healthcare sector. Took part in complaint analysis and NLP modeling pipeline using Huggingface transformers stack.",
+                "Configured, deployed and troubleshoot the model in the Kubernetes-based environment",
+                "Prototyped a conversational content-aware agent using OpenAI, langchain and Qdrant",
+                "<a target='_blank' rel='noopener' title='go to my software engineer's resume' href='/cv/software-engineer/'>The rest of my software engineering experience could be found there</a>",
+            ],
+            skills: [
+                "Problem Solving",
+                "Python", 
+                "Software Architecture", 
+                "System Design", 
+                "Distributed Systems", 
+                "NLP", 
+                "Huggingface Transformers", 
+                "Machine Learning", 
+                "Kubernetes",
+            ],
+        },
+        {
+            title: "eCommerce Software Developer, Tech Lead",
+            company: "Atwix",
+            location: "Ukraine",
+            period: "2015-2020 (5.5 years)",
+            highlights: [
+                "Dove into eCommerce domain, problems and challenges US and EU merchants from several areas (e.g. furniture construction, beauty)",
+                "<a target='_blank' rel='noopener' href='/cv/ecommerce-developer/' title='Go to Technical blog'>The rest of the software engineering experience could be found there.</a>"
+            ],
+            skills: [
+                "eCommerce",
+                "Problem Solving",
+                "Management",
+                "System Design",
+                "Problem Framing",
+                "PHP",
+                "MySQL",
+                "Elasticsearch",
+                "Redis",
+            ]
+        }
+    ]} />
+
+    <ManagementSection
+        items={[
+            "Hold a full-time <strong>technical leader position</strong> for 3.5 years (5-15 people teams incl. SEs, QA, PM, DevOps) + seasonal leading of serveral internal projects and initialives",
+            "Write <a target='_blank' rel='noopener' href='https://seifrajhi.github.io/blog/'>technical blog posts</a> and <a target='_blank' rel='noopener' href='https://seifrajhi.github.io/thoughts/'>thoughts about management</a>. Organized technical & business <a target='_blank' rel='noopener' href='https://www.atwix.com/magento/atwix-magenews-jun-2020/'>newsletter</a> (led for 2 years).",
+        ]}
+    />
+
+    <HobbySection hobbies={[
+        "Scooter Driving",
+        "Self-Improvement",
+        "Reading",
+        "<a rel='me' target='_blank' rel='noopener' href='https://seifrajhi.github.io/blog/'>Blogging</a>",
+        "<a target='_blank' href='https://github.com/seifrajhi'>Open Source</a>",
+        "Judaism (don't work on Saturdays)"
+    ]} />
+</div>

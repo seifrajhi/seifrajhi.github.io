@@ -1,0 +1,102 @@
+/** Theme variables **/
+
+body {
+    --thoughtsPageTitleColor: var(--red);
+}
+
+body.dark {
+    --thoughtsPageTitleColor: var(--pink);
+}
+
+
+/** Thoughts List Page **/
+
+.thoughts-wrapper {
+    max-width: 70rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.thoughts-wrapper .thought-sidebar {
+    float: left;
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
+    position: sticky;
+    top: 2rem;
+    width: calc(33.3%);
+}
+
+@media (max-width: 820px) {
+    .thoughts-wrapper .thought-sidebar {
+        float: none;
+        position: initial;
+        margin-bottom: 40px;
+        width: auto;
+    }
+}
+
+.thought-sidebar .navigation {
+    text-align: center;
+}
+
+.thought-sidebar .navigation a {
+    text-transform: uppercase;
+}
+
+.thought-sidebar .theme-switcher {
+    margin-top: 10px;
+}
+
+.thoughts-wrapper .thoughts-list {
+    float: left;
+    padding-left: 4rem;
+    margin-right: 0;
+    margin-top: 0;
+    width: calc(66.6% - 4rem);
+}
+
+@media (max-width: 1199.98px) {
+    .thoughts-wrapper .thoughts-list {
+        padding-left: 3rem;
+        width: calc(66.6% - 3rem);
+    }
+}
+
+@media (max-width: 920px) {
+    .thoughts-wrapper .thoughts-list {
+        padding-left: 2rem;
+        width: calc(66.6% - 2rem);
+    }
+}
+
+@media (max-width: 820px) {
+    .thoughts-wrapper .thoughts-list {
+        float: none;
+        display: block;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        width: auto;
+    }
+}
+
+@media (max-width: 820px) {
+    .thought-sidebar .theme-switcher {
+        margin-top: 1rem;
+    }
+}
+
+.thoughts-title {
+    color: var(--thoughtsPageTitleColor);
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+    font-weight: bold;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.thoughts-title a {
+    color: var(--thoughtsPageTitleColor);
+}

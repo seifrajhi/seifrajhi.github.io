@@ -1,0 +1,37 @@
+/** Theme variables **/
+
+body {
+    --thoughtNavigationLinkColor: var(--red);
+    --allThoughtsNavigationLinkColor: var(--black);
+}
+
+body.dark {
+    --thoughtNavigationLinkColor: var(--pink);
+    --allThoughtsNavigationLinkColor: var(--white);
+}
+
+
+/** Thought Navigation Styles **/
+
+.thought-navigation-wrapper {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.thought-navigation .nav-links {
+    padding: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.thought-navigation .nav-links a {
+    color: var(--thoughtNavigationLinkColor);
+    display: block;
+    font-weight: bold;
+    margin-bottom: calc(1.75rem / 2);
+    text-decoration: none;
+}
+
+.thought-navigation a.all-thoughts {
+    color: var(--allThoughtsNavigationLinkColor);
+}

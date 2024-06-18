@@ -1,0 +1,76 @@
+body {
+    --liveCircleColorOn: rgba(231, 76, 60, 0.2);
+    --liveCircleColorOff: rgba(231, 76, 60, 0);
+}
+
+body.dark {
+    --liveCircleColor: rgba(255, 167, 196, 0.5);
+    --liveCircleColorOff: rgba(255, 167, 196, 0);
+}
+
+.lab-header {
+    background-size: cover;
+    background-position: center center;
+    height: 40rem;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    z-index: 1;
+}
+
+.lab-header canvas {
+    height: 100%;
+    width: 100%;
+}
+
+.lab-header h1.title {
+    position: absolute;
+    pointer-events: none;
+    font-size: 4rem;
+    line-height: 1.2;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    top: 50%;
+    width: 100%;
+    -webkit-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0);
+}
+
+.lab-header .title .highlight {
+    color: var(--thoughtsPageTitleColor)
+}
+
+.lab-header .title .subscript {
+    font-size: 3rem;
+    position: relative;
+}
+
+.lab-header .title .after {
+    font-size: 3rem;
+}
+
+.live-circle {
+    background-color: var(--thoughtsPageTitleColor);
+    border-radius: 50%;
+    position: absolute;
+    right: -14px;
+    top: 14px;
+    width: 10px;
+    height: 10px;
+}
+  
+.pulse {
+    animation: live-pulse 2s infinite;
+}
+
+@keyframes live-pulse {
+    0% {
+        box-shadow: 0 0 0 0px var(--liveCircleColorOn);
+    }
+    100% {
+        box-shadow: 0 0 0 10px var(--liveCircleColorOff);
+    }
+}
+  
+

@@ -1,0 +1,148 @@
+html {
+    --codeCaptionColor: gray;
+    --codeBackgroundColor: #f6f8fa;
+    --codeCountColor: gray;
+    --codeHighlightColor: #c8c8ff21;
+    --codeHighlightBorderColor: #60a5fa;
+    --inlineCodeBorderColor: #c8c8ff21;
+}
+
+html.dark {
+    --codeCaptionColor: #8b949e;
+    --codeBackgroundColor: rgba(0, 0, 0, 0.267);
+    --inlineCodeBorderColor: gray;
+}
+
+pre[data-theme='light'], code[data-theme='light'], div[data-rehype-pretty-code-caption][data-theme='light'] {
+    display: grid;
+}
+
+pre[data-theme='dark'], code[data-theme='dark'], div[data-rehype-pretty-code-caption][data-theme='dark'] {
+    display: none;
+}
+
+html.dark pre[data-theme='light'], html.dark code[data-theme='light'], html.dark div[data-theme='light'][data-rehype-pretty-code-caption] {
+      display: none;
+}
+
+html.dark pre[data-theme='dark'], html.dark code[data-theme='dark'], html.dark div[data-theme='dark'][data-rehype-pretty-code-caption] {
+    display: grid;
+}
+
+pre[data-theme='light'] [data-highlighted-line] {
+    background: var(--codeHighlightColor);
+    border-left-color: var(--codeHighlightBorderColor);
+}
+
+pre[data-theme='dark'] [data-highlighted-line] {
+    background: var(--codeHighlightColor);
+    border-left-color: var(--codeHighlightBorderColor);
+}
+
+span[data-rehype-pretty-code-fragment] code[data-theme='light'] {
+    display: inline-block;
+    font-size: 90%;
+}
+
+html.dark span[data-rehype-pretty-code-fragment] code[data-theme='dark'] {
+    display: inline-block;
+    font-size: 90%;
+}
+
+html.dark span[data-rehype-pretty-code-fragment] code[data-theme='light'] {
+    display: none;
+}
+
+pre code {
+    counter-reset: line;
+}
+
+p > code, ul li > code {
+    background-color: var(--codeHighlightColor);
+    padding: 0.1em 0.25em;
+    border: 1px solid var(--inlineCodeBorderColor);
+    border-radius: 5px;
+    font-size: 90%;
+    word-wrap: break-word;
+}
+
+[data-line] {
+    border-left-width: 2px;
+    border-left-style: solid;
+    border-left-color: #0000;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+pre {
+    overflow-x: auto;
+
+    font-weight: 400;
+    font-size: .850em;
+    line-height: 1.71;
+
+    margin-top: 1.71em;
+    margin-bottom: 1.71em;
+
+    border-radius: 0.375rem;
+    
+    padding-top: 0.86em;
+    padding-bottom: 0.86em;
+}
+   
+pre[data-theme='light'] {
+    background-color: var(--codeBackgroundColor);
+}
+
+pre[data-theme='dark'] {
+    background-color: var(--codeBackgroundColor);
+}
+
+code > [data-line]::before {
+    counter-increment: line;
+    content: counter(line);
+
+    /* Other styling */
+    display: inline-block;
+    width: 1rem;
+    margin-right: 2rem;
+    text-align: right;
+    color: var(--codeCountColor);
+}
+   
+code[data-line-numbers-max-digits='2'] > [data-line]::before {
+    width: 2rem;
+}
+   
+code[data-line-numbers-max-digits='3'] > [data-line]::before {
+    width: 3rem;
+}
+
+.content div[data-rehype-pretty-code-caption] {
+    color: var(--codeCaptionColor);
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 1.7rem;
+}
+
+.content pre:has(+ div[data-rehype-pretty-code-caption]) {
+    margin-bottom: 0.86em;
+}
+
+@media (min-width: 1201px) {
+    .content pre {
+        margin-left: -32px;
+        margin-right: -32px;
+    }
+
+    aside.note .body pre {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media (max-width:768px) {
+    .content pre {
+        font-size: 0.7rem;
+    }
+}

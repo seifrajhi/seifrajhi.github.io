@@ -1,0 +1,58 @@
+---
+import { Image } from "astro:assets";
+
+import Date from "@components/Date.astro"
+import ThemeSwitcher from "@components/ThemeSwitcher";
+import TableOfContent from "./TableOfContent";
+import PostKeywords from '@components/blog/PostKeywords.astro';
+import ReadingTracker from '@components/reading/ReadingTracker';
+import { ContentTypes } from '@components/hooks/readRepository';
+
+import "@styles/content.css";
+import "@styles/code.css";
+
+const {id, title, pubDate, keywords, cover: {image, credits, aspectRatio}, timeToReadMin} = Astro.props;
+---
+<article class="blog-wrapper">
+    <header>
+      <figure class="cover">
+        <div class="cover-filter">
+          {image && 
+            <Image 
+              class="cover cover-image"
+              loading="lazy" 
+              src={image} 
+              alt={title} 
+              width={1400}
+              height={600}
+              decoding="async"
+            />
+          }
+        </div>
+        <figcaption
+          data-nosnippet=""
+          class="image-title"
+          set:html={credits}
+        />
+      </figure>
+      <h1>{title}</h1>
+      <div data-nosnippet="" class="blog-details">
+        <Date date={pubDate} />
+        <span> • </span>
+        <span class="blog-time2read">
+          {timeToReadMin}
+        </span>
+        <ThemeSwitcher client:load />
+      </div>
+      <PostKeywords keywords={keywords} />
+    </header>
+    <div class="blog-divider" />
+    <ReadingTracker id={id} contentType={ContentTypes.BLOG} client:load>
+      <div class="content-wrapper">
+        <TableOfContent client:load />
+        <div class="content blog-content">
+            <slot />
+        </div>
+      </div>
+    </ReadingTracker>
+</article>

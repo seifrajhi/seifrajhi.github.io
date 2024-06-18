@@ -1,0 +1,49 @@
+---
+import siteMetadata from "@data/siteMetadata"
+
+interface Props {
+    title: string;
+    path: string;
+    pubDate: Date;
+    articleSection: string;
+    image: string;
+    keywords: string[];
+    genres: string[];
+}
+
+const {title, path, pubDate, keywords, image, genres, articleSection} = Astro.props;
+
+const schemaJSONLD = {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    image: `${siteMetadata.siteUrl}${image}`,
+    headline: title,
+    dateCreated: pubDate,
+    // datePublished,
+    // dateModified: dateModified,
+    inLanguage: "en-US",
+    isFamilyFriendly: true,
+    isAccessibleForFree: true,
+    author: {
+      "@type": "Person",
+      name: "Saifeddine Rajhi",
+      url: siteMetadata.siteUrl,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Saifeddine Rajhi's Website",
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${siteMetadata.siteUrl}${path}`,
+    },
+    keywords: keywords,
+    genre: genres,
+    articleSection,
+    // articleBody: content,
+    // wordcount: wordCount,
+}
+
+const schemaDecoded = JSON.stringify(schemaJSONLD)
+---
+<script type="application/ld+json" set:html={schemaDecoded}></script>

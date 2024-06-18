@@ -1,0 +1,8 @@
+http://seifrajhi.github.io/ https://seifrajhi.github.io/ 301!
+http://seifrajhi.github.io/* https://seifrajhi.github.io/:splat 301!
+https://seifrajhi.github.io https://seifrajhi.github.io/ 301!
+https://seifrajhi.github.io/* https://seifrajhi.github.io/:splat 301!
+
+https://seifrajhi.github.io/lab/* https://seifrajhi.github.io/blog/:splat 301!
+https://seifrajhi.github.io/lab/ https://seifrajhi.github.io/blog/ 301!
+https://seifrajhi.github.io/sitemap/sitemap-index.xml https://seifrajhi.github.io/sitemap-index.xml 301!

@@ -1,0 +1,88 @@
+/**
+** Thought View Page
+**/
+
+body {
+    --thoughtQuoteColor: var(--red);
+}
+
+body.dark {
+    --thoughtQuoteColor: var(--pink);
+}
+
+.blogpost-view-page .blogpost-header {
+    margin: 1rem 0;
+}
+
+.blogpost-view-page .blog-header-wrapper .logo {
+    width: 90px;
+    height: 90px;
+}
+
+.blogpost-view-page .blog-header-wrapper .logo-img {
+    width: 5rem;
+}
+
+.blogpost-view-page .blog-header-wrapper .name {
+    font-size: 1.5rem;
+}
+
+.blogpost-view-page .blog-header-wrapper .blog-title {
+    font-size: 3rem;
+    padding-left: 1rem;
+}
+
+.thought-wrapper,
+.blogpost-view-page .thought-sidebar {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 43rem;
+}
+
+@media (max-width: 767px) {
+    .thought-wrapper {
+        display: block;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        width: auto;
+    }
+}
+
+.blogpost-view-page .thoughts-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 575px) {
+    .blogpost-view-page .thoughts-title {
+        font-size: 2rem;
+    }
+}
+
+.blogpost-view-page .thought-divider {
+    clear: both;
+}
+
+.blogpost-view-page .thought-content {
+    margin-top: 2rem;
+}
+
+.blogpost-view-page .thought-author-wrapper {
+    margin-bottom: 2rem;
+}
+
+.blogpost-view-page .thought-navigation-wrapper {
+    margin-bottom: 2rem;
+}
+
+.blogpost-view-page hr {
+    border: none;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.blogpost-view-page hr::before {
+    letter-spacing: 0.6em;
+    text-indent: 0.6em;
+    content: "***";
+}

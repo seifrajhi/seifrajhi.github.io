@@ -1,0 +1,31 @@
+---
+import BaseHead from '@components/BaseHead.astro';
+import Footer from '@components/Footer.astro';
+
+import PersonSnippet from '@components/home/PersonSnippet.astro';
+
+import "@styles/theme.css"
+import "@styles/general.css"
+import ConsoleBanner from '@components/ConsoleBanner';
+
+export interface Props {
+	title: string;
+	bodyClass: string;
+}
+
+const { title, bodyClass } = Astro.props
+---
+<!DOCTYPE html>
+<html lang="en" class={bodyClass}>
+  <head>
+    <BaseHead title={title} description={""} />
+  </head>
+  <body>
+    <main class="homepagev2">
+      <slot />
+      <Footer />
+    </main>
+    <PersonSnippet />
+    <ConsoleBanner client:only />
+  </body>
+</html>

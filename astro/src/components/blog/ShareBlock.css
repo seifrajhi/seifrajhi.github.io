@@ -1,0 +1,34 @@
+html {
+    --socialIconColor: var(--blackLigher);
+    --socialShareBorderHoverColor: var(--red);
+}
+
+html.dark {
+    --socialIconColor: var(--grey);
+    --socialShareBorderHoverColor: var(--pink);
+}
+
+.social-share-wrapper {
+    color: var(--socialIconColor);
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.social-share-wrapper h3 {
+    font-size: 1.5rem;
+}
+
+.social-share-wrapper .social-share-item {
+    margin-right: 0.8rem;
+    vertical-align: middle;
+}
+
+.social-share-wrapper .social-share-item:hover {
+    color: var(--socialShareBorderHoverColor) !important;
+}
+
+.social-share-wrapper .social-share-item svg {
+    height: 2.5rem;
+}

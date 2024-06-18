@@ -1,0 +1,33 @@
+---
+import BaseHead from "@components/BaseHead.astro";
+import CrumbSnippet from "@components/CrumbSnippet.astro";
+import Footer from "@components/Footer.astro";
+import CVListHeader from "@components/cv/CVListHeader.astro";
+
+import "@styles/theme.css"
+import "@styles/general.css"
+import "@styles/blog.css";
+import ConsoleBanner from "@components/ConsoleBanner";
+
+const { title, description, intro, keywords } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en" class="blogpost-list-page">
+<head>
+    <BaseHead 
+        title={title} 
+        description={description} 
+        keywords={keywords} 
+        ogType={`website`}
+        image={`/blog/roman-glushko-in-the-process-of-work.jpg`}
+    />
+</head>
+<body>
+    <CVListHeader />
+    <slot />
+    <div class="clearfix" />
+    <Footer />
+    <CrumbSnippet crumbs={[{ "/cv/": "Saifeddine Rajhi's Resumes" }]} />
+    <ConsoleBanner client:only />
+</body>
+</html>

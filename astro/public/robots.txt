@@ -1,0 +1,5 @@
+Host: https://seifrajhi.github.io
+User-agent: *
+Allow: /
+
+Sitemap: https://seifrajhi.github.io/sitemap-index.xml

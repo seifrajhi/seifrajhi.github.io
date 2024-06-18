@@ -1,0 +1,92 @@
+/** Theme variables **/
+
+body {
+    --thoughtTeaserHeaderLinkColor: var(--red);
+
+    --thoughtNewBadgeColor: var(--white);
+    --thoughtNewBadgeBgColor: var(--red);
+    --thoughtReadBadgeBgColor: var(--regentGray);
+}
+
+body.dark {
+    --thoughtTeaserHeaderLinkColor: var(--pink);
+
+    --thoughtNewBadgeColor: var(--midnight);
+    --thoughtNewBadgeBgColor: var(--pink);
+    --thoughtReadBadgeBgColor: var(--grey)
+}
+
+
+/** Thought Item Styles **/
+
+.blog-item .article-header {
+    display: block;
+    position: relative;
+}
+
+.blog-item .blog-details .unread-badge {
+    color: var(--thoughtNewBadgeColor);
+    font-weight: bold;
+    font-family: monospace;
+    padding: 5px;
+    background-color: var(--thoughtReadBadgeBgColor);
+    border-radius: 5px;
+}
+
+.blog-item .article-header .new-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: var(--thoughtNewBadgeBgColor);
+    padding: 5px;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    color: var(--thoughtNewBadgeColor);
+    font-weight: bold;
+    text-align: center;
+    font-size: 1rem;
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center
+}
+
+.blog-item {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.blog-item h2 {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.blog-item h2 a {
+    color: var(--thoughtTeaserHeaderLinkColor);
+}
+
+.blog-item p.blog-digest {
+    font-size: 1rem;
+    line-height: 1.6rem;
+    margin-bottom: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.blog-item .blog-details {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.blog-created-at {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.blog-item ul.blog-tags {
+    font-size: 0.8rem;
+    justify-content: start;
+}

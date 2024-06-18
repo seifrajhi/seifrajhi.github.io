@@ -1,0 +1,71 @@
+html {
+    --headerTitleColor: var(--red);
+    --blogAvatarBorderColor: var(--grey);
+}
+
+html.dark {
+    --headerTitleColor: var(--pink);
+    --blogAvatarBorderColor: var(--grey);
+}
+
+.view-page-header-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.view-page-header-wrapper .logo-wrapper {
+    align-items: center;
+    display: flex;
+}
+
+.view-page-header-wrapper .avatar {
+    height: 90px;
+    width: 90px;
+}
+
+.view-page-header-wrapper .avatar .logo-img {
+    width: 5rem;
+}
+
+.view-page-header-wrapper .name {
+    font-size: 2rem;
+    padding-left: 0.5rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+}
+
+.view-page-header-wrapper .blog-title {
+    color: var(--headerTitleColor);
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+    font-weight: bold;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-left: 1.5rem;
+    text-align: center;
+}
+
+@media (max-width: 575px) {
+    .view-page-header-wrapper .blog-title {
+        font-size: 3rem;
+        line-height: 3rem;
+        padding-left: 1rem;
+    }
+    
+    .view-page-header-wrapper .name {
+        font-size: 1.5rem;
+    }
+
+    .view-page-header-wrapper .logo {
+        width: 90px;
+        height: 90px;
+    }
+
+    .view-page-header-wrapper .avatar .logo-img {
+        width: 5rem;
+    }
+}
+
+.view-page-header-wrapper .blog-title a {
+    color: var(--headerTitleColor);
+}

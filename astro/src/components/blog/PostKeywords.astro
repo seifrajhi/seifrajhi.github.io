@@ -1,0 +1,41 @@
+---
+const {keywords} = Astro.props;
+---
+
+<ul class="blog-tags">
+    {keywords.map((keyword: string) => (
+        <li>{keyword}</li>
+    ))}
+</ul>
+
+<style>
+html {
+    --keywordBorder: darkslategray;
+}
+
+html.dark {
+    --keywordBorder: var(--grey);
+}
+
+ul.blog-tags {
+    display: flex;
+    font-size: 0.9rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+ul.blog-tags li {
+    border: 1px solid var(--keywordBorder);
+    border-radius: 4px;
+    color: var(--keywordBorder);
+    padding: 5px 10px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    white-space: nowrap;
+    padding: 0.2em 0.5em;
+    font-size: 90%;
+}
+</style>

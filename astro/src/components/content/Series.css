@@ -1,0 +1,84 @@
+html {
+    --seriesBorderColor: #efefef;
+    --counterBgColor: #efefef;
+    --counterActiveBgColor: var(--red);
+    --counterColor: var(--black);
+    --counterActiveColor: var(--white);
+}
+
+html.dark {
+    --counterActiveBgColor: var(--pink);
+    --counterColor: var(--midnight);
+    --counterActiveColor: var(--midnight);
+}
+
+.series {
+    border: 1px solid var(--seriesBorderColor);
+    border-radius: 0.375rem;
+    margin: 1rem 1rem;
+    font-size: 90%;
+    counter-reset: series;
+}
+
+.series > header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--seriesBorderColor);
+    padding: 0.75rem 1rem;
+    margin: 0;
+}
+
+
+.series > .items a {
+    text-decoration: none;
+}
+
+.series > .items a .item-wrapper {
+    display: flex;
+    padding: 0.75rem 1rem;
+}
+
+.series > .items a .item-wrapper::before {
+    color: var(--counterColor);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--counterBgColor);
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+    margin-right: 1rem;
+    counter-increment: series;
+    content: counter(series);
+}
+
+.series > .items a:hover .item-wrapper::before {
+    color: var(--counterColor);
+}
+
+.series > .items a div {
+    border-bottom: 1px solid var(--seriesBorderColor);
+}
+
+.series > .items a:last-child div {
+    border-bottom: none;
+}
+
+.series > .items a.active {
+    font-weight: 700;
+}
+
+
+.series > .items a.active .item-wrapper::before {
+    color: var(--counterActiveColor);
+    background-color: var(--counterActiveBgColor);
+}
+
+
+@media (min-width: 1200px) {
+    .series {
+        margin-left: -32px;
+        margin-right: -32px;
+    }
+}

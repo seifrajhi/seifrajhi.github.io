@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/roman_hlushko
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://seifrajhi.github.io
+  * I am roman_hlushko (https://keybase.io/roman_hlushko) on keybase.
+  * I have a public key ASBcxKOVsMVXbXS77Zpa1eCY0wk9aevojXoGVI5KQEhd9wo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01205cc4a395b0c5576d74bbed9a5ad5e098d3093d69ebe88d7a06548e4a40485df70a",
+      "host": "keybase.io",
+      "kid": "01205cc4a395b0c5576d74bbed9a5ad5e098d3093d69ebe88d7a06548e4a40485df70a",
+      "uid": "bd1d25fa519f43e7cb0f48ab4b904619",
+      "username": "roman_hlushko"
+    },
+    "merkle_root": {
+      "ctime": 1655021958,
+      "hash": "327ad7455ed8ae5ebab315e9012bc46be1dd0421760117c4c53b9e830b1a525f2964a81a3c531645b22f6f3a4418500156d4b39b964b69e30ad746cf16fe04f4",
+      "hash_meta": "f37391799c2040a31b3e00d71b9c3068e87e444d6d73066ed3296918f75013bf",
+      "seqno": 22658990
+    },
+    "service": {
+      "entropy": "MmMx7KqxLPePYfiThFr3FNHC",
+      "hostname": "seifrajhi.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "6.0.1"
+  },
+  "ctime": 1655021974,
+  "expire_in": 504576000,
+  "prev": "ac2887dac50d0366b467273e04ecf7b5526512b8a832206cdb8588cf69d7cf83",
+  "seqno": 11,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgXMSjlbDFV210u+2aWtXgmNMJPWnr6I16BlSOSkBIXfcKp3BheWxvYWTESpcCC8QgrCiH2sUNA2a0Zyc+BOz3tVJlErioMiBs24WIz2nXz4PEIENgmHjXHF/kMkNf2obq4qnmUlzItSDAert4gEzbTKmiAgHCo3NpZ8RApFC/ZvHHaSf+VpQKKo+9qTf+P4lWO/M5dc8Zgn9pau7enJVSRrzblFlDdzEYZ82dM2XvtONZ2gsLMUAUuUw8A6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIOP4vzX//cQnv5ym3qb76/1EK5sGh2W9nCmKiHgI3m8Jo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/roman_hlushko
+
+==================================================================

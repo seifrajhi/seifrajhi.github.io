@@ -1,0 +1,19 @@
+---
+export interface Props {
+    hobbies: string[];
+}
+
+const {hobbies} = Astro.props;
+---
+<section item-prop item-type="http://schema.org/ItemList">
+    <dl>
+        <dt>
+            <h2>
+                <span item-prop="name">Hobby & Interests</span>
+            </h2>
+        </dt>
+        <ul>
+            {hobbies && hobbies.map(hobby => <li item-prop="itemListElement" set:html={hobby}></li>)}
+        </ul>
+    </dl>
+</section>

@@ -1,0 +1,56 @@
+/** Theme variables **/
+
+body {
+    --thoughtTeaserHeaderLinkColor: var(--red);
+    --experimentIconColor: var(--blackLigher);
+}
+
+body.dark {
+    --thoughtTeaserHeaderLinkColor: var(--pink);
+    --experimentIconColor: var(--grey);
+}
+
+.experiment-item {
+    list-style: none;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.experiment-item h2 {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    width: 100%;
+}
+
+.experiment-item h2 a {
+    color: var(--thoughtTeaserHeaderLinkColor);
+    width: 100%;
+}
+
+.experiment-item p.blog-digest {
+    font-size: 1rem;
+    line-height: 1.6rem;
+    margin-bottom: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.experiment-item .blog-details {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.experiment-created-at {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.experiment-item .experiment-preview {
+    text-align: center;
+}
+
+.experiment-item .experiment-preview svg {
+    color: var(--experimentIconColor);
+    padding: 1rem;
+}

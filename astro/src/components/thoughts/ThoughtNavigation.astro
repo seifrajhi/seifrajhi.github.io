@@ -1,0 +1,33 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { getThoughtUrl } from 'src/content/routing';
+
+import "./ThoughtNavigation.css"
+
+export interface Props {
+	prev?: CollectionEntry<'thoughts'>;
+	next?: CollectionEntry<'thoughts'>;
+}
+
+const {prev, next} = Astro.props;
+---
+<div class="thought-navigation-wrapper">
+    <h3>Read Other Thoughts</h3>
+    <nav class="thought-navigation">
+        <div class="nav-links">
+            {next && (
+                <a rel="next" class="next-thought" href={getThoughtUrl(next.slug)}>
+                {next.data.title} →
+                </a>
+            )}
+            {prev && (
+                <a rel="prev" class="prev-thought" href={getThoughtUrl(prev.slug)}>
+                ← {prev.data.title}
+                </a>
+            )}
+            <a class="all-thoughts" href="/thoughts/">
+                All Thoughts
+            </a>
+        </div>
+    </nav>
+</div>

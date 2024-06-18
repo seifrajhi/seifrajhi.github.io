@@ -1,0 +1,46 @@
+.cv-header-wrapper {
+    text-align: center;
+}
+
+.cv-header-wrapper .avatar {
+    margin: 0 auto;
+    width: 8.6rem;
+    height: 8.6rem;
+}
+
+.cv-header-wrapper .avatar .logo-img {
+    width: 8rem;
+    height: 8rem;
+}
+
+.cv-header-wrapper .cv-name {
+    font-size: 3rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+}
+
+.cv-header-wrapper .cv-position {
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+@media print {
+    .cv-header-wrapper .avatar {
+        width: 4.2rem;
+        height: 4.2rem;
+    }
+
+    .cv-header-wrapper .avatar .logo-img {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .cv-header-wrapper .cv-name {
+        font-size: 1.5rem;
+    }
+
+    .cv-header-wrapper .cv-position {
+        font-size: 0.7rem;
+    }
+}

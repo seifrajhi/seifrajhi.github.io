@@ -1,0 +1,136 @@
+/** Remark Styling **/
+
+body {
+    --backquoteBorderColor: var(--red);
+    --imageTitleColor: gray;
+    --inlineCodeColor: var(--black);
+    --inlineCodeBgColor: var(--grey);
+}
+
+body.dark {
+    --backquoteBorderColor: var(--pink);
+    --imageTitleColor: #8b949e;
+    --inlineCodeColor: var(--white);
+    --inlineCodeBgColor: var(--regentGray);
+}
+
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+    font-weight: 500;
+    letter-spacing: 0;
+    margin-top: 1.95em;
+    margin-bottom: -0.3em;
+}
+
+.content h2:first-of-type {
+    margin-top: 0;
+}
+
+.content,
+.content p {
+    font-size: 1.4rem;
+    letter-spacing: -0.003em;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+    margin-top: 0.5rem;
+    text-align: justify;
+}
+
+.content p:has(img) {
+    margin-bottom: 0;
+}
+
+.content img {
+    width: 100%;
+    height: 100%;
+}
+
+.content img[src$=".svg"] {
+    max-height: 400px;
+}
+
+.content p {
+    margin-top: 2rem;
+}
+
+.content p::first-letter {
+    padding-left: 1.5rem;
+}
+
+.content ul {
+    padding: 0;
+}
+
+.content ul ol {
+    padding: 0;
+    margin: 0;
+}
+
+.content a {
+    text-decoration: underline;
+}
+
+.content ul li,
+.content ol li {
+    margin-left: 30px;
+    margin-top: 0.80em;
+}
+
+.content blockquote {
+    box-shadow: var(--backquoteBorderColor) 3px 0px 0px 0px inset;
+    font-size: 1.3rem;
+    font-style: italic;
+    line-height: 1.7;
+    margin-left: -20px;
+    padding-left: 20px;
+}
+
+@media (max-width: 1200px) {
+    .content h2 .anchor {
+        display: none
+    }
+}
+
+@media (max-width: 575px) {
+    .content blockquote {
+        margin: 0.5rem;
+    }
+}
+
+.content .image-title {
+    color: var(--imageTitleColor);
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.content .image-title a{
+    color: var(--imageTitleColor);
+    font-size: 1.1rem;
+}
+
+.content .gatsby-highlight {
+    font-size: 1rem;
+}
+
+.content a.anchor{
+    transform: translateX(-100%) translateY(-5%);
+}
+
+.content a.anchor .anchor-icon {
+    fill: currentColor;
+}
+
+.content code.language-text {
+    /** style inline code snippets **/
+    padding: .15em .2em .05em;
+    white-space: normal;
+    background: var(--inlineCodeBgColor);
+    border-radius: .3em;
+    line-height: inherit;
+    color: var(--inlineCodeColor);
+    text-shadow: none;
+    opacity: 0.9;
+}

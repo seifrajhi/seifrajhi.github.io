@@ -1,0 +1,36 @@
+.hero-header {
+    background-size: cover;
+    background-position: center center;
+    height: 40rem;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    z-index: 1;
+}
+
+.hero-header canvas {
+    height: 100%;
+    width: 100%;
+}
+
+.hero-header h1.title {
+    position: absolute;
+    pointer-events: none;
+    font-size: 4rem;
+    line-height: 1.2;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    top: 50%;
+    width: 100%;
+    -webkit-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0);
+}
+
+.hero-header .title .highlight {
+    color: var(--thoughtsPageTitleColor)
+}
+
+.hero-header .title .subscript {
+    font-size: 3rem;
+}

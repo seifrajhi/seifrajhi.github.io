@@ -1,0 +1,104 @@
+body {
+    --footerIconColor: var(--blackLigher);
+    --footerBgColor: var(--grey);
+    --copyrightColor: var(--midnightDarker);
+}
+
+body.dark {
+    --footerIconColor: var(--white);
+    --footerBgColor: var(--midnightDarker);
+    --copyrightColor: var(--grey);
+}
+
+
+/**
+** Sticky footer - https://css-tricks.com/couple-takes-sticky-footer/#:~:text=The%20purpose%20of%20a%20sticky,bottom%20of%20the%20browser%20window.
+**/
+
+footer {
+    background-color: var(--footerBgColor);
+    color: var(--footerIconColor);
+}
+
+footer a {
+    color: var(--footerIconColor);
+}
+
+footer .footer-wrapper {
+    padding: 4rem 1rem;
+}
+
+footer .footer-wrapper .copyright {
+    color: var(--copyrightColor);
+    text-align: center;
+}
+
+footer .footer-wrapper .copyright a {
+    color: var(--copyrightColor);
+    font-weight: bold;
+}
+
+footer .footer-wrapper .copyright a:hover {
+    color: var(--footerIconColor);
+}
+
+.footer-separator {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-separator .separator {
+    background-color: white;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+footer .social-list .social-item {
+    margin: 0.5rem;
+}
+
+.copyright {
+    font-size: 1.1rem;
+    margin: 2rem auto 0;
+}
+
+footer .pgp {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+footer .pgp a {
+    color: #777;
+    font-family: monospace;
+    font-size: 16px;
+}
+
+.dark footer .pgp a:hover {
+    color: #fff;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff,
+                 0 0 20px #fff,
+                 0 0 30px #e60073,
+                 0 0 40px #e60073,
+                 0 0 50px #e60073,
+                 0 0 60px #e60073,
+                 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff,
+                 0 0 30px #ff4da6,
+                 0 0 40px #ff4da6,
+                 0 0 50px #ff4da6,
+                 0 0 60px #ff4da6,
+                 0 0 70px #ff4da6,
+                 0 0 80px #ff4da6;
+  }
+}
