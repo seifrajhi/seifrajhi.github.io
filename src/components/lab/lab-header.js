@@ -13,7 +13,7 @@ const LabHeader = () => {
       </ThemeToggler>
       <h1 className="title">
         <span className="highlight">Lab</span> <br />
-        Machine Learning Experiments <br />
+        Platform engineer Experiments <br />
         <span className="subscript">
           Live <div className="live-circle pulse" />
         </span>

@@ -25,10 +25,10 @@ class BlogListPage extends Component {
           title="Blog"
           pagePath="/blog/"
           className="blog-list-page"
-          description="Technical blog about machine learning, data science, math and software engineering"
+          description="Technical blog about Platform engineer, data science, math and software engineering"
           keywords={[
             "technical blog",
-            "machine learning blog",
+            "Platform engineer blog",
             "math",
             "engineering",
             "Cloud engineering",
@@ -48,7 +48,7 @@ class BlogListPage extends Component {
               <MainNavigation space={"blog"} />
             </div>
             <div className="blog-intro">
-              Technical notes about machine learning, data science, math and
+              Technical notes about Platform engineer, data science, math and
               software engineering. Recording what I learn everyday.
             </div>
             <div className="misc">

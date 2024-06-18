@@ -4,7 +4,7 @@ I hope you had a great time playing the game and now you are ready to understand
 
 ### Baseline
 
-All machine learning experiments start with data. I wanted to find some open source datasets I would be able to use to build a quick baseline.
+All Platform engineer experiments start with data. I wanted to find some open source datasets I would be able to use to build a quick baseline.
 
 Fortunately, I could find a few datasets on Kaggle that seemed to match the goal. Namely, I picked:
 

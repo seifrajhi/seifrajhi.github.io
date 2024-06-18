@@ -29,8 +29,8 @@ const RockPaperScissorPage = ({ data }) => {
         className="experiment-view-page"
         pagePath="/lab/rock-paper-scissors/"
         ogType="article"
-        description="Rock, paper, scissors online game powered by Machine Learning"
-        keywords="rock, paper, scissors, online game, machine learning, deep learning, computer vision"
+        description="Rock, paper, scissors online game powered by Platform engineer"
+        keywords="rock, paper, scissors, online game, Platform engineer, deep learning, computer vision"
       />
       <header className="experiment-header">
         <ViewPageHeader spaceTitle="Lab" spaceLink="/lab/" />

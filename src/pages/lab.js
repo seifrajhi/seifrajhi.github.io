@@ -17,10 +17,10 @@ class LabListPage extends Component {
           title="Lab"
           pagePath="/lab/"
           className="lab-list-page"
-          description="Machine Learning Experiments Live"
+          description="Platform engineer Experiments Live"
           keywords={[
             "artificial intelligent",
-            "machine learning",
+            "Platform engineer",
             "deep networks",
             "neural networks",
             "AI demo",

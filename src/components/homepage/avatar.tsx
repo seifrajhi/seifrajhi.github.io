@@ -21,7 +21,7 @@ const Avatar = (): JSX.Element => {
     <GatsbyImage
       className="logo-img"
       image={gatsbyImageData}
-      alt={`Saifeddine Rajhi - Machine Learning and Software Engineer, Life Explorer`}
+      alt={`Saifeddine Rajhi - Platform engineer and Software Engineer, Life Explorer`}
     />
   )
 }

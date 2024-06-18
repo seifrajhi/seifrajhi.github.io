@@ -110,7 +110,7 @@ const IndexPage = (): JSX.Element => {
   return (
     <Layout>
       <Seo
-        title="Saifeddine Rajhi - Machine Learning and Software Engineer, Life Explorer"
+        title="Saifeddine Rajhi - Platform engineer and Software Engineer, Life Explorer"
         isUniqueTitle={true}
         className="home-page-v2"
         pagePath="/"

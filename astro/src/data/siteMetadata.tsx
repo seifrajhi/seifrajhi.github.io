@@ -6,7 +6,7 @@ const siteMetadata = {
       "Saif Rajhi",
       "Seifeddine Rajhi",
       "Saif",
-      "machine learning",
+      "Platform engineer",
       "deep learning",
       "magento",
       "open source",

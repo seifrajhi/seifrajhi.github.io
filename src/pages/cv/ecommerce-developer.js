@@ -11,7 +11,7 @@ import { trackCustomEvent } from "gatsby-plugin-google-analytics"
 
 import "./cv.css"
 
-const MachineLearningEngineerCV = () => {
+const PlatformEngineerCV = () => {
   return (
     <Layout>
       <Seo
@@ -145,7 +145,7 @@ const MachineLearningEngineerCV = () => {
                   itemScope
                   itemType="http://schema.org/EducationalOrganization"
                 >
-                  <strong>Machine Learning Nanodegree</strong>, 2020-Present (8
+                  <strong>Platform engineer Nanodegree</strong>, 2020-Present (8
                   months)
                 </li>
                 <li
@@ -807,11 +807,11 @@ const MachineLearningEngineerCV = () => {
       </main>
       <BreadcrumbsSnippet
         crumbs={[
-          { "/cv/software-engineer/": "Machine Learning Engineer CV" },
+          { "/cv/software-engineer/": "Platform Engineer CV" },
         ]}
       />
     </Layout>
   )
 }
 
-export default MachineLearningEngineerCV
+export default PlatformEngineerCV

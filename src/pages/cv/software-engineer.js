@@ -12,22 +12,22 @@ import { Link } from "gatsby"
 
 import "./cv.css"
 
-const MachineLearningEngineerCV = () => {
+const PlatformEngineerCV = () => {
   return (
     <Layout>
       <Seo
         isUniqueTitle={true}
-        title={"Saifeddine Rajhi's Machine Learning Engineer CV"}
+        title={"Saifeddine Rajhi's Platform Engineer CV"}
         className="cv-view-page"
         pagePath="/cv/software-engineer"
         ogType="website"
-        description="Saifeddine Rajhi's Machine Learning Engineer CV"
+        description="Saifeddine Rajhi's Platform Engineer CV"
         keywords={[
-          "machine learning engineer",
-          "magento machine learning",
+          "Platform Engineer",
+          "magento Platform engineer",
           "cv",
-          "machine learning cv",
-          "machine learning resume",
+          "Platform engineer cv",
+          "Platform engineer resume",
         ]}
       />
       <main
@@ -41,14 +41,14 @@ const MachineLearningEngineerCV = () => {
             trackCustomEvent({
               category: "cv",
               action: "download",
-              label: "machine-learning",
+              label: "platform-engineering",
             })
 
             typeof window !== "undefined" &&
               typeof window.gtag !== "undefined" &&
               window.gtag("event", "download", {
                 event_category: "cv",
-                event_label: "machine-learning",
+                event_label: "platform-engineering",
               })
 
             window.print()
@@ -133,7 +133,7 @@ const MachineLearningEngineerCV = () => {
                   itemScope
                   itemType="http://schema.org/EducationalOrganization"
                 >
-                  <strong>Machine Learning Nanodegree</strong>, 2020-2021
+                  <strong>Platform engineer Nanodegree</strong>, 2020-2021
                 </li>
                 <li
                   itemScope
@@ -434,7 +434,7 @@ const MachineLearningEngineerCV = () => {
                 <a
                   target="_blank"
                   rel="noopener"
-                  href="https://github.com/seifrajhi?tab=repositories&q=machine-learning"
+                  href="https://github.com/seifrajhi?tab=repositories&q=platform-engineering"
                 >
                   GitHub
                 </a>{" "}
@@ -544,7 +544,7 @@ const MachineLearningEngineerCV = () => {
                     <li>
                       <strong>Experience</strong>: Problem Solving, Python,
                       Software Architecture, NLP, Huggingface Transformers,
-                      Machine Learning, Kubernetes, Gitlab CI/CD
+                      Platform engineer, Kubernetes, Gitlab CI/CD
                     </li>
                   </ul>
                 </li>
@@ -700,4 +700,4 @@ const MachineLearningEngineerCV = () => {
   )
 }
 
-export default MachineLearningEngineerCV
+export default PlatformEngineerCV

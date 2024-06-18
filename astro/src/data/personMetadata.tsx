@@ -3,7 +3,7 @@ const personMetadata = {
     alternateName: `Saifeddine Rajhi`,
     gender: `Male`,
     image: "/me/saifeddine-rajhi.jpeg",
-    jobTitle: `Machine Learning Engineer, Magento eCommerce Software Developer`,
+    jobTitle: `Platform Engineer, Magento eCommerce Software Developer`,
     worksFor: {
         name: "DataRobot, Inc.",
         sameAs: "https://www.datarobot.com/",

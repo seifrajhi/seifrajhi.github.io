@@ -95,7 +95,7 @@ export default function Template({
         cover={gatsbyImageData}
         articleSection={"Technical Blog"}
         genre={[
-          "machine learning",
+          "Platform engineer",
           "software engineering",
           "science",
           "deep learning",
