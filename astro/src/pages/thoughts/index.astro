@@ -1,4 +1,4 @@
----
+--- 
 import { getThoughts } from 'src/content/collections';
 
 import ThoughtsLayout from '@layouts/ThoughtsLayout.astro';
@@ -7,7 +7,7 @@ import ThoughtTeaser from '@components/thoughts/ThoughtTeaser.astro';
 import '@styles/thoughts.css';
 
 const thoughts = await getThoughts()
----
+--- 
 <ThoughtsLayout 
   title={"Thoughts"} 
   description={"Thoughts and experience that will help you to go through your life in the very best way"} 
@@ -32,4 +32,3 @@ const thoughts = await getThoughts()
     ))}
   </main>
 </ThoughtsLayout>
-            
