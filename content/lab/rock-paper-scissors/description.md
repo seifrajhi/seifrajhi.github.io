@@ -92,7 +92,7 @@ I ended up with the model that was trained for 50 epochs with:
 
 ### Deployment
 
-I did not want to buy any servers or cloud instances to run my tiny little pet project. That was a challenging requirement that left me with few options. The most solid one was to use Tensorflow.js.
+I did not want to buy any servers or Cloud instances to run my tiny little pet project. That was a challenging requirement that left me with few options. The most solid one was to use Tensorflow.js.
 
 Tensorflow.js is a JavaScript frontend library that can load Tensorflow models right into the browser and use them to perform predictions.
 

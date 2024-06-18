@@ -24,7 +24,7 @@ const titles: string[] = shuffleArray([
   "DevOps Enginerr 🛠",
   "Python Enthusiast 🐹",
   "Container Nerd 🧠",
-  "CLoud Engineer 🔬",
+  "Cloud Engineer 🔬",
   "Passive Traveler 🏕",
   "Open Source Contributor 👨‍👩‍👧‍👦",
   "3x AWS Certified 🏅",

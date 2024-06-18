@@ -8,7 +8,7 @@ const config: GatsbyConfig = {
       "Saifeddine Rajhi",
       "Saif Rajhi",
       "Saifeddine Rajhi",
-      "Roma Hlushko",
+      "Saif",
       "Platform engineering",
       "open source",
       "containers nerd",

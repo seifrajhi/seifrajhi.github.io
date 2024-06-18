@@ -31,9 +31,9 @@ class BlogListPage extends Component {
             "machine learning blog",
             "math",
             "engineering",
-            "data science",
+            "Cloud engineering",
             "Saifeddine Rajhi blog",
-            "roma glushko blog",
+            "Saif Rajhi blog",
           ]}
           meta={[]}
         />

@@ -13,7 +13,7 @@ const siteMetadata = {
       "web development",
     ],
     author: `Saifeddine Rajhi`,
-    twitterAuthor: `@roma_glushko`,
+    twitterAuthor: `@RajhiSaifeddine`,
     siteUrl: `https://seifrajhi.github.io`,
 };
 
