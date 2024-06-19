@@ -807,7 +807,7 @@ const PlatformEngineerCV = () => {
       </main>
       <BreadcrumbsSnippet
         crumbs={[
-          { "/cv/software-engineer/": "Platform Engineer CV" },
+          { "/cv/platform-engineer/": "Platform Engineer CV" },
         ]}
       />
     </Layout>
