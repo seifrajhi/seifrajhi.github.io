@@ -132,7 +132,7 @@ const PlatformEngineerCV = () => {
                   itemScope
                   itemType="http://schema.org/EducationalOrganization"
                 >
-                  <strong>Platform engineer Nanodegree</strong>, 2020-2021
+                  <strong>Network and distributed systems engineer</strong>, 2015-2018
                 </li>
                 <li
                   itemScope
