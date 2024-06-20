@@ -76,16 +76,16 @@ const PlatformEngineerCV = () => {
                 </dt>
                 <ul>
                   <li itemProp="itemListElement">
-                    Aspiring <strong>problem solver</strong> & ML engineer
+                    Aspiring <strong>problem solver</strong> & Platform engineer
                   </li>
                   <li itemProp="itemListElement">
-                    <strong>5+ years</strong> of experience in{" "}
-                    <strong>software engineering</strong> and eCommerce
-                    development
+                    <strong>6+ years</strong> of experience in{" "}
+                    <strong>DevOps</strong> and Cloud
+                    engineering
                   </li>
                   <li itemProp="itemListElement">
                     <strong>3+ years</strong> of experience in{" "}
-                    <strong>technical management</strong>
+                    <strong>SRE and cloud native technologies</strong>
                   </li>
                   <li itemProp="itemListElement">
                     Expertise in a broad variety of technical and business
@@ -107,19 +107,18 @@ const PlatformEngineerCV = () => {
                 </dt>
                 <ul>
                   <li itemProp="itemListElement">
-                    Experience: tabular data processing, image processing,
-                    classification, regression, time series forecasting, image
-                    object detection, data analysis
+                    Experience: Infrastructure as code, container technologies, 
+                    automation, GitOps, AWS cloud, CI/CD pipelines
+                    platform & site reliability engineering
                   </li>
                   <li itemProp="itemListElement">
-                    Languages: <strong>Python</strong>, Golang, PHP, WebDev
-                    Stack (JS & HTML5 & CSS3)
+                    Languages: <strong>Python</strong>, Golang, Shell
                   </li>
                   <li itemProp="itemListElement">
-                    ML/DL Frameworks: PyTorch, Keras, Scikit-Learn
+                    IAC tools: Terraform, cloudformation, crossplane
                   </li>
                   <li itemProp="itemListElement">
-                    Visualization: Seaborn, Plotly
+                    containerization: Docker, Kubernetes, cri-o.
                   </li>
                 </ul>
               </dl>
