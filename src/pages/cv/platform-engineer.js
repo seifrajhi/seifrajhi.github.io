@@ -62,7 +62,7 @@ const PlatformEngineerCV = () => {
             <ThemeSwitcher />
           </div>
           <MainNavigation space={"cv"} />
-          <CvHeader position={`ML/DL Engineer CV`} />
+          <CvHeader position={`Senior Platform/SRE Engineer`} />
           <SocialLinks showPatreon={false} />
         </header>
         <div className="cv-content">
@@ -147,306 +147,6 @@ const PlatformEngineerCV = () => {
             </section>
           </div>
           <div className="cv-content-column main-column">
-            <section className="projects">
-              <h2 className={`notop-margin`}>
-                <span>Projects</span>
-              </h2>
-              <ul>
-                <li className="project">
-                  <h3>Wireframe Scanner</h3>
-                  <div className="project-description">
-                    <a href="https://www.commerceframe.com/" target="blank">
-                      CommerceFrame
-                    </a>
-                    , my side project about swift eCommerce wireframing, needs a
-                    functionality to import wireframes that were drawn on a
-                    piece of paper or a whiteboard. The project includes problem
-                    framing, collecting and labeling dataset.
-                  </div>
-                  <ul className="project-details">
-                    <li>
-                      <strong>Experience</strong>: Problem Framing, Data
-                      Collection, Data Labeling, Image Data, Python, PyTorch,
-                      Object Detection
-                    </li>
-                  </ul>
-                </li>
-                <li className="project">
-                  <h3>Rock, Paper, Scissors Game</h3>
-                  <div className="project-description">
-                    Trained a model to recognize hand forms of rock, paper,
-                    scissors and incorporate it into a game. Collected hundreds
-                    of images in order to improve the model accuracy. <br />
-                    <br />
-                    Ended up with a model that is <strong>
-                      90% accurate
-                    </strong>{" "}
-                    and recognizes common ways to shape RPS forms. The model was{" "}
-                    <strong>deployed as a serverless</strong> application using
-                    Tensorflow.js.
-                  </div>
-                  <ul className="project-details">
-                    <li>
-                      <strong>Experience</strong>: Problem Framing, Data
-                      Collection, Image Data, Python, Tensorflow, Tensorflow.js
-                    </li>
-                    <li>
-                      Links:{" "}
-                      <a href="/lab/rock-paper-scissors/" target="blank">
-                        Live Demo
-                      </a>{" "}
-                      •{" "}
-                      <a
-                        href="https://github.com/seifrajhi/rock-paper-scissors"
-                        target="blank"
-                      >
-                        GitHub
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <li className="project">
-                  <h3>[Kaggle] Shopee - Price Match Guarantee</h3>
-                  <div className="project-description">
-                    The Shopee marketplace has a price match guarantee program.
-                    They needed a model that could automate the process of
-                    finding marketplace lots with similar product offerings and
-                    prices, despite marketing strategy, product titles and
-                    images which merchants might use.
-                    <br />
-                    <br />
-                    Got to Top 45% of submitters on Kaggle. Got{" "}
-                    <a
-                      href="https://www.kaggle.com/c/shopee-product-matching/discussion/236496"
-                      target="blank"
-                    >
-                      gold and silver medals
-                    </a>{" "}
-                    for providing deep insights on the domain and problem goal.
-                  </div>
-                  <ul className="project-details">
-                    <li>
-                      <strong>Experience</strong>: eCommerce, Tabular & Image
-                      Data, Python, Keras, Data Processing, embeddings
-                    </li>
-                    <li>
-                      Links:{" "}
-                      <a
-                        href="https://www.kaggle.com/c/shopee-product-matching"
-                        target="blank"
-                      >
-                        Competition
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <li className="project">
-                  <h3>[Kaggle] HPA - Single Cell Classification</h3>
-                  <div className="project-description">
-                    Human Protein Atlas organization was interested in finding
-                    patterns of protein distribution inside of the single cell.
-                    This helped to understand role of different proteins in
-                    disease development, medical treatment impact, etc.
-                    <br />
-                    Based on 150Gb of 4-layers human cells images, it was needed
-                    to segment each cell and predict in which organelle of the
-                    cell the protein of interest were located. Provided dataset
-                    contained only inaccurate image-level labels (not directly
-                    connected to particular cells).
-                    <br />
-                    <br />
-                    Got to Top 15% of submitters on Kaggle.
-                  </div>
-                  <ul className="project-details">
-                    <li>
-                      <strong>Experience</strong>: Biology, Image Medical Data,
-                      Weakly-Supervised Learning, Data Analysis, Data
-                      Processing, Instance Segmentation, Multi-Label
-                      Classification
-                    </li>
-                    <li>
-                      Links:{" "}
-                      <a
-                        href="https://www.kaggle.com/c/hpa-single-cell-image-classification"
-                        target="blank"
-                      >
-                        Competition
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-              <div className="other-projects">
-                <input type="checkbox" id="other-projects-collapse" />
-                <label htmlFor="other-projects-collapse">
-                  <a>..click to show/hide other projects</a>
-                </label>
-                <ul className="other-projects-list">
-                  <li className="project">
-                    <h3>Mall Customer Segmentation</h3>
-                    <div className="project-description">
-                      Analyzed dataset of mall customers and segment them
-                      according to their spending patterns.
-                      <br />
-                      <br />
-                      Got{" "}
-                      <a
-                        href="https://www.kaggle.com/glushko/mall-customer-segmentation"
-                        target="blank"
-                      >
-                        a silver medal on Kaggle
-                      </a>{" "}
-                      for the analysis.
-                    </div>
-                    <ul className="project-details">
-                      <li>
-                        <strong>Experience</strong>: Clustering, Tabular Data,
-                        Data Analysis, Python, Scikit-Learn, Plotly, Seaborn
-                      </li>
-                      <li>
-                        Links:{" "}
-                        <a
-                          href="https://www.kaggle.com/glushko/mall-customer-segmentation"
-                          target="blank"
-                        >
-                          Modeling
-                        </a>{" "}
-                        •{" "}
-                        <a
-                          href="https://github.com/seifrajhi/kaggle-mall-customer-segmentation"
-                          target="blank"
-                        >
-                          Github
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="project">
-                    <h3>Digit Recognizer</h3>
-                    <div className="project-description">
-                      Built a classifier to predict handwritten digits.
-                      <br />
-                      <br />
-                      Got to Top 5% of submitters on Kaggle.
-                    </div>
-                    <ul className="project-details">
-                      <li>
-                        <strong>Experience</strong>: Classification, Image Data,
-                        Python, Keras, Scikit-Learn, CNN
-                      </li>
-                      <li>
-                        Links:{" "}
-                        <a
-                          href="https://www.kaggle.com/glushko/digit-recognizer-0-99657-3-approaches-tpu"
-                          target="blank"
-                        >
-                          Modeling
-                        </a>{" "}
-                        •{" "}
-                        <a
-                          href="https://github.com/seifrajhi/kaggle-digit-recognizer"
-                          target="blank"
-                        >
-                          Github
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="project">
-                    <h3>Wine Quality</h3>
-                    <div className="project-description">
-                      Automated wine quality analysis based on results of
-                      physicochemical tests.
-                    </div>
-                    <ul className="project-details">
-                      <li>
-                        <strong>Experience</strong>: Classification, Tabular
-                        Data, Data Analysis, Python, Scikit-Learn
-                      </li>
-                      <li>
-                        Links:{" "}
-                        <a
-                          href="https://www.kaggle.com/glushko/wine-quality-domain-driven-eda-part-i"
-                          target="blank"
-                        >
-                          Data Analysis
-                        </a>{" "}
-                        •{" "}
-                        <a
-                          href="https://www.kaggle.com/glushko/wine-quality-modelling-part-ii"
-                          target="blank"
-                        >
-                          Modeling
-                        </a>{" "}
-                        •{" "}
-                        <a
-                          href="https://github.com/seifrajhi/kaggle-wine-quality"
-                          target="blank"
-                        >
-                          Github
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="project">
-                    <h3>Ames House Pricing</h3>
-                    <div className="project-description">
-                      Modeled house prices based on Ames Housing Dataset.
-                      <br /> <br />
-                      Got to Top 4% of submitters on Kaggle.
-                    </div>
-                    <ul className="project-details">
-                      <li>
-                        <strong>Experience</strong>: Regression, Tabular Data,
-                        Real Estate, Data Analysis, Python, Scikit-Learn,
-                        XGBoost
-                      </li>
-                      <li>
-                        Links:{" "}
-                        <a
-                          href="https://www.kaggle.com/glushko/house-prices-domain-driven-eda-part-i"
-                          target="blank"
-                        >
-                          Data Analysis
-                        </a>{" "}
-                        •{" "}
-                        <a
-                          href="https://www.kaggle.com/glushko/house-prices-regression-modelling-part-ii"
-                          target="blank"
-                        >
-                          Modeling
-                        </a>{" "}
-                        •{" "}
-                        <a
-                          href="https://github.com/seifrajhi/kaggle-house-prices"
-                          target="blank"
-                        >
-                          Github
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-              <span className="other-projects-link">
-                Other projects can be found on{" "}
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://github.com/seifrajhi?tab=repositories&q=platform-engineering"
-                >
-                  GitHub
-                </a>{" "}
-                and{" "}
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://www.kaggle.com/glushko/code"
-                >
-                  Kaggle
-                </a>
-              </span>
-            </section>
             <section className="jobs">
               <h2>
                 <span>Work Experience</span>
@@ -458,54 +158,46 @@ const PlatformEngineerCV = () => {
                   className="job"
                 >
                   <strong itemProp="jobTitle">
-                    Software Engineer II (R&D, Notebooks)
+                    Senior Platform Engineer 
                   </strong>
-                  , <span itemProp="name">DataRobot</span>; Ukraine — Nov 2021 -
-                  Present (7 months)
+                  , <span itemProp="name">Justeat Takeaway.com</span>; The Netherlands — April 2023 -
+                  June 2024
                   <br />
                   <div className="job-description">
-                    Have been working on code execution system for data
-                    scientists based on the microservice multi-language (Python,
-                    Node.js, GoLang) architecture:
+                    Have been working on infrastructure optimization and application deployment in EKS (Elastic Kubernetes Service), ensuring high availability and performance:
                     <ul>
                       <li>
-                        Designed, implemented and owned the deployment of the
-                        whole system to AWS based on Kubernetes, Helm Charts and
-                        ArgoCD as a gitOps CD
+                        Monitored the maintenance and optimization of the site's infrastructure to ensure high availability and performance
                       </li>
                       <li>
-                        Designed a custom Kubernetes operator based on the
-                        RedHat OperatorFramework (GoLang)
+                        Implemented and provisioned infrastructure in EKS to support the deployment of applications
                       </li>
                       <li>
-                        Designed and implemented a websocket mictoservice based
-                        on Socket.IO and Node.JS
+                        Enforced standardized deployment practices, following a golden path approach for consistency and efficiency
                       </li>
                       <li>
-                        Implemented the central orchestration part of the
-                        project (a Python-based microservice)
+                        Conducted system upgrades and ensured seamless integration of new features to enhance platform reliability
                       </li>
                       <li>
-                        Worked and extended the Jenkins-based CI pipelines
+                        Actively participated in on-call rotations, responding promptly to incidents and ensuring system stability
                       </li>
                       <li>
-                        Took active part in architectural discussions and
-                        improvements, code reviews in a geographically
-                        distributed team (Ukraine and East US timezones) of more
-                        than 20 people. Effectively handled cross-team
-                        communication with other DataRobot teams to resolve
-                        roadblocks and meet project expectations and deadlines
+                        Collaborated with cross-functional teams to address technical challenges and enhance overall system efficiency
+                      </li>
+                      <li>
+                        Ensured our clients' workloads are optimized for cost, security, performance, reliability, and sustainability
+                      </li>
+                      <li>
+                        Installed and configured the integration and production environment on AWS
                       </li>
                     </ul>
                   </div>
                   <ul className="project-details">
                     <li>
-                      <strong>Experience</strong>: Python, Microservices, System
-                      Design, Kubernetes, AWS EKS stack, GitOps, Jenkins,
-                      Socket.IO
+                      <strong>Experience</strong>: AWS, GIT, Python, Terragrunt, Atlantis, Docker, Helm, Kubernetes, Terraform, DataDog
                     </li>
                   </ul>
-                </li>
+                </li>                
                 <li
                   itemScope
                   itemType="http://schema.org/Organization"
