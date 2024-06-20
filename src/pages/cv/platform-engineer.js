@@ -204,41 +204,43 @@ const PlatformEngineerCV = () => {
                   className="job"
                 >
                   <strong itemProp="jobTitle">
-                    Software Engineer (R&D, AI Apps)
+                    Senior Site Reliability Engineer 
                   </strong>
-                  , <span itemProp="name">DataRobot</span>; Ukraine — Aug-Nov
-                  2021 (4 months)
+                  , <span itemProp="name">Storm Reply</span>; Paris, France — August 2022 – March 2023
                   <br />
                   <div className="job-description">
+                    Have been working on migrating and optimizing clients' workloads to AWS and managing CI/CD pipelines:
                     <ul>
                       <li>
-                        Designed and implement an internal framework for
-                        building ML-enabled applications using DataRobot
-                        platform powered by modern Python stack (Flask,
-                        Pydantic, FastAPI).
+                        Migrated our clients’ workloads to the AWS cloud as an AWS partner
                       </li>
                       <li>
-                        Using the framework, I have took part in implementation
-                        a complaint review application for a US company from the
-                        healthcare sector. Took part in complaint analysis and
-                        NLP modeling pipeline using Huggingface transformers
-                        stack.
+                        Assisted clients with the process of portfolio analysis to estimate migration costs and create a TCO analysis
                       </li>
                       <li>
-                        Took part in configuring and troubleshooting
-                        Kubernetes-based environments deployed on Gitlab
-                        instances
+                        Managed the CI/CD pipelines using Jenkins and other tools
+                      </li>
+                      <li>
+                        Managed automation pipelines using Terraform, Jenkins, and CloudFormation
+                      </li>
+                      <li>
+                        Managed AWS accounts via Control Tower and Organizations
+                      </li>
+                      <li>
+                        Ensured our clients' workloads are optimized for cost, security, performance, reliability, and sustainability
+                      </li>
+                      <li>
+                        Installed and configured the integration and production environment on AWS
                       </li>
                     </ul>
                   </div>
                   <ul className="project-details">
                     <li>
-                      <strong>Experience</strong>: Problem Solving, Python,
-                      Software Architecture, NLP, Huggingface Transformers,
-                      Platform engineer, Kubernetes, Gitlab CI/CD
+                      <strong>Experience</strong>: Linux, AWS, GitOps, Python, Jenkins, Inspec, Docker, Oracle, Cassandra, Kubernetes, Terraform
                     </li>
                   </ul>
                 </li>
+
                 <li
                   itemScope
                   itemType="http://schema.org/Organization"
