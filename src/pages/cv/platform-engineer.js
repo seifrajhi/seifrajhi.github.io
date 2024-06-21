@@ -247,28 +247,49 @@ const PlatformEngineerCV = () => {
                   className="job"
                 >
                   <strong itemProp="jobTitle">
-                    Tech Lead / Software Developer
+                    DevOps Engineer
                   </strong>
-                  , <span itemProp="name">Atwix</span>; Ukraine — 2017-2020 (3.5
-                  years)
+                  , <span itemProp="name">Michelin</span>; Paris, France — June 2020 – August 2022
                   <br />
                   <div className="job-description">
-                    <Link
-                      target="_blank"
-                      rel="noopener"
-                      to="/cv/ecommerce-developer/"
-                      title="Go to Technical blog"
-                    >
-                      See what I have done there in great details
-                    </Link>
+                    Have been working on managing CI/CD pipelines and automating infrastructure on AWS:
+                    <ul>
+                      <li>
+                        Managed the CI/CD pipelines using Jenkins and other tools
+                      </li>
+                      <li>
+                        Installed and configured the acceptance environment
+                      </li>
+                      <li>
+                        Processed Prod / Pre-Prod incidents and monitored daily processing
+                      </li>
+                      <li>
+                        Automated the infrastructure using Terraform and CloudFormation
+                      </li>
+                      <li>
+                        Monitored, surveilled, and centralized logs via the ELK stack
+                      </li>
+                      <li>
+                        Administered the system, ensuring smooth operations
+                      </li>
+                      <li>
+                        Installed the production environment on AWS cloud using Terraform and CloudFormation
+                      </li>
+                      <li>
+                        Configured platforms and servers via Ansible and Chef
+                      </li>
+                      <li>
+                        Conducted real-time monitoring using Kibana and Grafana
+                      </li>
+                    </ul>
                   </div>
                   <ul className="project-details">
                     <li>
-                      <strong>Experience</strong>: Problem Solving, eCommerce,
-                      Marketing, Leadership, System Design, Problem Framing
+                      <strong>Experience</strong>: Linux, Grafana, GIT, Python, Jenkins, AWS, Docker, Oracle, Maven, Sonarqube, Terraform
                     </li>
                   </ul>
                 </li>
+
                 <li
                   itemScope
                   itemType="http://schema.org/Organization"
