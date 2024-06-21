@@ -334,6 +334,86 @@ const PlatformEngineerCV = () => {
                     </li>
                   </ul>
                 </li>
+                <li
+                  itemScope
+                  itemType="http://schema.org/Organization"
+                  className="job"
+                >
+                  <strong itemProp="jobTitle">
+                    Integration and System Engineer
+                  </strong>
+                  , <span itemProp="name">SOFRECOM</span>; Tunis, Tunisia — August 2018 - December 2019
+                  <br />
+                  <div className="job-description">
+                    Have been working on updating technical documentation, configuring systems, and supporting Orange subsidiaries:
+                    <ul>
+                      <li>
+                        Updated operational technical documentation (diagrams, operating modes, etc.)
+                      </li>
+                      <li>
+                        Configured monitoring metrics
+                      </li>
+                      <li>
+                        Made the requests to open the necessary flows
+                      </li>
+                      <li>
+                        Created and managed system files (ext4, xfs, LVM)
+                      </li>
+                      <li>
+                        Maintained and executed the Disaster Recovery Plan (DRP)
+                      </li>
+                      <li>
+                        Managed systems and provided support for Orange subsidiaries
+                      </li>
+                      <li>
+                        Trained and supported technical support teams during production implementation
+                      </li>
+                    </ul>
+                  </div>
+                  <ul className="project-details">
+                    <li>
+                      <strong>Experience</strong>: Linux, Grafana, Cloud, Load Balancer (HAProxy, Nginx), MySQL, Python, Docker, Ansible
+                    </li>
+                  </ul>
+                </li>
+
+                <li
+                  itemScope
+                  itemType="http://schema.org/Organization"
+                  className="job"
+                >
+                  <strong itemProp="jobTitle">
+                    Java/Angular Development Engineer
+                  </strong>
+                  , <span itemProp="name">SOFRECOM</span>; Tunis, Tunisia
+                  <br />
+                  <div className="job-description">
+                    Worked on developing a platform to manage the training catalog, session plans, and analyze indicators after training monitoring:
+                    <ul>
+                      <li>
+                        Developed and maintained the platform using Java and Angular 4
+                      </li>
+                      <li>
+                        Utilized technologies like NodeJS, ExpressJS, and MongoDB for backend development
+                      </li>
+                      <li>
+                        Integrated Hibernate and Spring BOOT for enhanced application performance and management
+                      </li>
+                      <li>
+                        Worked with MySQL for database management and operations
+                      </li>
+                      <li>
+                        Ensured seamless operation on Linux RedHat environment
+                      </li>
+                    </ul>
+                  </div>
+                  <ul className="project-details">
+                    <li>
+                      <strong>Experience</strong>: Linux RedHat, NodeJS, ExpressJS, MongoDB, Angular 4, Hibernate, Spring BOOT, MySQL
+                    </li>
+                  </ul>
+                </li>
+
 
 
               </ul>
