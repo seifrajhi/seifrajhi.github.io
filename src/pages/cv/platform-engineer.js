@@ -488,7 +488,7 @@ const PlatformEngineerCV = () => {
                       rel="me"
                       target="_blank"
                       rel="noopener"
-                      href="https://seifrajhi.github.io/"
+                      href="https://medium.com/@seifeddinerajhi"
                     >
                       Blogging
                     </a>
