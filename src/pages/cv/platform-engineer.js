@@ -107,18 +107,27 @@ const PlatformEngineerCV = () => {
                 </dt>
                 <ul>
                   <li itemProp="itemListElement">
-                    Experience: Infrastructure as code, container technologies, 
+                    <strong>Experience:</strong> Infrastructure as code, container technologies, 
                     automation, GitOps, AWS cloud, CI/CD pipelines
                     platform & site reliability engineering
                   </li>
                   <li itemProp="itemListElement">
-                    Languages: <strong>Python</strong>, Golang, Shell
+                    <strong>Languages:</strong> <strong>Python</strong>, Golang, Shell
                   </li>
                   <li itemProp="itemListElement">
-                    IAC tools: Terraform, cloudformation, crossplane
+                    <strong>IAC tools:</strong> Terraform, cloudformation, crossplane
                   </li>
                   <li itemProp="itemListElement">
-                    containerization: Docker, Kubernetes, cri-o.
+                    <strong>containerization:</strong> Docker, Kubernetes, cri-o.
+                  </li>
+                  <li itemProp="itemListElement">
+                    <strong>Software Engineering</strong>: Domain-Driven Design,
+                    SOLID, System Design
+                  </li>
+                  <li itemProp="itemListElement">
+                    <strong>Management</strong>: Leading Scrum Teams, Product
+                    Owning, Problem Framing, Developer Mentoring, Giving
+                    Workshops
                   </li>
                 </ul>
               </dl>
