@@ -298,35 +298,44 @@ const PlatformEngineerCV = () => {
                     </li>
                   </ul>
                 </li>
-
                 <li
                   itemScope
                   itemType="http://schema.org/Organization"
                   className="job"
                 >
                   <strong itemProp="jobTitle">
-                    eCommerce Magento Software Developer
+                    DevOps/Cloud Engineer
                   </strong>
-                  , <span itemProp="name">Atwix</span>; Ukraine — 2015-2017 (2
-                  years)
+                  , <span itemProp="name">System-Dynamics</span>; Paris, France — January 2020 to May 2020
                   <br />
                   <div className="job-description">
-                    <Link
-                      target="_blank"
-                      rel="noopener"
-                      to="/cv/ecommerce-developer/"
-                      title="Go to Technical blog"
-                    >
-                      See what I have done there in great details
-                    </Link>
+                    Have been working on implementing and managing server configurations and system deployment:
+                    <ul>
+                      <li>
+                        Implemented Puppet (installation, configuration, management of facts, templates) for server configurations
+                      </li>
+                      <li>
+                        Managed system deployment via Terraform (architecture creation and management in AWS)
+                      </li>
+                      <li>
+                        Automated deployment with tools such as Git, Jenkins, Gitlab (CI/CD), and Docker
+                      </li>
+                      <li>
+                        Documented the solutions put in place
+                      </li>
+                      <li>
+                        Served as a Linux/DevOps trainer
+                      </li>
+                    </ul>
                   </div>
                   <ul className="project-details">
                     <li>
-                      <strong>Experience</strong>: Linux, Git, PHP, MySQL,
-                      Elasticsearch, Redis
+                      <strong>Experience</strong>: Jenkins, Linux (Debian), AWS, Docker, Puppet, Terraform, GIT, Python, Perl, LDAP
                     </li>
                   </ul>
                 </li>
+
+
               </ul>
             </section>
             <section
