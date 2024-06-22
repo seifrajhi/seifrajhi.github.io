@@ -1,29 +1,25 @@
 import React, { Component } from "react"
 import Layout from "../components/theme/layout"
 import Seo from "../components/seo/seo"
-import LabHeader from "../components/lab/lab-header"
 import MainNavigation from "../components/main-navigation"
-import ExperimentTeaser from "../components/lab/experiment-teaser"
 import Footer from "../components/footer"
 
-import experiments from "../../data/lab/experiments.json"
-import "./lab.css"
 
 class LabListPage extends Component {
   render() {
     return (
       <Layout>
         <Seo
-          title="Lab"
-          pagePath="/lab/"
-          className="lab-list-page"
-          description="Platform engineer Experiments Live"
+          title="blog"
+          pagePath="/blog/"
+          className="blog-list-page"
+          description="Platform engineer blogs Live"
           keywords={[
-            "artificial intelligent",
+            "DevOps",
             "Platform engineer",
             "deep networks",
-            "neural networks",
-            "AI demo",
+            "Cloud native",
+            "Containers and Linux",
           ]}
         />
         <div className="lab-wrapper">

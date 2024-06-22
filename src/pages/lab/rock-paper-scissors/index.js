@@ -10,8 +10,6 @@ import MainNavigation from "../../../components/main-navigation"
 import NNBackground from "../../../components/nn-design/nn-background.js"
 import Footer from "../../../components/footer"
 
-import RockPaperScissorGame from "../../../components/lab/rock-paper-scissor-game.js"
-
 import "./index.css"
 import ReadingTracker, {
   ContentTypes,
