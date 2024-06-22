@@ -280,14 +280,7 @@ const config: GatsbyConfig = {
         path: `${__dirname}/content`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `data`,
-        path: `${__dirname}/data/`,
-        ignore: [`**/\.*`],
-      },
-    },
+
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
