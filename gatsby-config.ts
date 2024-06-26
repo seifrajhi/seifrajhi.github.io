@@ -82,7 +82,7 @@ const config: GatsbyConfig = {
         background_color: `#ffffff`,
         theme_color: `#ffffff`,
         display: `minimal-ui`,
-        icon: `src/images/fav-icon.png`,
+        icon: `src/images/sr-icon.png`,
       },
     },
     {
