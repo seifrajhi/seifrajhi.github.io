@@ -55,6 +55,10 @@ body.dark {
     border-radius: 5px;
 }
 
+.thought-item .thought-header {
+    display: block;
+    position: relative;
+}
 .thought-item .thought-header .new-badge {
     position: absolute;
     top: -10px;

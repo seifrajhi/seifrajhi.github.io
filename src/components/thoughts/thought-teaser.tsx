@@ -46,7 +46,7 @@ const isNewArticle = (publishDate: string): boolean => {
 
   return (
     <article className="thought-item">
-      <Link className="article-header" to={url}>
+      <Link className="thought-header" to={url}>
         <div className="cover-filter">
           <GatsbyImage className="cover" image={cover} alt={title} />
         </div>
