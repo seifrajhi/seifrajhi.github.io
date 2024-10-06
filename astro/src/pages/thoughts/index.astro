@@ -1,0 +1,34 @@
+--- 
+import { getThoughts } from 'src/content/collections';
+
+import ThoughtsLayout from '@layouts/ThoughtsLayout.astro';
+import ThoughtTeaser from '@components/thoughts/ThoughtTeaser.astro';
+
+import '@styles/thoughts.css';
+
+const thoughts = await getThoughts()
+--- 
+<ThoughtsLayout 
+  title={"Thoughts"} 
+  description={"Thoughts and experience that will help you to go through your life in the very best way"} 
+  keywords={[
+    "thoughts",
+    "opinion",
+    "life exploring",
+    "psychology",
+    "Saifeddine Rajhi thoughts",
+    "Saifeddine Rajhi thoughts",
+    "life",
+    "people",
+    "management",
+  ]} 
+  image={'/thoughts/roman-glushko-thoughts.jpg'}
+>
+  <main class="thoughts-list">
+    {thoughts.map((thought) => (
+      <ThoughtTeaser
+          thought={thought}
+      />
+    ))}
+  </main>
+</ThoughtsLayout>

@@ -1,0 +1,56 @@
+html {
+    --pdfBadgeColor: var(--brownDarker);
+    --pdfBadgeHoverColor: var(--red);
+}
+
+html.dark {
+    --pdfBadgeColor: var(--midnightDarker);
+    --pdfBadgeHoverColor: var(--pink);
+}
+
+.pdf-badge {
+    border-width: 50px;
+    border-style: solid;
+    border-color: var(--pdfBadgeColor) var(--pdfBadgeColor) transparent transparent;
+    position: fixed;
+    top:0;
+    right:0;
+    width:0;
+    height:0;
+    cursor: pointer;
+}
+
+.pdf-badge:hover {
+    border-color: var(--pdfBadgeHoverColor) var(--pdfBadgeHoverColor) transparent transparent;
+}
+
+.pdf-badge a {
+    color: white;
+    font-weight: bold;
+    height: 100%;
+    left: 1rem;
+    position: absolute;
+    top: -2.3rem;
+    transform: rotate(45deg);
+    text-transform: uppercase;
+    text-decoration: none;
+    user-select: none;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .pdf-badge {
+        display: none;
+    }
+}
+
+@media print {
+    html.dark {
+        --pdfBadgeColor: var(--brownDarker);
+        --pdfBadgeHoverColor: var(--red);
+    }
+
+   .pdf-badge {
+        display: none;
+    }
+}  

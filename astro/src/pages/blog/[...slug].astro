@@ -1,0 +1,85 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+import BlogPostLayout from '@layouts/BlogPostLayout.astro';
+import BlogComments from '@components/blog/BlogComments';
+import BlogContent from '@components/blog/BlogContent.astro';
+import BlogNavigation from '@components/blog/BlogNavigation.astro';
+import { getBlogPosts } from '../../content/collections';
+import { getBlogUrl } from '../../content/routing';
+import CrumbsSnippet from '@components/CrumbSnippet.astro';
+import ArticleSnippet from '@components/ArticleSnippet.astro';
+import ShareBlock from '@components/blog/ShareBlock';
+import ImageZoomer from '@components/blog/ImageZoomer.tsx';
+import ContentEnd from '@components/blog/ContentEnd.astro';
+import ReadingIndicator from '@components/reading/ReadingIndicator.tsx';
+import { components } from '@components/content';
+
+
+export async function getStaticPaths() {
+	const posts = await getBlogPosts();
+	const postCount = posts.length
+	
+	return posts.map((post, idx) => {
+		const prevPost = (idx - 1) >= 0 ? posts[idx - 1] : undefined
+		const nextPost = (idx + 1) < postCount ? posts[idx + 1] : undefined
+
+		return {
+			params: { slug: post.slug },
+			props: {
+				"prev": prevPost,
+				"current": post,
+				"next": nextPost,
+			},
+		}
+	});
+}
+
+export interface Props {
+	prev?: CollectionEntry<'blog'>;
+	current: CollectionEntry<'blog'>;
+	next?: CollectionEntry<'blog'>;
+}
+
+const {prev, current, next} = Astro.props;
+const { Content, remarkPluginFrontmatter: { timeToReadMin } } = await current.render();
+const {id, title, excerpt, pubDate, keywords, cover} = current.data
+const slug = current.slug
+const blogUrlPath = getBlogUrl(slug)
+---
+<BlogPostLayout title={title} description={excerpt} keywords={keywords} image={cover.image}>
+	<ReadingIndicator client:only />
+	<main>
+		<BlogContent id={id || slug} title={title} pubDate={pubDate} keywords={keywords} cover={cover} timeToReadMin={timeToReadMin}>
+			<Content components={components} />
+		</BlogContent>
+		<div class="sidebar-wrapper">
+			<div></div>
+			<div>
+				<ContentEnd />
+				<ShareBlock title={title} path={blogUrlPath} keywords={keywords} client:only />
+			</div>
+		</div>
+		<aside class="blogpost-sidebar">
+			<BlogNavigation prev={prev} next={next} />
+		</aside>
+		<BlogComments client:visible />
+	</main>
+	<ImageZoomer client:load />
+	<CrumbsSnippet crumbs={[{ "/blog/": "Blog" }, { [blogUrlPath]: title }]} />
+	<ArticleSnippet
+		title={title}
+		path={blogUrlPath}
+		pubDate={pubDate}
+		keywords={keywords}
+		image={cover.image}
+		articleSection={"Technical Blog"}
+		genres={[
+			"Platform engineer",
+			"software engineering",
+			"science",
+			"deep learning",
+			"statistics",
+		]}
+	/>
+</BlogPostLayout>

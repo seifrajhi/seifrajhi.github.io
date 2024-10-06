@@ -1,0 +1,24 @@
+---
+import Avatar from "@components/Avatar.astro"
+
+import "./CVHeader.css"
+
+export interface Props {
+    position: string;
+}
+
+const {position} = Astro.props;
+---
+<div class="cv-header-wrapper">
+    <div class="logo">
+        <Avatar itemprop="image" />
+    </div>
+    <hgroup>
+      <h2 itemprop="name" class="cv-name">
+        Saifeddine <strong>Glushko</strong>
+      </h2>
+      <h1 itemprop="jobTitle" class="cv-position">
+        {position}
+      </h1>
+    </hgroup>
+</div>

@@ -1,0 +1,47 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+import { Image } from "astro:assets";
+import Date from "@components/Date.astro"
+
+import "./ThoughtTeaser.css"
+
+export interface Props {
+    thought: CollectionEntry<'thoughts'>
+}
+
+const {thought} = Astro.props
+const {title, pubDate, cover: {image, credits}, excerpt} = thought.data;
+const {remarkPluginFrontmatter: {timeToReadMin}} = await thought.render()
+const slug = thought.slug;
+
+const thoughtURL = `/thoughts/${slug}/`;
+---
+<article class="thought-item">
+    <h2>
+        <a href={thoughtURL}>{title}</Link>
+    </h2>
+    <div class="thought-details">
+        <Date date={pubDate} />
+        <span> • </span>
+        <span class="thought-time2read">
+            {timeToReadMin}
+        </span>
+    </div>
+    <a href={thoughtURL}>
+        <div class="cover-filter">
+            {image && 
+            <div class="cover">
+                <Image 
+                    loading="lazy" 
+                    src={image} 
+                    alt={title} 
+                    width={682}
+                    height={500}
+                    decoding="async"
+                />
+            </div>}
+        </div>
+    </a>
+    <p class="thought-digest">{excerpt}</p>
+</article>

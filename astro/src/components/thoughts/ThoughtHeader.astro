@@ -1,0 +1,34 @@
+---
+const {listing} = Astro.props;
+---
+
+{listing && <h1 class="thoughts-title">Thoughts</h1>}
+
+{!listing &&
+<div class="thoughts-title">
+    <a href="/thoughts/">Thoughts</Link>
+</div>
+}
+
+<style>
+html {
+    --thoughtsPageTitleColor: var(--red);
+}
+
+html.dark {
+    --thoughtsPageTitleColor: var(--pink);
+}
+.thoughts-title {
+    color: var(--thoughtsPageTitleColor);
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+    font-weight: bold;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.thoughts-title a {
+    color: var(--thoughtsPageTitleColor);
+}
+</style>

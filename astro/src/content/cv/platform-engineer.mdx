@@ -1,0 +1,250 @@
+---
+title: Saifeddine Rajhi's Platform Engineer CV
+description: Saifeddine Rajhi's Platform Engineer CV
+excerpt: "Design, implement, deploy and maintain distributed microservice systems"
+position: Platform Engineer
+order: 3
+keywords:
+    - Platform engineer
+    - cv
+    - Platform cv
+    - Platform resume
+---
+import ProfileSection from "@components/cv/ProfileSection.astro"
+import ProjectsSection from "@components/cv/ProjectsSection.astro"
+import ExperienceSection from "@components/cv/ExperienceSection.astro"
+import OpenSourceSection from "@components/cv/OpenSourceSection.astro"
+import ManagementSection from "@components/cv/ManagementSection.astro"
+import CertificationSection from "@components/cv/CertificationSection.astro"
+import EducationSection from "@components/cv/EducationSection.astro"
+import SkillsSection from "@components/cv/SkillsSection.astro"
+import HobbySection from "@components/cv/HobbySection.astro"
+
+<div className="cv-content-column additional-column">
+    <ProfileSection
+        items={[
+            "Aspiring <strong>problem solver</strong> & Platform Engineer",
+            "<strong>5+ years</strong> of experience in <strong>Platform engineering</strong>",
+            "<strong>5+ years</strong> of experience in SRE and cloud domain",
+            "<strong>3+ years</strong> of experience in <strong>technical management</strong>",
+            "Expertise in a broad variety of technical, business, management topics",
+            "Constant, quick & avid learner",
+            "Positive attitudes",
+        ]}
+    /> 
+
+    <SkillsSection
+        skills={[
+            {
+                title: "Experience",
+                items: [
+                    "Problem Solving",
+                    "System Design & Architecture",
+                    "Distributed Systems",
+                    "Product Development",
+                    "Microservices",
+                    "Service Reliability Engineering",
+                    "Load Testing",
+                    "Chaos Testing",
+                    "Open Source Development",
+                    "Containers"
+                    "Cloud providers"
+                ],
+            },
+            {
+                title: "Languages",
+                items: [
+                    "Python", 
+                    "Golang", 
+                    "WebDev Stack (JS/ReactJS/TypeScript & CSS)",
+                ],
+            },
+            {
+                title: "Infrastructure",
+                items: [
+                    "Kubernetes",
+                    "Helm Charts",
+                    "AWS",
+                    "Azure"
+                ]
+            },
+            {
+                title: "Observability",
+                items: [
+                    "Elastic Stack",
+                    "Grafana",
+                    "OpenTelemetry",
+                    "DataDog",
+                    "Splunk"
+                ],
+            },
+            {
+                title: "Databases",
+                items: [
+                    "MangoDB",
+                    "Redis",
+                    "ElasticSearch",
+                    "MySQL",
+                    "RabbitMQ",
+                ]
+            },
+            {
+                title: "CI & CD",
+                items: [
+                    "Jenkins & Groovy Scripts",
+                    "gitOps",
+                    "ArgoCD",
+                    "Flux",
+                    "Harness",
+                    "Gitlab",
+                    "Github Actions",
+                ]
+            },
+        ]}
+    />
+
+    <EducationSection 
+        educations={[
+            {
+                title: "Platform engineer Nanodegree",
+                institution: "self-paced",
+                period: "2020-2021",
+            },
+            {
+                title: "M.S. Computer Engineering",
+                institution: "National schcool of computer engineering University",
+                location: "Tunisia",
+                period: "2018",
+            },
+        ]}
+    />
+</div>
+
+<div class="cv-content-column main-column">
+    <ExperienceSection topMargin={false} jobs={[
+        {
+            title: "Senior Platform Engineer (R&D, Notebooks)",
+            company: "DataRobot",
+            location: "Ukraine",
+            period: "2021-Present (2+ years)",
+            highlights: [
+                "designed and implementing the persistent filesystem support for the product. Analysed various storage types available on the marker like block storages (AWS EBS), NFS (AWS EFS), Lustre (AWS FSx) and OpenEBS",
+                "took part in incident resolutions, postmortem, on-call rotations and other SRE-related activities",
+                "continuously analysed and improved the product from cost-efficiency and reliability standpoints by by conducting load and chaos testing",
+                "improved team productivity by optimising CI check's run time (slashed the wait time by half for the most time consuming jobs)",
+                "prototyped a conversational agent using OpenAI, Qdrant, langchain",
+                "designed and developed a complex real-time state handling mechanism to deal with notebook files in a reliable way"             
+            ],
+            skills: [
+                "Problem Solving",
+                "Platform Architecture", 
+                "System Design", 
+                "Distributed Systems", 
+                "Kubernetes",
+                "Load Testing",
+                "Chaos Engineering",
+                "Penetration Testing",
+            ],
+        },
+        {
+            title: "Platform Engineer II (R&D, Notebooks)",
+            company: "DataRobot",
+            location: "Ukraine",
+            period: "Nov 2021 - Aug 2022 (10 mos)",
+            description: "Have been working on a code execution system for data scientists based on the microservice multi-language (Python, Node.js, GoLang) architecture:",
+            highlights: [
+                "Designed, implemented and owned the deployment of the whole system to AWS based on Kubernetes, Helm Charts and ArgoCD and Flux as a gitOps CD",
+                "Implemented the central orchestration part of the project (a Python-based microservice). Designed a custom Kubernetes operator based on the RedHat OperatorFramework (GoLang). Designed and implemented a websocket microservice based on Socket.IO and Node.JS",
+                "Worked and extended the Jenkins-based CI pipelines",
+                "Led integration of the system with the observability stack based on Elastic Stack (aka ELK stack) in terms of logging, metrics collection and distributed tracing",
+                "Led a security review of the system and identified the main points of k8s security improvements. Created security defense measures for zero-trust execution environment",
+                "Took active part in architectural discussions and improvements, code reviews in a geographically distributed team (Ukraine and East US time zones) of more than 20 people. Effectively handled cross-team communication with other DataRobot teams to resolve roadblocks and meet project expectations and deadlines",
+            ],
+            skills: [
+                "Python",
+                "Platform Engineering", 
+                "Distributed Systems",
+                "Kubernetes",
+                "Helm Charts",
+                "Golang",
+                "Reliability Engineering",
+                "AWS",
+                "Penetration Testing",
+                "Domain-Driven Design"
+            ],
+        },
+        {
+            title: "Platform Engineer (R&D, AI Apps)",
+            company: "DataRobot",
+            location: "Ukraine",
+            period: "Aug 2021 - Nov 2021 (4 mos)",
+            highlights: [
+                "Designed and implemented an internal framework for building ML-enabled applications using DataRobot platform powered by modern Python stack (Flask, Pydantic, FastAPI)",
+                "Using the framework, I have taken part in the implementation of a complaint review application for a US company from the healthcare sector. Took part in complaint analysis and NLP modeling pipeline using huggingface transformers stack",
+                "Took part in configuring and troubleshooting Kubernetes-based environments deployed on Gitlab instances",
+            ],
+            skills: [
+                "Python",
+                "Flask",
+                "Platform Engineering", 
+                "Helm Charts",
+            ],
+        },
+        {
+            title: "ML Engineer",
+            company: "Learning Sabbatical",
+            location: "Ukraine",
+            period: "2020-2021 (10 mos)",
+            highlights: [
+                "<a target='_blank' rel='noopener' href='/cv/platform-engineer/' title='Go to ML Engineer's Resume'>The rest of the ML engineering experience could be found there.</a>",
+            ],
+            skills: [
+                "data analysis",
+                "tabular data",
+                "Python",
+                "NLP",
+                "XGBoost",
+                "Pytorch",
+                "MLFlow",
+                "Jupyter Notebooks",
+            ]
+        },
+        {
+            title: "eCommerce Platform Developer, Tech Lead",
+            company: "Atwix",
+            location: "Ukraine",
+            period: "2015-2020 (5.5 years)",
+            highlights: [
+                "Dove into eCommerce domain, problems and challenges US and EU merchants from several areas (e.g. furniture construction, beauty)",
+                "<a target='_blank' rel='noopener' href='/cv/ecommerce-developer/' title='Go to eCommerce Developer's Resume'>The rest of the eCommerce development experience could be found there.</a>",
+            ],
+            skills: [
+                "eCommerce",
+                "Problem Solving",
+                "Management",
+                "System Design",
+                "Problem Framing",
+                "PHP",
+                "MySQL",
+                "Elasticsearch",
+                "Redis",
+            ]
+        }
+    ]} />
+
+    <ManagementSection
+        items={[
+            "Hold a full-time <strong>technical leader position</strong> for 3.5 years (5-15 people teams incl. SEs, QA, PM, DevOps) + seasonal leading of serveral internal projects and initialives",
+            "Write <a target='_blank' rel='noopener' href='https://seifrajhi.github.io/blog/'>technical blog posts</a> and <a target='_blank' rel='noopener' href='https://seifrajhi.github.io/thoughts/'>thoughts about management</a>. Organized technical & business <a target='_blank' rel='noopener' href='https://www.atwix.com/magento/atwix-magenews-jun-2020/'>newsletter</a> (led for 2 years).",
+            "Led several projects as a part of the DataRobot team including feature design and development and passing them a few levels of maturity all the way to GA",
+        ]}
+    />
+    <HobbySection hobbies={[
+        "Scooter Driving",
+        "Self-Improvement",
+        "Reading",
+        "<a rel='me' target='_blank' rel='noopener' href='https://seifrajhi.github.io/blog/'>Blogging</a>",
+        "<a target='_blank' href='https://github.com/seifrajhi'>Open Source</a>",
+        "AWS Community Builder"
+    ]} />
+</div>

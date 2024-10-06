@@ -1,0 +1,7 @@
+.comment-container {
+    width: 52%; /* Adjust the width as needed */
+    margin: 0 25%; /* Add right and left margins of 20% each */
+  }
+.spaced-component {
+    margin-bottom: 90px; /* Adjust the spacing as needed */
+}

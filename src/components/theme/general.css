@@ -1,0 +1,87 @@
+/** Theme variables **/
+
+body {
+    --bodyBackgroundColor: var(--white);
+    --bodyTextColor: var(--black);
+    --linkColor: var(--black);
+    --linkHoverColor: var(--red);
+    --thoughtCoverBlendColor: var(--brownDarker);
+    --thoughtCoverBlendMode: lighten;
+}
+
+body.dark {
+    --bodyBackgroundColor: var(--midnight);
+    --bodyTextColor: var(--white);
+    --linkColor: var(--white);
+    --linkHoverColor: var(--pink);
+}
+
+
+/** General Styles **/
+
+@font-face {
+    font-family: 'Ledger';
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--bodyTextColor);
+    background-color: var(--bodyBackgroundColor);
+    box-sizing: border-box;
+    font-family: 'Ledger', serif;
+    margin: 0;
+    text-rendering: optimizeLegibility;
+    transition: color 0.2s ease-out, background 0.2s ease-out;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    color: var(--linkColor);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--linkHoverColor);
+}
+
+.avatar {
+    border: 2px solid var(--avatarBorderColor);
+    border-radius: 50%;
+    height: 170px;
+    margin: 0 auto;
+    user-select: none;
+    width: 170px;
+}
+
+.logo-img {
+    display: block;
+    border-radius: 50%;
+    width: 10rem;
+    height: auto;
+    transform: translate(5px, 5px);
+}
+
+.clearfix {
+    clear: both;
+}
+
+.cover-filter {
+    background-color: var(--thoughtCoverBlendColor);
+}
+
+.cover-filter .cover {
+    mix-blend-mode: var(--thoughtCoverBlendMode);
+    user-select: none;
+}
+
+body.dark .cover-filter {
+    -webkit-filter: brightness(0.5);
+    filter: brightness(0.5);
+}

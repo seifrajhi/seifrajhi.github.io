@@ -1,0 +1,23 @@
+---
+import personMetadata from "@data/personMetadata"
+
+const schemaJSONLD = {
+    "@context": "http://schema.org",
+    "@type": "Person",
+    name: personMetadata.name,
+    alternateName: personMetadata.alternateName,
+    image: personMetadata.image,
+    gender: personMetadata.gender,
+    sameAs: personMetadata.sameAs,
+    jobTitle: personMetadata.jobTitle,
+    worksFor: {
+        "@type": "Organization",
+        name: personMetadata.worksFor.name,
+        sameAs: personMetadata.worksFor.sameAs,
+    },
+}
+
+const schemaDecoded = JSON.stringify(schemaJSONLD)
+---
+
+<script type="application/ld+json" set:html={schemaDecoded}></script>

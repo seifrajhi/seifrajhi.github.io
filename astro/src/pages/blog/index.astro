@@ -1,0 +1,46 @@
+---
+import { getBlogPosts } from '../../content/collections';
+
+import PostTeaser from '@components/blog/PostTeaser.astro';
+import BlogLayout from '@layouts/BlogLayout.astro';
+
+const posts = await getBlogPosts()
+---
+<BlogLayout
+	title={"Blog"}
+	description={"Technical blog about Cloud native engineering, DevOps best practices, SRE and Platform engineering "}
+	keywords={[
+		"technical blog",
+		"Cloud native engineering blog",
+		"DevOps learning blog",
+		"math",
+		"engineering",
+		"SRE Engineering",
+		"Saifeddine Rajhi blog",
+		"Saif Rajh blog",
+	]}
+>
+	<main
+		data-nosnippet=""
+		class={`blog-list blog-grid ${!posts.length ? "no-posts" : ""}`}
+	>
+		{!posts.length && (
+		<div class="no-posts-placeholder">
+			Great posts will be here as soon as my muse comes back to me &nbsp;
+			<span role="img" aria-label="magic will happen soon">
+			💫
+			</span> &nbsp;
+			<br />
+			Come back soon &nbsp;
+			<span aria-label="bye" role="img">
+			👋
+			</span>
+		</div>
+		)}
+		{posts.map(
+		(post) => (
+			<PostTeaser post={post} />
+		)
+		)}
+	</main>
+</BlogLayout>

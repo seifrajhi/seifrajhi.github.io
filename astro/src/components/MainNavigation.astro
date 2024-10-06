@@ -1,0 +1,25 @@
+---
+import "./MainNavigation.css"
+
+export interface Props {
+	space: string;
+}
+
+const { space } = Astro.props
+---
+<nav class="main-navigation">
+  <ul>
+    <li>
+      <a href="/" title="Go Home" rel="home">Home</a>
+    </li>
+    <li>
+      <a href="/blog/" title="Go to My Technical Blog">Blog</a>
+    </li>
+    <li>
+      <a href="/thoughts/" title="Go to My Thoughts">Thoughts</a>
+    </li>
+    <li>
+      <a href="/cv/" title="Review My Resumes">CV</a>
+    </li>
+  </ul>
+</nav>

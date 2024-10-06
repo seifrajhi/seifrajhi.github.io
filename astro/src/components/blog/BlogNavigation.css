@@ -1,0 +1,42 @@
+/** Theme variables **/
+
+html {
+    --blogNavigationLinkColor: var(--red);
+    --allPostsNavigationLinkColor: var(--black);
+}
+
+html.dark {
+    --blogNavigationLinkColor: var(--pink);
+    --allPostsNavigationLinkColor: var(--white);
+}
+
+
+/** Blog Navigation Styles **/
+
+.blog-navigation-wrapper {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.blog-navigation-wrapper h3 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.blog-navigation .nav-links {
+    padding: 0px;
+    text-align: center;
+    width: 100%;
+}
+
+.blog-navigation .nav-links a {
+    color: var(--blogNavigationLinkColor);
+    display: block;
+    font-weight: bold;
+    margin-bottom: calc(1.75rem / 2);
+    text-decoration: none;
+}
+
+.blog-navigation a.all-posts {
+    color: var(--allPostsNavigationLinkColor);
+}

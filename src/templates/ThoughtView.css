@@ -1,0 +1,68 @@
+/**
+** Thought View Page
+**/
+
+body {
+    --thoughtQuoteColor: var(--red);
+}
+
+body.dark {
+    --thoughtQuoteColor: var(--pink);
+}
+
+.thought-wrapper,
+.thought-view-page .thought-sidebar {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 43rem;
+}
+
+@media (max-width: 767px) {
+    .thought-wrapper {
+        display: block;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        width: auto;
+    }
+}
+
+.thought-view-page .thoughts-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+@media (max-width: 575px) {
+    .thought-view-page .thoughts-title {
+        font-size: 2rem;
+    }
+}
+
+.thought-view-page .thought-divider {
+    clear: both;
+}
+
+.thought-view-page .thought-content {
+    margin-top: 2rem;
+}
+
+.thought-view-page .thought-author-wrapper {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.thought-view-page .thought-navigation-wrapper {
+    margin-bottom: 2rem;
+}
+
+.thought-view-page hr {
+    border: none;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.thought-view-page hr::before {
+    letter-spacing: 0.6em;
+    text-indent: 0.6em;
+    content: "***";
+}

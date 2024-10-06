@@ -1,0 +1,28 @@
+---
+
+interface Education {
+    title: string;
+    location?: string;
+    institution?: string;
+    period: string;
+}
+
+export interface Props {
+    educations: Education[];
+}
+
+const {educations} = Astro.props;
+---
+<section class="education">
+    <h2>
+        <span>Education</span>
+    </h2>
+    <ul>
+        {educations && educations.map(education => (
+            <li itemscope itemtype="http://schema.org/EducationalOrganization">
+                <strong>{education.title}</strong>, 
+                {education.institution && <span itemprop="name">{education.institution + ", "}</span>} {education.location && education.location + ", " } {education.period}
+            </li>
+        ))}
+    </ul>
+</section>

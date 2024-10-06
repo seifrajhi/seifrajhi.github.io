@@ -1,0 +1,25 @@
+html {
+    --avatarBorderColor: var(--grey);
+    --avatarBgColor: var(--white);
+}
+
+html.dark {
+    --avatarBorderColor: var(--grey);
+    --avatarBgColor: var(--midnight);
+}
+
+.avatar {
+    user-select: none;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 3px solid var(--avatarBorderColor);
+    background-color: var(--avatarBgColor);
+}
+
+.avatar .logo-img {
+    display: block;
+    border-radius: 50%;
+    width: 10rem;
+    height: auto;
+    transform: translate(5px, 5px);
+}

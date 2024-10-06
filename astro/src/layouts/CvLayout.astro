@@ -1,0 +1,51 @@
+---
+import BaseHead from "@components/BaseHead.astro";
+import MainNavigation from "@components/MainNavigation.astro";
+import CVHeader from "@components/cv/CVHeader.astro";
+import DownloadBadge from "@components/cv/DownloadBadge.astro";
+import SocialLinks from "@components/SocialLinks.astro";
+import ThemeSwitcher from "@components/ThemeSwitcher";
+import CrumbSnippet from "@components/CrumbSnippet.astro";
+
+import "@styles/theme.css"
+import "@styles/general.css"
+import "@styles/cv.css"
+import ConsoleBanner from "@components/ConsoleBanner";
+
+const { title, description, position, keywords } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en" class="cv-view-page">
+<head>
+    <BaseHead 
+        title={title} 
+        description={description} 
+        keywords={keywords} 
+        ogType={`website`}
+        image={`/blog/roman-glushko-in-the-process-of-work.jpg`}
+    />
+</head>
+<body>
+    <div
+        itemscope
+        itemtype="http://schema.org/Person"
+        class="cv cv-platform-engineer"
+    >
+        <DownloadBadge />
+        <header>
+            <CVHeader position={position} />
+            <MainNavigation space={"cv"} />
+            <SocialLinks showPatreon={false} />
+            <ThemeSwitcher client:only />
+        </header>
+        <main class="cv-content">
+            <slot />
+        </main>
+    </div>
+    <CrumbSnippet crumbs={[
+        { "/cv/": "Saifeddine Rajhi's CV" },
+        { "/cv/platform-engineer/": "Platform/SRE Engineer CV" },
+    ]} />
+    <ConsoleBanner client:only />
+</body>
+</html>

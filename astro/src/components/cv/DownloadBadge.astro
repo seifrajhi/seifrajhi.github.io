@@ -1,0 +1,19 @@
+---
+import "./DownloadBadge.css"
+---
+<div
+    class="pdf-badge"
+    title="Download CV as a PDF file"
+>
+    <a>pdf</a>
+</div>
+
+<script>
+    const badges = document.querySelectorAll(".pdf-badge")
+
+    badges.forEach((badge) => {
+        badge.addEventListener("click", () => {
+            window.print()
+        });
+    });
+</script>

@@ -1,0 +1,21 @@
+---
+import { Image } from "astro:assets"
+
+import "./Avatar.css"
+
+const {itemprop} = Astro.props;
+// <!-- widths={[150]}  -->
+// <!-- aspectRatio={1} -->
+// <!-- formats={['avif', 'webp']}  -->
+---
+<div class="avatar" itemprop={itemprop}>
+    <Image 
+        class="logo-img"
+        width={160}
+        height={160}
+        loading={"eager"}
+        decoding="async"
+        src={"/me/saifeddine-rajhi.jpeg"} 
+        alt={`Saifeddine Rajhi - Senior Data Platform Engineer, Life Explorer`} 
+    />
+</div>

@@ -1,0 +1,35 @@
+---
+import Avatar from '@components/Avatar.astro';
+
+import './BlogHeader.css';
+
+const { spaceTitle, spaceLink, isListing = false } = Astro.props
+---
+<div class="view-page-header">
+    <div class="view-page-header-wrapper">
+      <div class="logo-wrapper">
+        <div class="logo">
+          <Avatar />
+        </div>
+        <div class="name">
+          <a href={spaceLink} title="back to blog">
+            Saifeddine <br /> Rajhi
+          </a>
+        </div>
+      </div>
+      {isListing && (
+        <h1 class="blog-title">
+          <a href={spaceLink} title="back to the homepage">
+            {spaceTitle}
+          </a>
+        </h1>
+      )}
+      {!isListing && (
+        <h2 class="blog-title">
+          <a href={spaceLink} title="back to the homepage">
+            {spaceTitle}
+          </a>
+        </h2>
+      )}
+    </div>
+</div>

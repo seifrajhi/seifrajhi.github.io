@@ -1,0 +1,25 @@
+---
+import SocialLinks from "@components/SocialLinks.astro";
+
+import "./Footer.css"
+
+const currentDate: Date = new Date();
+---
+<footer data-nosnippet="">
+	<div class="footer-wrapper">
+		<SocialLinks showPatreon={true} iconSize={"2x"} />
+		<div class="copyright">
+			Saifeddine Rajhi © 1996 - {currentDate.getFullYear()} <br />
+			<a
+				rel="license"
+				href="https://creativecommons.org/licenses/by/4.0/"
+				title="Content is published under CC BY 4.0 license"
+			>
+				CC BY 4.0
+			</a>
+		</div>
+		<div class={`pgp`}>
+			<a href={`https://keybase.io/saifrajhi`} target="_blank" rel="noopener noreferrer nofollow">AB49 B91C C3E5 8E73</a>
+		</div>
+	</div>
+</footer>

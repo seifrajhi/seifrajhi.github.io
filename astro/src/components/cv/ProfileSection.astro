@@ -1,0 +1,25 @@
+---
+export interface Props {
+    items: string[];
+}
+
+const {items} = Astro.props;
+---
+<section
+    class="profile"
+    itemscope
+    itemtype="http://schema.org/ItemList"
+>
+    <dl class="notop-margin">
+        <dt>
+            <h2 class="notop-margin">
+                <span itemprop="name">Profile</span>
+            </h2>
+        </dt>
+        <ul>
+            {items && items.map(item => (
+                <li itemprop="itemListElement" set:html={item}></li>
+            ))}
+        </ul>
+    </dl>
+</section>

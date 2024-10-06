@@ -1,0 +1,100 @@
+html {
+    --iconBackgroundColor: var(--white);
+    --infoBackgroundColor: hsl(210deg, 55%, 92%);
+    --warnBackgroundColor: hsla(52deg, 100%, 50%, 0.25);
+    --successBackgroundColor: hsla(160deg, 100%, 40%, 0.1);
+    --dangerBackgroundColor: hsla(340deg, 95%, 43%, 0.1);
+}
+
+html.dark {
+    --iconBackgroundColor: #383c48;
+    --infoBackgroundColor: hsl(210deg, 38%, 15%);
+    --warnBackgroundColor: hsla(52deg, 100%, 50%, 0.25);
+    --successBackgroundColor: hsla(160deg, 100%, 40%, 0.1);
+    --dangerBackgroundColor: hsla(340deg, 95%, 43%, 0.1);
+}
+
+.note {
+    position: relative;
+    margin-left: -32px;
+    margin-right: -32px;
+    padding: 24px 32px;
+    border-right: 3px solid;
+    border-radius: 5px;
+}
+
+.note.info {
+    background-color: var(--infoBackgroundColor);
+    border-color: #60a5fa;
+}
+
+.note.info .note-icon {
+    color: #60a5fa;
+}
+
+.note.info a:hover {
+    color: dodgerblue;
+}
+
+.note.warn {
+    background-color: var(--warnBackgroundColor);
+    border-color: hsl(30deg, 100%, 50%);
+}
+
+.note.warn .note-icon {
+    color: hsl(30deg, 100%, 50%);
+}
+
+.note.success {
+    background-color: var(--successBackgroundColor);
+    border-color: hsl(160deg, 100%, 40%);
+}
+
+.note.success .note-icon {
+    color: hsl(160deg, 100%, 40%);
+}
+
+.note.danger {
+    background-color: var(--dangerBackgroundColor);
+    border-color: var(--red);
+}
+
+.note.danger .note-icon {
+    color: var(--red);
+}
+
+.note .note-icon {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 32px;
+    height: 32px;
+    transform: translate(50%, -50%);
+    padding: 8px;
+    background: var(--iconBackgroundColor);
+    border-radius: 50%;
+    transition: background 350ms ease 0s;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.note .note-icon svg {
+    width: 32px;
+    height: 32px;
+}
+
+.note .title {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.note .body, .note .body p:first-child, .note .body p:last-child {
+    margin: 0;
+}
+
+@media (max-width: 1200px) {
+    .note {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}

@@ -1,0 +1,14 @@
+.hero-header {
+    background-size: cover;
+    background-position: center center;
+    height: 40rem;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    z-index: 1;
+}
+
+.hero-header canvas {
+    height: 100%;
+    width: 100%;
+}

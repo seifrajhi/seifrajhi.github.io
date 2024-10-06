@@ -1,0 +1,27 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { getBlogUrl } from 'src/content/routing';
+
+import "./BlogNavigation.css"
+
+export interface Props {
+	prev?: CollectionEntry<'blog'>;
+	next?: CollectionEntry<'blog'>;
+}
+
+const {prev, next} = Astro.props;
+---
+<div data-nosnippet="" class="blog-navigation-wrapper">
+    <h3>Read Other Posts</h3>
+    <nav class="blog-navigation">
+      <div class="nav-links">
+        {next && (
+          <a rel="next" class="next-post" href={getBlogUrl(next.slug)}>{next.data.title} →</a>
+        )}
+        {prev && (
+          <a rel="prev" class="prev-post" href={getBlogUrl(prev.slug)}>← {prev.data.title}</a>
+        )}
+        <a class="all-posts" href="/blog/">All Posts</a>
+      </div>
+    </nav>
+</div>

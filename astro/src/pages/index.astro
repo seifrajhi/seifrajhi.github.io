@@ -1,0 +1,103 @@
+---
+import { getBlogPosts, getThoughts } from '../content/collections';
+
+import HomeLayout from '@layouts/HomeLayout.astro';
+import Avatar from '@components/Avatar.astro';
+import MyTitles from '@components/home/MyTitles.astro';
+import MainNavigation from '@components/MainNavigation.astro';
+import ThemeSwitcher from '@components/ThemeSwitcher';
+import NetworkBackground from '@components/home/NetworkBackground';
+import SocialLinks from '@components/SocialLinks.astro';
+import PostTeaser from '@components/blog/PostTeaser.astro';
+import ThoughtTeaser from '@components/thoughts/ThoughtTeaser.astro';
+
+import "@styles/index.css"
+
+const recentPosts = (await getBlogPosts()).slice(0, 3)
+const recentThoughts = (await getThoughts()).slice(0, 3)
+---
+
+<HomeLayout 
+	title={"Saifeddine Rajhi - Platform engineer and Software Engineer, Life Explorer"}
+	bodyClass={"home-page-v2"}
+>
+	<div class="intro">
+		<div id="hero-header" class="hero-header homepage-sidebar">
+		<NetworkBackground client:only />
+		<figure class="hero-intro">
+			<div class="logo">
+				<Avatar />
+			</div>
+			<h1 class="name">
+				<span class="first-name">Saifeddine</span>{" "}
+				<span class="second-name">Rajhi</span>
+			</h1>
+			<MyTitles />
+			<MainNavigation space={"homepage"} />
+			<SocialLinks showPatreon={true} iconSize={"sm"} />
+			<ThemeSwitcher client:load />
+		</figure>
+		</div>
+	</div>
+	<div class="mylife">
+		<div>
+		<p class="hey">Hey,</p>
+		<p>
+			My name is Saifeddine <span role="img">👋</span>
+		</p>
+		<p>
+			I'm a Platform engineer and Software Engineer, Science Geek and
+			Life Explorer.
+		</p>
+		</div>
+		<div>
+		<h2 class="activity-title">Learn & Share</h2>
+		<div>
+			<p>
+			I'm a lifetime learner interested in a broad variety of topics:
+			Machine and Deep Learning, Science-related Theory, Computer
+			Science, Software Engineering, Distributed System Design,
+			eCommerce and so on.
+			</p>
+			<p>
+			When I have spare time, I enjoy putting together my knowledge
+			about those topics and share with others.
+			</p>
+			<div class="recent-posts">
+			{recentPosts.map((post) => (
+				<PostTeaser post={post} />
+			))}
+			</div>
+			<div class="all-button-wrapper">
+			<a class="read-all-button" href={"/blog/"}>
+				Read All Posts
+			</a>
+			</div>
+		</div>
+		</div>
+		<div>
+		<h2 class="activity-title">Think & Write</h2>
+		<div>
+			<p>
+			Another thing I like to do is to explore this world, think about
+			its components, their interconnections and finally capture my
+			observations and thoughts.
+			</p>
+			<p>
+			These thoughts are usually about self-development, management
+			and people perceptions and mindsets.
+			</p>
+			<div class="recent-thoughts">
+			{recentThoughts.map((thought) => (
+				<ThoughtTeaser thought={thought} />
+			))}
+			</div>
+			<div class="all-button-wrapper">
+			<a class="read-all-button" href={"/thoughts/"}>
+				Read All Thoughts
+			</a>
+			</div>
+		</div>
+		</div>
+	</div>
+</HomeLayout>

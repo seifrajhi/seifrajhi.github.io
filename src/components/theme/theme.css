@@ -1,0 +1,14 @@
+/** Main Theme Variables **/
+
+body {
+    --black: #000000;
+    --blackLigher: #262626;
+    --red: #e74c3c;
+    --white: #ffffff;
+    --grey: #ebebeb;
+    --brownDarker: #5a4e3e;
+    --regentGray: #8b949e;
+    --midnight: #373c49;
+    --midnightDarker: #0004;
+    --pink: #ffa7c4;
+}

@@ -1,0 +1,26 @@
+.resumes {
+    display: flex;
+    justify-content: center;
+    margin: 0 2rem 2rem 2rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+.resume-list {
+    max-width: 50rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+    line-height: 1.4;
+}
+
+.resumes > p {
+    font-size: 1.4rem;
+    max-width: 40rem;
+}
+
+@media (max-width: 768px) {
+    .resume-list {
+        grid-template-columns: 1fr;
+    }
+}

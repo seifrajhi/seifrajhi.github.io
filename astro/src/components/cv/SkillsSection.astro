@@ -1,0 +1,28 @@
+---
+type Skill = {
+    title: string;
+    items: string[];
+}
+
+export interface Props {
+    skills: Skill[];
+}
+
+const {skills} = Astro.props;
+---
+<section class="skills" itemtype="http://schema.org/ItemList">
+    <dl>
+        <dt>
+            <h2>
+                <span itemprop="name">Skills</span>
+            </h2>
+        </dt>
+        <ul>
+            {skills && skills.map(skillItem => (
+                <li itemprop="itemListElement">
+                    <strong>{skillItem.title}: </strong> {skillItem.items.join(", ")}
+                </li>
+            ))}
+        </ul>
+    </dl>
+</section>

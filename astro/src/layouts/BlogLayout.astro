@@ -1,0 +1,58 @@
+---
+import Footer from '@components/Footer.astro';
+import BaseHead from '../components/BaseHead.astro';
+import ThemeSwitcher from '@components/ThemeSwitcher';
+import MainNavigation from '@components/MainNavigation.astro';
+import BlogHeader from '@components/BlogHeader.astro';
+import ConsoleBanner from '@components/ConsoleBanner';
+import CrumbsSnippet from '@components/CrumbSnippet.astro';
+
+import "@styles/theme.css"
+import "@styles/general.css"
+import "@styles/blog.css";
+
+export interface Props {
+	title: string;
+	description: string;
+	keywords: string[];
+}
+
+const { title, description, keywords } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en" class="blogpost-list-page">
+	<head>
+		<BaseHead 
+			title={title} 
+			description={description} 
+			keywords={keywords} 
+			image={'/blog/roman-glushko-in-the-process-of-work.jpg'}
+		/>
+	</head>
+	<body>
+		<div class="blog-listing-wrapper">
+			<aside class="blog-sidebar">
+				<div class="blog-header">
+					<BlogHeader
+						spaceTitle="Blog"
+						spaceLink="/blog/"
+						isListing={true}
+					/>
+					<MainNavigation space={"blog"} />
+			  	</div>
+				<div class="blog-intro">
+					Technical notes about Platform engineer, data science, math and
+					software engineering. Recording what I learn everyday.
+				</div>
+				<div class="misc">
+					<ThemeSwitcher client:load />
+				</div>
+			</aside>
+			<slot />
+		</div>
+		<div class="clearfix" />
+		<Footer />
+		<CrumbsSnippet crumbs={[{ "/blog/": "Blog" }]} />
+		<ConsoleBanner client:only />
+	</body>
+</html>

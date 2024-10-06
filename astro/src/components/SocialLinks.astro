@@ -1,0 +1,83 @@
+---
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons/faEnvelope"
+import { faGithubAlt } from "@fortawesome/free-brands-svg-icons/faGithubAlt"
+import { faXTwitter } from "@fortawesome/free-brands-svg-icons/faXTwitter"
+import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons/faLinkedinIn"
+import { faKaggle } from "@fortawesome/free-brands-svg-icons/faKaggle"
+import { faPatreon } from "@fortawesome/free-brands-svg-icons/faPatreon"
+
+import './SocialLinks.css'
+
+type IconSize =
+  | "xs"
+  | "lg"
+  | "sm"
+  | "1x"
+  | "2x"
+  | "3x"
+  | "4x"
+  | "5x"
+  | "6x"
+  | "7x"
+  | "8x"
+  | "9x"
+  | "10x";
+
+export interface Props {
+	iconSize?: IconSize;
+  showPatreon: boolean;
+}
+
+const { iconSize, showPatreon = true } = Astro.props
+---
+<div data-nosnippet="" class="social">
+    <ul class="social-list">
+      <li class="social-item social-linkedin">
+        <a
+          rel="me"
+          item-prop="url"
+          href="https://www.linkedin.com/in/rajhi-saif/"
+          title="Saifeddine Rajhi on LinkedIn"
+          target="blank"
+        >
+          <FontAwesomeIcon icon={faLinkedinIn} size={iconSize} />
+          <span>LinkedIn</span>
+      </a>
+      </li>
+      <li class="social-item social-github">
+        <a
+          rel="me"
+          item-prop="url"
+          href="https://github.com/seifrajhi"
+          title="Saifeddine Rajhi on Github"
+          target="blank"
+        >
+          <FontAwesomeIcon icon={faGithubAlt} size={iconSize} />
+          <span>GitHub</span>
+        </a>
+      </li>
+      <li class="social-item social-email">
+        <a
+          item-prop="email"
+          href="mailto:rajhiseif@gmail.com"
+          title="Saifeddine Rajhi's Email"
+        >
+          <FontAwesomeIcon icon={faEnvelope} size={iconSize} />
+          <span>Email</span>
+        </a>
+      </li
+      <li class="social-item social-twitter">
+        <a
+          rel="me"
+          item-prop="url"
+          href="https://twitter.com/RajhiSaifeddine"
+          title="Saifeddine Rajhi on Twitter"
+          target="blank"
+        >
+          <FontAwesomeIcon icon={faXTwitter} size={iconSize} />
+          <span>Twitter</span>
+        </a>
+      </li>
+    </ul>
+</div>

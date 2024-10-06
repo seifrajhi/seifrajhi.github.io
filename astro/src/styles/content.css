@@ -1,0 +1,226 @@
+/** Remark Styling **/
+
+html {
+    --imageTitleColor: gray;
+    --inlineCodeColor: var(--black);
+    --inlineCodeBgColor: var(--grey);
+    --tableMainBorderColor: var(--black);
+
+    --refGreen: green;
+    --refBlue: cornflowerblue;
+    --refYellow: #e4d00a;
+    --refOrange: darkorange;
+}
+
+html.dark {
+    --imageTitleColor: #8b949e;
+    --inlineCodeColor: var(--white);
+    --inlineCodeBgColor: var(--regentGray);
+    --tableMainBorderColor: var(--white);
+
+    --refGreen: lightgreen;
+    --refBlue: deepskyblue;
+    --refYellow: gold;
+    --refOrange: orange;
+}
+
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+    font-weight: 500;
+    letter-spacing: 0;
+    margin-top: 1.95em;
+    margin-bottom: -0.3em;
+}
+
+.content h2:first-of-type {
+    margin-top: 0;
+}
+
+.content > p:first-of-type::first-letter {
+    font-size: 2rem;
+    font-weight: bold;
+    padding-left: 1.5rem;
+}
+
+.content,
+.content p {
+    font-size: 1.4rem;
+    letter-spacing: -0.003em;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+    margin-top: 0.5rem;
+    text-align: left;
+}
+
+.content {
+    margin-bottom: 0;
+}
+
+.content p:has(img) {
+    margin-bottom: 0;
+}
+
+.content img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.375rem;
+}
+
+.content img[src$=".svg"] {
+    max-height: 400px;
+}
+
+.content p {
+    margin-top: 2rem;
+}
+
+.content ul {
+    padding: 0;
+}
+
+.content ul ol {
+    padding: 0;
+    margin: 0;
+}
+
+.content a {
+    text-decoration: underline;
+    text-underline-offset: 0.2rem;
+}
+
+.content ul li,
+.content ol li {
+    margin-left: 30px;
+    margin-top: 0.50em;
+}
+
+@media (max-width: 1200px) {
+    .content h2 .anchor {
+        display: none
+    }
+}
+
+.content .image-title {
+    color: var(--imageTitleColor);
+    font-size: 80%;
+    text-align: center;
+}
+
+.content .image-title a{
+    color: var(--imageTitleColor);
+    font-size: 80%;
+}
+
+.content .gatsby-highlight {
+    font-size: 1rem;
+}
+
+.content a.anchor{
+    transform: translateX(-100%) translateY(-5%);
+}
+
+.content a.anchor .anchor-icon {
+    fill: currentColor;
+}
+
+.content code.language-text {
+    /** style inline code snippets **/
+    padding: .15em .2em .05em;
+    white-space: normal;
+    background: var(--inlineCodeBgColor);
+    border-radius: .3em;
+    line-height: inherit;
+    color: var(--inlineCodeColor);
+    text-shadow: none;
+    opacity: 0.9;
+}
+
+.content table {
+    border-spacing: 0;
+    word-break: break-all;
+}
+
+.content table thead th {
+    border-bottom: 2px solid var(--tableMainBorderColor);
+    text-align: left;
+    padding: 15px 10px;
+}
+
+.content table tr td {
+    border-bottom: 2px solid var(--tableMainBorderColor);
+}
+
+.content table td {
+    vertical-align: top;
+    padding: 15px 10px;
+}
+
+.content table td:not(:last-of-type) {
+    border-right: 1px dotted grey;
+}
+
+.content table tr:not(:last-of-type) td {
+    border-bottom: 1px solid grey;
+}
+
+@media (max-width:1199px) {
+    .content table {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .content table {
+        margin-left: -30px;
+        margin-right: -30px;
+    }
+}
+
+.content .autolink-header{
+    vertical-align: middle;
+    margin-left: 3px;
+}
+
+.content ul:last-child {
+    margin-bottom: 0;
+}
+
+/* Reference diagram components in text by color */
+
+.content span.green {
+    color: var(--refGreen);
+}
+
+.content span.blue {
+    color: var(--refBlue);
+}
+
+.content span.orange {
+    color: darkorange;
+}
+
+.content span.yellow {
+    color: var(--refYellow);
+}
+
+@media (max-width:768px) {
+    .content h2,
+    .content h3,
+    .content h4,
+    .content h5,
+    .content h6 {
+        font-size: 1.2em;
+    }
+
+    .content,
+    .content p {
+        font-size: 1.2rem;
+    }
+
+    .content p {
+        margin-top: 1.2rem;
+    }
+}

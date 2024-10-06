@@ -1,0 +1,93 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+import ThoughtContent from '@components/thoughts/ThoughtContent.astro';
+import ThoughtPostLayout from '@layouts/ThoughtPostLayout.astro';
+
+import CrumbsSnippet from '@components/CrumbSnippet.astro';
+import { getThoughtUrl } from 'src/content/routing';
+import { getThoughts } from 'src/content/collections';
+import ThoughtAuthor from '@components/thoughts/ThoughtAuthor.astro';
+import ThoughtNavigation from '@components/thoughts/ThoughtNavigation.astro';
+import ArticleSnippet from '@components/ArticleSnippet.astro';
+import ReadingIndicator from '@components/reading/ReadingIndicator.tsx';
+import ShareBlock from '@components/blog/ShareBlock';
+import ContentEnd from '@components/blog/ContentEnd.astro';
+
+
+import '@styles/thoughtView.css'
+import { components } from '@components/content';
+
+
+export async function getStaticPaths() {
+	const posts = await getThoughts();
+	const postCount = posts.length
+  
+	return posts.map((post, idx) => {
+		const prevPost = (idx - 1) >= 0 ? posts[idx - 1] : undefined
+		const nextPost = (idx + 1) < postCount ? posts[idx + 1] : undefined
+
+		return {
+			params: { slug: post.slug },
+			props: {
+				"prev": prevPost,
+				"current": post,
+				"next": nextPost,
+			},
+		}
+	});
+}
+
+export interface Props {
+	prev?: CollectionEntry<'thoughts'>;
+	current: CollectionEntry<'thoughts'>;
+	next?: CollectionEntry<'thoughts'>;
+}
+
+const {prev, current, next} = Astro.props;
+const { Content, remarkPluginFrontmatter: { timeToReadMin } } = await current.render();
+const {title, excerpt, pubDate, keywords, cover} = current.data
+const slug = current.slug
+const thoughtUrlPath = getThoughtUrl(slug)
+---
+<ThoughtPostLayout
+  title={title}
+  description={excerpt}
+  keywords={keywords}
+  image={cover.image}
+>
+  <ReadingIndicator client:only />
+  <main>
+    <ThoughtContent
+      id={slug}
+      title={title}
+      pubDate={pubDate}
+      cover={cover}
+      timeToReadMin={timeToReadMin}
+    >
+      <Content components={components} />
+      <ContentEnd />
+      <ShareBlock title={title} path={thoughtUrlPath} keywords={keywords} client:only />
+    </ThoughtContent>
+  </main>
+  <aside class="thought-sidebar">
+    <ThoughtAuthor />
+    <ThoughtNavigation prev={prev} next={next} />
+  </aside>
+  <CrumbsSnippet crumbs={[{ "/thoughts/": "Thoughts" }, { [thoughtUrlPath]: title }]} />
+  <ArticleSnippet
+		title={title}
+		path={thoughtUrlPath}
+		pubDate={pubDate}
+		keywords={keywords}
+		image={cover.image}
+		articleSection={"Thoughts"}
+		genres={[
+      "self-improvement",
+      "management",
+      "thoughts",
+      "life experience",
+      "life exploration",
+    ]}
+	/>
+</ThoughtPostLayout>

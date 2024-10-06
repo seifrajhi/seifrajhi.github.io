@@ -1,0 +1,26 @@
+body {
+    --socialShareBorderHoverColor: var(--red);
+}
+
+body.dark {
+    --socialShareBorderHoverColor: var(--pink);
+}
+
+.social-share-wrapper {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1.2rem
+}
+
+.social-share-wrapper h3 {
+    font-size: 1.5rem;
+}
+
+.social-share-wrapper .social-share-item {
+    margin-right: 0.8rem;
+    vertical-align: middle;
+}
+
+.social-share-wrapper .social-share-item:hover {
+    color: var(--socialShareBorderHoverColor) !important;
+}

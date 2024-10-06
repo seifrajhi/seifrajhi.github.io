@@ -1,0 +1,100 @@
+/** Theme variables **/
+
+body {
+    --thoughtHeaderColor: var(--red);
+    --thoughtTagColor: gray;
+    --imageTitleColor: gray;
+}
+
+body.dark {
+    --thoughtHeaderColor: var(--pink);
+    --thoughtTagColor: var(--grey);
+    --imageTitleColor: #8b949e;
+}
+
+ul.thought-tags {
+    display: flex;
+    font-size: 0.9rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+ul.thought-tags li {
+    border: 1px solid var(--thoughtTagColor);
+    border-radius: 4px;
+    color: var(--thoughtTagColor);
+    padding: 5px 10px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    white-space: nowrap;
+}
+/** Thought Styling **/
+
+.thought-wrapper h1 {
+    color: var(--thoughtHeaderColor);
+    font-size: 3rem;
+    line-height: 4rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+@media (max-width: 575px) {
+    .thought-wrapper h1 {
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+}
+
+.thought-wrapper .thought-details {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.thought-wrapper .thought-createdat {
+    font-weight: normal;
+}
+
+.thought-wrapper .theme-switcher {
+    float: right;
+    margin-left: 1rem;
+    margin-top: 0;
+}
+
+.thought-wrapper .cover {
+    margin: 0;
+}
+
+.thought-wrapper .cover .cover-filter {
+    left: 50%;
+    margin-left: -50vw;
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+}
+
+.thought-wrapper .cover .cover-image {
+    left: 50%;
+    margin-left: -50vw;
+    overflow: hidden;
+    position: relative;
+    max-height: 600px;
+    width: 100vw;
+}
+
+.thought-wrapper .cover .image-title {
+    color: var(--imageTitleColor);
+    font-size: 1rem;
+    margin: 0.5rem;
+    text-align: center;
+}
+
+.thought-wrapper .cover .image-title a{
+    color: var(--imageTitleColor);
+    font-size: 1rem;
+    text-decoration: underline;
+}
