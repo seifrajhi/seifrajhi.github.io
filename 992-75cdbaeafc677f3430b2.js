@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkseifrajhi_github_io=self.webpackChunkseifrajhi_github_io||[]).push([[992],{3992:function(e,t,i){i.r(t);var r=i(6540);t.default=()=>r.createElement("div",{"data-nosnippet":"",className:"newsletter-form"},r.createElement("iframe",{src:"https://rajhisaif.substack.com/embed",loading:"lazy",width:"100%",height:"320",style:{border:"10px solid #fff"},frameBorder:"0",scrolling:"no",title:"Newsletter Form"}))}}]);
+//# sourceMappingURL=992-75cdbaeafc677f3430b2.js.map
