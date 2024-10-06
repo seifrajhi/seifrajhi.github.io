@@ -166,7 +166,7 @@ const config: GatsbyConfig = {
         background_color: `#ffffff`,
         theme_color: `#ffffff`,
         display: `minimal-ui`,
-        icon: `src/images/sr-icon.png`,
+        icon: `src/images/seifr-icon.jpg`,
       },
     },
     {
