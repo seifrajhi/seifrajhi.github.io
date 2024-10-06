@@ -1,7 +1,7 @@
 ---
 id: 54e37b96a723ae61cbad4abe
 path: "/blog/data-on-kubernetes/"
-date: "2024-10-05 18:06:00"
+date: "2024-09-27 20:06:00"
 published: true
 title: "Managing Data on Kubernetes"
 cover: "./dok.png"

@@ -1,7 +1,7 @@
 ---
 id: 63ca499fd271b18e8f89b485
 path: "/thoughts/why-engineering-managers-should-be-technical/"
-date: "2024-10-05 07:37:00"
+date: "2024-10-05 17:37:00"
 published: true
 title: "Why Engineering Managers Should Be Technical"
 cover: "./how-to-be-an-engineering-manager.jpg"

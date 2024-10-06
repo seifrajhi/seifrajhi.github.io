@@ -2,10 +2,13 @@
 
 body {
     --thoughtTeaserHeaderLinkColor: var(--red);
+    --thoughtNewBadgeBgColor: var(--red);
 }
 
 body.dark {
     --thoughtTeaserHeaderLinkColor: var(--pink);
+    --thoughtReadBadgeBgColor: var(--grey)
+    
 }
 
 
@@ -41,4 +44,33 @@ body.dark {
 .thought-createdat {
     font-weight: 600;
     text-transform: uppercase;
+}
+
+.thought-item .thought-details .unread-badge {
+    color: var(--thoughtNewBadgeColor);
+    font-weight: bold;
+    font-family: monospace;
+    padding: 5px;
+    background-color: var(--thoughtReadBadgeBgColor);
+    border-radius: 5px;
+}
+
+.thought-item .article-header .new-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: var(--thoughtNewBadgeBgColor);
+    padding: 5px;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    color: var(--thoughtNewBadgeColor);
+    font-weight: bold;
+    text-align: center;
+    font-size: 1rem;
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center
 }
