@@ -21,6 +21,8 @@ Elon Musk once tweeted that he believed managers in tech should be technically e
 
 In this blog post, we will explore why technical skills are important for engineering managers, especially when there are senior tech leads within the team. We will also discuss the cognitive dissonance created by Musk’s tweet and how it relates to modern management practices.
 
+![Elon Musk's Tweet](./emusk-tweet.png)
+
 ## 🛠️ Why Technical Skills Matter
 
 1. **Effective Communication**: Technical managers can talk easily with both tech and non-tech teams. This helps everyone understand each other better.

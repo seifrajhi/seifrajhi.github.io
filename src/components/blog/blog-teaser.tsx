@@ -1,25 +1,26 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { Link } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
+import React, { useRef, useEffect } from "react";
+import PropTypes from "prop-types";
+import { Link } from "gatsby";
+import { GatsbyImage } from "gatsby-plugin-image";
+import gsap from "gsap";
 
 import useReadRepository, {
   getStatusLabel,
   ReadStatuses,
-} from "../../hooks/read-repository"
+} from "../../hooks/read-repository";
 
-import "./blog-teaser.css"
-import { ContentTypes } from "../analytics/reading-tracker"
+import "./blog-teaser.css";
+import { ContentTypes } from "../analytics/reading-tracker";
 
 const isNewArticle = (publishDate: string): boolean => {
-  const then = new Date(publishDate)
-  const now = new Date()
+  const then = new Date(publishDate);
+  const now = new Date();
 
-  const msBetweenDates = Math.abs(then.getTime() - now.getTime())
-  const daysBetweenDates = msBetweenDates / (24 * 60 * 60 * 1000)
+  const msBetweenDates = Math.abs(then.getTime() - now.getTime());
+  const daysBetweenDates = msBetweenDates / (24 * 60 * 60 * 1000);
 
-  return daysBetweenDates < 30
-}
+  return daysBetweenDates < 30;
+};
 
 const BlogTeaser = (props) => {
   const {
@@ -32,17 +33,46 @@ const BlogTeaser = (props) => {
     excerpt,
     cover,
     keywords,
-  } = props
+  } = props;
 
-  const [articleReadRepository, _] = useReadRepository(ContentTypes.BLOG)
-  const readingState = articleReadRepository[id]
+  const [articleReadRepository, _] = useReadRepository(ContentTypes.BLOG);
+  const readingState = articleReadRepository[id];
 
   const isFinished: boolean =
-    readingState && readingState.status == ReadStatuses.FINISHED
-  const isNew: boolean = isNewArticle(publishedFullDate)
+    readingState && readingState.status == ReadStatuses.FINISHED;
+  const isNew: boolean = isNewArticle(publishedFullDate);
+
+  const teaserRef = useRef(null);
+
+  useEffect(() => {
+    const element = teaserRef.current;
+
+    gsap.fromTo(
+      element,
+      { scale: 1 },
+      {
+        scale: 1.4,
+        duration: 0.5,
+        paused: true,
+        ease: "power1.inOut",
+        onReverseComplete: () => gsap.set(element, { scale: 1 }),
+      }
+    );
+
+    const handleMouseEnter = () => gsap.to(element, { scale: 1.05 });
+    const handleMouseLeave = () => gsap.to(element, { scale: 1 });
+
+    element.addEventListener("mouseenter", handleMouseEnter);
+    element.addEventListener("mouseleave", handleMouseLeave);
+
+    return () => {
+      element.removeEventListener("mouseenter", handleMouseEnter);
+      element.removeEventListener("mouseleave", handleMouseLeave);
+    };
+  }, []);
 
   return (
-    <article className="blog-item">
+    <article className="blog-item" ref={teaserRef}>
       <Link className="article-header" to={url}>
         <div className="cover-filter">
           <GatsbyImage className="cover" image={cover} alt={title} />
@@ -90,8 +120,8 @@ const BlogTeaser = (props) => {
         </ul>
       </div>
     </article>
-  )
-}
+  );
+};
 
 BlogTeaser.propTypes = {
   id: PropTypes.string.isRequired,
@@ -103,6 +133,6 @@ BlogTeaser.propTypes = {
   excerpt: PropTypes.string.isRequired,
   cover: PropTypes.object.isRequired,
   keywords: PropTypes.array.isRequired,
-}
+};
 
-export default BlogTeaser
+export default BlogTeaser;

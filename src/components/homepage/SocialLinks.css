@@ -12,3 +12,48 @@
 .social .social-list a span {
     display: none;
 }
+
+/* Add styles for specific social items */
+.social-item {
+    margin: 0 10px; /* Example margin for each item */
+}
+
+.social-linkedin a {
+    color: #0077b5; /* LinkedIn color */
+}
+
+.social-github a {
+    color: #000; /* GitHub color */
+}
+
+.social-email a {
+    color: #d14836; /* Email color */
+}
+
+.social-twitter a {
+    color: #1da1f2; /* Twitter color */
+}
+
+.social-reddit a {
+    color: #ff4500; /* Reddit color */
+}
+
+.social-stackoverflow a {
+    color: #f48024; /* StackOverflow color */
+}
+
+.social-goodreads a {
+    color: #382110; /* Goodreads color */
+}
+
+.social-osi a {
+    color: #ffeb3b; /* OSSInsights color */
+}
+
+.social-devstats a {
+    color: #4caf50; /* DevStats color */
+}
+
+.social-rss a {
+    color: #ff6600; /* RSS color */
+}

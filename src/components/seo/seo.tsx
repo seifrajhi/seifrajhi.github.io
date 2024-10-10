@@ -72,19 +72,19 @@ const Seo = ({
       content: ogType,
     },
     {
-      name: `X/Twitter:card`,
+      name: `twitter:card`,
       content: `summary_large_image`,
     },
     {
-      name: `X/Twitter:creator`,
+      name: `twitter:creator`,
       content: siteMetadata.author,
     },
     {
-      name: `X/Twitter:title`,
+      name: `twitter:title`,
       content: title,
     },
     {
-      name: `X/Twitter:description`,
+      name: `twitter:description`,
       content: metaDescription,
     },
     {
@@ -93,8 +93,8 @@ const Seo = ({
       content: `${socialCardImageUrl}`,
     },
     {
-      name: `X/Twitter:image`,
-      content: `${socialCardImageUrl}`,
+      name: `twitter:image`,
+      content: socialCardImageUrl,
     },
   ])
 

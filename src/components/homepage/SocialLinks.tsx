@@ -10,6 +10,7 @@ import { faStackOverflow } from "@fortawesome/free-brands-svg-icons/faStackOverf
 import { faGoodreads } from  "@fortawesome/free-brands-svg-icons/faGoodreads"
 import { faOsi } from "@fortawesome/free-brands-svg-icons/faOsi"
 import { faChartLine } from "@fortawesome/free-solid-svg-icons/faChartLine"
+import { faRss } from "@fortawesome/free-solid-svg-icons/faRss"
 import "./SocialLinks.css"
 
 export type IconSize =
@@ -50,7 +51,7 @@ const SocialLinks = ({
             title="Saifeddine Rajhi on LinkedIn"
             target="blank"
           >
-            <FontAwesomeIcon icon={faLinkedinIn} size={iconSize} />
+            <FontAwesomeIcon icon={faLinkedinIn} beat size={iconSize} />
             <span>LinkedIn</span>
           </OutboundLink>
         </li>
@@ -65,7 +66,7 @@ const SocialLinks = ({
             title="Saifeddine Rajhi on Github"
             target="blank"
           >
-            <FontAwesomeIcon icon={faGithub} size={iconSize} />
+            <FontAwesomeIcon icon={faGithub} beat size={iconSize} />
             <span>GitHub</span>
           </OutboundLink>
         </li>
@@ -78,7 +79,7 @@ const SocialLinks = ({
             href="mailto:rajhiseif@gmail.com"
             title="Saifeddine Rajhi's Email"
           >
-            <FontAwesomeIcon icon={faEnvelope} size={iconSize} />
+            <FontAwesomeIcon icon={faEnvelope} beat size={iconSize} />
             <span>Email</span>
           </OutboundLink>
         </li>
@@ -93,7 +94,7 @@ const SocialLinks = ({
             title="Saifeddine Rajhi on X/X/Twitter"
             target="blank"
           >
-            <FontAwesomeIcon icon={faXTwitter} size={iconSize} />
+            <FontAwesomeIcon icon={faXTwitter} beat size={iconSize} />
             <span>X/Twitter</span>
           </OutboundLink>
         </li>
@@ -108,11 +109,11 @@ const SocialLinks = ({
             title="Saifeddine Rajhi on Reddit"
             target="blank"
           >
-            <FontAwesomeIcon icon={faRedditAlien} size={iconSize} />
+            <FontAwesomeIcon icon={faRedditAlien} beat size={iconSize} />
             <span>Reddit</span>
           </OutboundLink>
         </li>
-        <li className="social-item social-StackOverflow">
+        <li className="social-item social-stackoverflow">
           <OutboundLink
             rel="me"
             itemProp="url"
@@ -123,7 +124,7 @@ const SocialLinks = ({
             title="Saifeddine Rajhi on StackOverflow"
             target="blank"
           >
-            <FontAwesomeIcon icon={faStackOverflow} size={iconSize} />
+            <FontAwesomeIcon icon={faStackOverflow} beat size={iconSize} />
             <span>StackOverflow</span>
           </OutboundLink>
         </li>
@@ -139,7 +140,7 @@ const SocialLinks = ({
             title="Saifeddine Rajhi on Goodreads"
             target="blank"
           >
-            <FontAwesomeIcon icon={faGoodreads} size={iconSize}  />
+            <FontAwesomeIcon icon={faGoodreads} beat size={iconSize}  />
             <span>Goodreads</span>
           </OutboundLink>
         </li>
@@ -154,7 +155,7 @@ const SocialLinks = ({
             title="Saifeddine Rajhi on OSSInsights"
             target="blank"
           >
-            <FontAwesomeIcon icon={faOsi} size={iconSize}  />
+            <FontAwesomeIcon icon={faOsi} beat size={iconSize}  />
             <span>OSSInsights</span>
           </OutboundLink>
         </li>
@@ -169,10 +170,25 @@ const SocialLinks = ({
             title="Saifeddine Rajhi on DevStats"
             target="blank"
           >
-            <FontAwesomeIcon icon={faChartLine} size={iconSize}  />
+            <FontAwesomeIcon icon={faChartLine} beat size={iconSize}  />
             <span>DevStats</span>
           </OutboundLink>
-        </li>     
+        </li>   
+        <li className="social-item social-RSS">
+          <OutboundLink
+            rel="me"
+            itemProp="url"
+            eventCategory="social"
+            eventAction="click"
+            eventLabel="RSS"
+            href="https://seifrajhi.github.io/rss.xml"
+            title="Subscribe to my blog post"
+            target="blank"
+          >
+            <FontAwesomeIcon icon={faRss} beat size={iconSize}  />
+            <span>RSS</span>
+          </OutboundLink>
+        </li>   
       </ul>
     </div>
   )

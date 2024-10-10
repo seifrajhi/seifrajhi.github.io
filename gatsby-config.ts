@@ -66,9 +66,6 @@ const config: GatsbyConfig = {
                   date: frontmatter.date,
                   url: site.siteMetadata.siteUrl + frontmatter.path,
                   guid: site.siteMetadata.siteUrl + frontmatter.path,
-                  custom_elements: [    
-                    { author: "Saif Rajhi rajhiseif@gmail.com" }
-                  ],
                 };
               });
             },
@@ -136,7 +133,7 @@ const config: GatsbyConfig = {
       resolve: "gatsby-plugin-robots-txt",
       options: {
         host: "https://seifrajhi.github.io",
-        sitemap: "https://seifrajhi.github.io/sitemap/sitemap-index.xml",
+        sitemap: ["https://seifrajhi.github.io/sitemap-0.xml","https://seifrajhi.github.io/sitemap-index.xml"],
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },
@@ -197,7 +194,7 @@ const config: GatsbyConfig = {
       options: {
         trackingId: "G-LLPCCGNLH7",
         // Defines where to place the tracking script - `true` in the head and `false` in the body
-        head: false,
+        head: true,
         // Setting this parameter is optional
         anonymize: true,
         // Setting this parameter is also optional
@@ -213,7 +210,7 @@ const config: GatsbyConfig = {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
         // You can add multiple tracking ids and a pageview event will be fired for all of them.
-        trackingIds: ["G-LLPCCGNLH7"],
+        trackingIds: ["G-LLPCCGNLH7", "GTM-5V895PDS"],
         gtagConfig: {
           // optimize_id: "OPT_CONTAINER_ID",
           anonymize_ip: true,
@@ -222,7 +219,7 @@ const config: GatsbyConfig = {
         // This object is used for configuration specific to this plugin
         pluginConfig: {
           // Puts tracking script in the head instead of the body
-          head: false,
+          head: true,
           // Setting this parameter is also optional
           // respectDNT: false,
           // Avoids sending pageview hits from custom paths

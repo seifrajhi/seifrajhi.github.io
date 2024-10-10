@@ -1,11 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { TweenLite, Circ } from "gsap/all";
+import React, { useEffect, useRef } from "react";
 import "gsap/CSSPlugin";
 
 import "./hero-header.css";
-
-// Bright Theme - rgba(31, 43, 49) || 95, 99, 106
-// Dark Theme - rgba(228, 232, 240)
 
 interface CircleProps {
   ctx: CanvasRenderingContext2D;
@@ -34,7 +30,8 @@ class Circle {
 
     this.drawCtx.beginPath();
     this.drawCtx.arc(this.pos.x, this.pos.y, this.radius, 0, 2 * Math.PI, false);
-    this.drawCtx.fillStyle = this.color.replace("{alpha}", String(this.active));
+    const alpha = Math.min(1, Math.max(0, this.active));
+    this.drawCtx.fillStyle = this.color.replace("{alpha}", String(alpha));
     this.drawCtx.fill();
   };
 }
@@ -47,194 +44,210 @@ const getDistance = (p1: { x: number; y: number }, p2: { x: number; y: number })
 interface NNBackgroundProps {
   theme: string;
   id: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 const NNBackground: React.FC<NNBackgroundProps> = (props) => {
   const { theme } = props;
+  const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
     const colors = getColorsByTheme(theme);
 
-    (function () {
-      const pointSize = 3;
-      const pointDensity = 20;
-      const kNeighbors = 6;
+    const pointSize = 3;
+    const pointDensity = 20;
+    const kNeighbors = 6;
 
-      const largeHeader = document.getElementById("hero-header") as HTMLElement;
+    const largeHeader = document.getElementById("hero-header") as HTMLElement;
 
-      let width = largeHeader.offsetWidth;
-      let height = largeHeader.offsetHeight;
+    let width = largeHeader.offsetWidth;
+    let height = largeHeader.offsetHeight;
 
-      let target = {
-        x: width * 0.5,
-        y: height * 0.4,
-      };
+    let target = {
+      x: width * 0.5,
+      y: height * 0.4,
+    };
 
-      const canvas = document.getElementById("neural-network-background") as HTMLCanvasElement;
+    const canvas = canvasRef.current!;
+    canvas.width = width;
+    canvas.height = height;
+
+    const ctx = canvas.getContext("2d") as CanvasRenderingContext2D;
+
+    let points: any[] = [];
+
+    const initHeader = () => {
+      points = [];
+
+      for (let x = 0; x < width; x = x + width / pointDensity) {
+        for (let y = 0; y < height; y = y + height / pointDensity) {
+          let px = x + (Math.random() * width) / pointDensity,
+            py = y + (Math.random() * height) / pointDensity;
+
+          points.push({
+            x: px,
+            originX: px,
+            y: py,
+            originY: py,
+          });
+        }
+      }
+
+      for (let i = 0; i < points.length; i++) {
+        let closest: any[] = [];
+        let p1 = points[i];
+
+        for (let j = 0; j < points.length; j++) {
+          let p2 = points[j];
+
+          if (p1 === p2) {
+            continue;
+          }
+
+          var placed = false;
+
+          for (var k = 0; k < kNeighbors; k++) {
+            if (placed) continue;
+
+            if (closest[k] === undefined) {
+              closest[k] = p2;
+              placed = true;
+            }
+          }
+
+          for (var k = 0; k < kNeighbors; k++) {
+            if (placed) continue;
+
+            if (getDistance(p1, p2) < getDistance(p1, closest[k])) {
+              closest[k] = p2;
+              placed = true;
+            }
+          }
+        }
+
+        p1.closest = closest;
+      }
+
+      for (var i in points) {
+        points[i].circle = new Circle(
+          ctx,
+          points[i],
+          pointSize + Math.random() * pointSize,
+          colors["circleColor"]
+        );
+      }
+    };
+
+    const addListeners = () => {
+      if (!("ontouchstart" in window)) {
+        largeHeader.addEventListener("mousemove", mouseMove);
+        largeHeader.addEventListener("click", mouseClick);
+      }
+
+      window.addEventListener("resize", resize);
+    };
+
+    const mouseMove = (e: MouseEvent) => {
+      const path = e.composedPath ? e.composedPath() : (e as any).path || [];
+      if (canvas !== path) {
+        return;
+      }
+
+      let posx = 0,
+        posy = 0;
+
+      let rect = (e.target as HTMLElement).getBoundingClientRect();
+
+      posx = e.pageX - rect.left;
+      posy = e.pageY - rect.top;
+
+      target.x = posx;
+      target.y = posy;
+    };
+
+    const mouseClick = (e: MouseEvent) => {
+      points.forEach(point => {
+        point.circle.color = `rgba(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, {alpha})`;
+      });
+    };
+
+    const resize = () => {
+      width = largeHeader.offsetWidth;
+      height = largeHeader.offsetHeight;
+
       canvas.width = width;
       canvas.height = height;
+    };
 
-      const ctx = canvas.getContext("2d") as CanvasRenderingContext2D;
+    const initAnimation = () => {
+      animate();
 
-      let points: any[] = [];
+      for (var i in points) {
+        shiftPoint(points[i]);
+      }
+    };
 
-      const initHeader = () => {
-        points = [];
+    const animate = () => {
+      drawGradientBackground(ctx, width, height);
+      ctx.clearRect(0, 0, width, height);
 
-        for (let x = 0; x < width; x = x + width / pointDensity) {
-          for (let y = 0; y < height; y = y + height / pointDensity) {
-            let px = x + (Math.random() * width) / pointDensity,
-              py = y + (Math.random() * height) / pointDensity;
-
-            points.push({
-              x: px,
-              originX: px,
-              y: py,
-              originY: py,
-            });
-          }
+      for (var i in points) {
+        if (Math.abs(getDistance(target, points[i])) < 4000) {
+          points[i].active = 0.3;
+          points[i].circle.active = 0.5;
+        } else if (Math.abs(getDistance(target, points[i])) < 20000) {
+          points[i].active = 0.1;
+          points[i].circle.active = 0.3;
+        } else if (Math.abs(getDistance(target, points[i])) < 40000) {
+          points[i].active = 0.02;
+          points[i].circle.active = 0.1;
+        } else {
+          points[i].active = 0;
+          points[i].circle.active = 0;
         }
 
-        for (let i = 0; i < points.length; i++) {
-          let closest: any[] = [];
-          let p1 = points[i];
+        drawLines(points[i], colors["lineColor"]);
+        points[i].circle.draw();
+      }
 
-          for (let j = 0; j < points.length; j++) {
-            let p2 = points[j];
+      requestAnimationFrame(animate);
+    };
 
-            if (p1 === p2) {
-              continue;
-            }
+    const shiftPoint = (p: any) => {
+      TweenLite.to(p, 1 + 1 * Math.random(), {
+        x: p.originX - 50 + Math.random() * 100,
+        y: p.originY - 50 + Math.random() * 100,
+        ease: Circ.easeInOut,
+        onComplete: function () {
+          shiftPoint(p);
+        },
+      });
+    };
 
-            var placed = false;
+    const drawLines = (p: any, lineColor: string) => {
+      if (!p.active) return;
 
-            for (var k = 0; k < kNeighbors; k++) {
-              if (placed) continue;
+      for (var i in p.closest) {
+        ctx.beginPath();
+        ctx.moveTo(p.x, p.y);
+        ctx.lineTo(p.closest[i].x, p.closest[i].y);
+        ctx.strokeStyle = lineColor.replace("{alpha}", String(p.active));
+        ctx.stroke();
+      }
+    };
 
-              if (closest[k] === undefined) {
-                closest[k] = p2;
-                placed = true;
-              }
-            }
+    const drawGradientBackground = (ctx: CanvasRenderingContext2D, width: number, height: number) => {
+      const gradient = ctx.createLinearGradient(0, 0, width, height);
+      gradient.addColorStop(0, "#1e3c72");
+      gradient.addColorStop(1, "#2a5298");
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, width, height);
+    };
 
-            for (var k = 0; k < kNeighbors; k++) {
-              if (placed) continue;
+    initHeader();
+    initAnimation();
+    addListeners();
 
-              if (getDistance(p1, p2) < getDistance(p1, closest[k])) {
-                closest[k] = p2;
-                placed = true;
-              }
-            }
-          }
-
-          p1.closest = closest;
-        }
-
-        for (var i in points) {
-          points[i].circle = new Circle(
-            ctx,
-            points[i],
-            pointSize + Math.random() * pointSize,
-            colors["circleColor"]
-          );
-        }
-      };
-
-      const addListeners = () => {
-        if (!("ontouchstart" in window)) {
-          largeHeader.addEventListener("mousemove", mouseMove);
-        }
-
-        window.addEventListener("resize", resize);
-      };
-
-      const mouseMove = (e: MouseEvent) => {
-        const path = e.composedPath ? e.composedPath() : (e as any).path || [];
-        if (canvas !== path) {
-          return;
-        }
-
-        let posx = 0,
-          posy = 0;
-
-        let rect = (e.target as HTMLElement).getBoundingClientRect();
-
-        posx = e.pageX - rect.left;
-        posy = e.pageY - rect.top;
-
-        target.x = posx;
-        target.y = posy;
-      };
-
-      const resize = () => {
-        width = largeHeader.offsetWidth;
-        height = largeHeader.offsetHeight;
-
-        canvas.width = width;
-        canvas.height = height;
-      };
-
-      const initAnimation = () => {
-        animate();
-
-        for (var i in points) {
-          shiftPoint(points[i]);
-        }
-      };
-
-      const animate = () => {
-        ctx.clearRect(0, 0, width, height);
-
-        for (var i in points) {
-          if (Math.abs(getDistance(target, points[i])) < 4000) {
-            points[i].active = 0.3;
-            points[i].circle.active = 0.5;
-          } else if (Math.abs(getDistance(target, points[i])) < 20000) {
-            points[i].active = 0.1;
-            points[i].circle.active = 0.3;
-          } else if (Math.abs(getDistance(target, points[i])) < 40000) {
-            points[i].active = 0.02;
-            points[i].circle.active = 0.1;
-          } else {
-            points[i].active = 0;
-            points[i].circle.active = 0;
-          }
-
-          drawLines(points[i], colors["lineColor"]);
-          points[i].circle.draw();
-        }
-
-        requestAnimationFrame(animate);
-      };
-
-      const shiftPoint = (p: any) => {
-        TweenLite.to(p, 1 + 1 * Math.random(), {
-          x: p.originX - 50 + Math.random() * 100,
-          y: p.originY - 50 + Math.random() * 100,
-          ease: Circ.easeInOut,
-          onComplete: function () {
-            shiftPoint(p);
-          },
-        });
-      };
-
-      const drawLines = (p: any, lineColor: string) => {
-        if (!p.active) return;
-
-        for (var i in p.closest) {
-          ctx.beginPath();
-          ctx.moveTo(p.x, p.y);
-          ctx.lineTo(p.closest[i].x, p.closest[i].y);
-          ctx.strokeStyle = lineColor.replace("{alpha}", String(p.active));
-          ctx.stroke();
-        }
-      };
-
-      initHeader();
-      initAnimation();
-      addListeners();
-    })();
   }, [theme]);
 
   const getColorsByTheme = (theme: string) => {
@@ -251,7 +264,8 @@ const NNBackground: React.FC<NNBackgroundProps> = (props) => {
     };
   };
 
-  return <canvas id="neural-network-background"></canvas>;
+  return <canvas ref={canvasRef} id="neural-network-background"></canvas>;
 };
 
 export default NNBackground;
+

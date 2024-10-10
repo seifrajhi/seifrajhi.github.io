@@ -200,7 +200,7 @@ const PlatformEngineerCV = () => {
                   <strong itemProp="jobTitle">
                     Senior Platform Engineer 
                   </strong>
-                  , <span itemProp="name">JustEat Takeaway.com</span>; Enschede, Netherlands — April 2023 – Present
+                  , <span itemProp="name">JustEat Takeaway.com</span>; Enschede, Netherlands — April 2023 – June 2024
                   <br />
                   <div className="job-description">
                     Have been working on infrastructure optimization and application deployment in Amazon EKS (Elastic Kubernetes Service), ensuring high availability and performance:

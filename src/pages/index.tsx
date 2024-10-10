@@ -1,24 +1,21 @@
-import * as React from "react"
-
-import { useStaticQuery, graphql } from "gatsby"
-
-import Layout from "../components/theme/layout"
-import Seo from "../components/seo/seo"
-import PersonRichSnippet from "../components/seo/person-snippet"
-import Avatar from "../components/homepage/avatar"
-import ThemeSwitcher from "../components/theme/theme-switcher"
-import ReactRotatingText from "react-rotating-text"
-import MainNavigation from "../components/main-navigation"
-import BlogTeaser from "../components/blog/blog-teaser"
-import ThoughtTeaser from "../components/thoughts/thought-teaser"
-import SocialLinks from "../components/homepage/SocialLinks"
-import NNBackground from "../components/nn-design/nn-background"
-import Footer from "../components/footer"
-
-import "./Index.css"
+import * as React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import Layout from "../components/theme/layout";
+import Seo from "../components/seo/seo";
+import PersonRichSnippet from "../components/seo/person-snippet";
+import Avatar from "../components/homepage/avatar";
+import ThemeSwitcher from "../components/theme/theme-switcher";
+import ReactRotatingText from "react-rotating-text";
+import MainNavigation from "../components/main-navigation";
+import BlogTeaser from "../components/blog/blog-teaser";
+import ThoughtTeaser from "../components/thoughts/thought-teaser";
+import SocialLinks from "../components/homepage/SocialLinks";
+import NNBackground from "../components/nn-design/nn-background";
+import Footer from "../components/footer";
+import "./Index.css";
 
 const shuffleArray = (strings: string[]) =>
-  strings.sort(() => Math.random() - 1.1)
+  strings.sort(() => Math.random() - 1.1);
 
 const titles: string[] = shuffleArray([
   "DevOps Engineer 🛠",
@@ -27,7 +24,7 @@ const titles: string[] = shuffleArray([
   "Data Platform Engineer 📊",
   "Site Reliability Engineer SRE 🚀",
   "Cloud Architect ☁️",
-  "Tech Blogger 📚",
+  "Tech Blogger ✍️",
   "Head in the clouds ☁️",
   "Code Monkey 🐒",
   "Tech Enthusiast 🤓",
@@ -48,7 +45,8 @@ const titles: string[] = shuffleArray([
   "Lifelong Student 📚",
   "AI Evangelist 🔮",
   "Hobby Blogger ✍️",
-])
+  "Critical thinker 💬",
+]);
 
 const IndexPage = (): JSX.Element => {
   const { recentPosts, recentThoughts } = useStaticQuery(
@@ -112,7 +110,7 @@ const IndexPage = (): JSX.Element => {
         }
       }
     `
-  )
+  );
 
   return (
     <Layout>
@@ -125,7 +123,7 @@ const IndexPage = (): JSX.Element => {
       <main className="homepagev2">
         <div className="intro">
           <div id="hero-header" className="hero-header homepage-sidebar">
-            <NNBackground />
+            <NNBackground theme="dark" id="neural-network-background"/>
             <figure className="hero-intro">
               <div className="logo">
                 <div className="avatar">
@@ -148,25 +146,27 @@ const IndexPage = (): JSX.Element => {
           </div>
         </div>
         <div className="mylife">
+          <NNBackground theme="dark" id="neural-network-background" />
           <div>
-            <p className="hey">Hi There<span role="img">👋</span>, Saif Here!</p>
+            <p className="hey">Hi there<span role="img">👋</span>, Saif here!</p>
             <p>
-            My name is <strong>Saifeddine</strong>, and you can just call me <strong>Saif</strong> 
+            I’m Saifeddine, but you can call me <strong>Saif</strong>. I’m a Senior Data Platform Engineer and a former Site Reliability Engineer. I’m all about containers, Kubernetes, and diving into the latest tech trends. 
             </p>
             <p>
-            I’m a Senior Data Platform Engineer with experience as a Site Reliability Engineer, passionate about containers and bew technologies exploration.
+              <strong><em>Let’s Connect! <a href="https://cal.com/saifeddine-rajhi" className="link-url">Schedule a meeting</a> on my calendar to discuss potential collaborations, projects, or just to network.</em></strong>
             </p>
+           <br />
           </div>
           <div>
             <h2 className="activity-title">Learn & Share</h2>
             <div>
               <p>
-              I am a lifetime learner with a keen interest in a broad range of topics, including Containers and Cloud, 
-              Kubernetes, DevOps, Platform Engineering, AI, Security, Networking, Open Source, AWS, 
-              Automation, Infrastructure as Code, Monitoring, and Reliability Engineering.
+                I am a lifetime learner with a keen interest in a broad range of topics, including Containers and Cloud, 
+                Kubernetes, DevOps, Platform Engineering, AI, Security, Networking, Open Source, AWS, 
+                Automation, Infrastructure as Code, Monitoring, and Reliability Engineering.
               </p>
-              <br/>
-              <br></br>
+              <br />
+              <br />
               <p>
                 When I have spare time, I enjoy putting together my knowledge
                 about those enlightening topics and share with others.
@@ -196,6 +196,7 @@ const IndexPage = (): JSX.Element => {
               </div>
             </div>
           </div>
+          <br />
           <div>
             <h2 className="activity-title">Think & Write</h2>
             <div>
@@ -213,6 +214,7 @@ const IndexPage = (): JSX.Element => {
                   ({ node: { timeToRead, frontmatter } }) => (
                     <ThoughtTeaser
                       key={frontmatter.id}
+                      id={frontmatter.id}
                       title={frontmatter.title}
                       url={frontmatter.path}
                       timeToRead={timeToRead}
@@ -237,7 +239,7 @@ const IndexPage = (): JSX.Element => {
       <Footer />
       <PersonRichSnippet />
     </Layout>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;

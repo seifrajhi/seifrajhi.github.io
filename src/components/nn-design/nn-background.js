@@ -5,6 +5,7 @@ import "gsap/CSSPlugin"
 import "./hero-header.css"
 
 // Bright Theme - rgba(31, 43, 49) || 95, 99, 106
+
 // Dark Theme - rgba(228, 232, 240)
 
 class Circle {

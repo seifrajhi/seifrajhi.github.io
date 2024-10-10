@@ -72,9 +72,6 @@ That's what happened. Both projects were merged into one known as <a href="https
 </div>
 <br>
 
-
-
-
 ## The SDK
 
 

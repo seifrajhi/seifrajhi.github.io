@@ -229,3 +229,13 @@ body.dark {
         width: 100%;
     }
 }
+
+@media (prefers-color-scheme: dark) {
+    a {
+      color: pink;
+    }
+  }
+
+ .link-url {
+    color: var(--secondNameColor);
+}
