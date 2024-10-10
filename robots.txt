@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://seifrajhi.github.io/sitemap/sitemap-index.xml
+Sitemap: https://seifrajhi.github.io/sitemap-0.xml
 Host: https://seifrajhi.github.io
