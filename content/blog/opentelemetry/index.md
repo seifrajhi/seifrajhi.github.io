@@ -1,6 +1,6 @@
 ---
 id: 54e37b96a690de61cbad4dca
-path: "/blog/opentelemtry/"
+path: "/blog/opentelemtry-sdk/"
 date: "2024-09-26 13:06:00"
 published: true
 title: "Get Started with OpenTelemetry SDKs"
@@ -19,11 +19,12 @@ OpenTelemetry is an observability framework and an active [CNCF project](https:/
 In this blog post series, we will dig into two big questions:
 
 - how OpenTelemetry instrumentation works on the application side taking [Python's SDK](https://github.com/open-telemetry/opentelemetry-python/) as an example. We will touch traces, metrics, logs and context propagation across services.
-- how OpenTelemetry Collector works under the hood and some of the interesting engineering decisions made there (see [the OTel Collector blog post](./-sdk/))
+
+- how OpenTelemetry Collector works under the hood and some of the interesting engineering decisions made there.
 
 Gotta be fun 🙌
 
-## The Problem
+## 📚 Introduction
 
 With the rise of the open source community, people and organizations don’t really want to invest in proprietary protocols and standards anymore. Instead, it's mainstream to pick a widely-recognized open source project as a basis to build on top of it.
 
@@ -41,6 +42,7 @@ On the traces side, there are [Jaeger](https://www.jaegertracing.io/) and [Zipki
 There are also various beats that could scrap your logs like [fluentd](https://www.fluentd.org/) or [Grafana Loki](https://grafana.com/oss/loki/).
 
 Now if you want to cover all three pillars, you need to pick a combination of collectors/protocols to cover each one (well, some are capable of covering a few pillars).
+
 However, there are still a few problems left:
 
 - even though the protocols are open source, they may still tightly connect your application to the underlying collector or storage, so it won't be that easy to switch gears and use something else
@@ -72,15 +74,13 @@ That's what happened. Both projects were merged into one known as <a href="https
 </div>
 <br>
 
-## The SDK
-
-
-
+## The Software development kit SDK
 
 Collecting logs, metrics and traces in a unified way across services implemented in different technical stacks is the central task of OpenTelemetry.
+
 To get there, OpenTelemetry provides:
 
-- SDKs for [11+ of the most popular languages](https://opentelemetry.io/docs/instrumentation/) (like Python, Go, NodeJS, Rust, Java, etc) that inits OTel core components
+- SDKs for [11+ of the most popular languages](https://opentelemetry.io/docs/instrumentation/) (like Python, Go, NodeJS, Rust, Java, etc) that inits OTel core components.
 - library-specific instrumentations that provide tool/framework-specific signals and context automagically (e.g. [Starlette](https://www.starlette.io/), [HTTPX](https://www.python-httpx.org/), [aiopika](https://aio-pika.readthedocs.io/en/latest/) instrumentations, and so on)
 
 The third thing you could do is to further instrument your codebase with business logic specific traces and metrics.
@@ -112,7 +112,7 @@ metric_reader = PeriodicExportingMetricReader(ConsoleMetricExporter())
 
 resource = Resource(
     attributes={
-        SERVICE_NAME: "notifications",
+        SERVICE_NAME: "demo",
         SERVICE_VERSION: "v42",
     }
 )
@@ -144,7 +144,7 @@ from opentelemetry.sdk.resources import SERVICE_NAME, SERVICE_VERSION, Resource
 
 resource = Resource(
     attributes={
-        SERVICE_NAME: "notifications",
+        SERVICE_NAME: "demo",
         SERVICE_VERSION: "v42",
     }
 )
@@ -175,7 +175,6 @@ If you don't want to configure a real provider, there are also `NoOpTracerProvid
         </p>
     </span>
 </div>
-
 <br>
 
 Then, the rest of the codebase refers to the global providers when it needs to create traces or metrics.
@@ -265,7 +264,6 @@ These two samplers could be also configured to respect parent span decisions, so
     </span>
 </div>
 
-
 ### Span Processors
 
 When spans end, they come to span processors. Span processing is the last stage of span's lifecycle before it's exported outside of the service. OpenTelemetry uses it to batch spans and multiplex them to multiple exporters.
@@ -353,7 +351,7 @@ OpenTelemetry supports the following metric types:
 - <span class="green">Histogram</span> (and <span class="green">Observable Histogram</span>) - suitable for measurements on which you want to calculate statistics (for example, request latency)
 - <span class="green">Gauge</span> - just like the observable <span class="green">UpDownCounter</span>, but each measurement is treated as a separate data point, so they are not summed up (for example, CPU or RAM utilizations)
 
-### Views & Aggregations
+### Views & agregations
 
 With our metrics defined, we could start measuring, aggregating and collecting actual values.
 
@@ -391,7 +389,7 @@ This is called <span class="yellow">aggregation temporality</span>.
 ![Aggregation Temporalities](./opentelemetry-temporalities.png "Aggregation Temporalities")
 <div class="image-title">Aggregation Temporalities</div>
 
-### Metric Readers
+### Metric readers
 
 As we briefly have mentioned, metrics are collected on schedule by <span class="blue">MetricReader</span> like <span class="blue">PeriodicExportingMetricReader</span> which holds a ticker in a separate thread.
 The ticker initiates the metrics collection process that creates exportable data according to <span class="yellow">metrics aggregation temporalities</span>.
@@ -428,7 +426,7 @@ The remaining architecture resembles what we have reviewed in [the trace part](#
 There is a dedicated LoggerProvider that holds log processors and exporters attached to the processors.
 The processors send logs to exporters for further saving in observability backends.
 
-## SemConv
+## Semantic Conventions SemConv
 
 Before wrapping up, we need to touch on another important topic that is tangentially connected to service instrumentations and metrics.
 
@@ -442,11 +440,9 @@ The same situations can happen in traces when we instrument database queries, ob
 OTel recognized this problem and [came up with a set of common names for common operations across all three signals](https://opentelemetry.io/docs/specs/semconv/).
 So if you use it, you can come up with a very unified view of the whole system when looking at it through an observability lens.
 
-## Conclusion
+## Closing thoughts
 
 In this article, we have reviewed OpenTelemetry integration from the service development perspective by looking into the internals of the SDK.
-
-In the next part, we will see what happens with logs when they come to the OTel Collector.
 
 ## References
 

@@ -132,6 +132,19 @@ body.dark {
     font-size: 4rem;
     text-align: center;
 }
+.activity-title {
+    color: var(--activityTitleColor);
+    font-family: 'Medium 500', cursive;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.activity-notfound {
+    color: var(--activityTitleColor);
+    font-family: 'Medium 500', cursive;
+    font-size: 2rem;
+    text-align: center;
+}
 
 .homepagev2 .mylife .recent-posts {
     display: flex;

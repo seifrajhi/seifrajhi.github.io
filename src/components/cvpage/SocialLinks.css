@@ -1,0 +1,39 @@
+.social .social-list {
+    display: flex;
+    flex-flow: row wrap;
+    flex-grow: 0;
+    flex-shrink: 0;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social .social-list a span {
+    display: none;
+}
+
+/* Add styles for specific social items */
+.social-item {
+    margin: 0 10px; /* Example margin for each item */
+}
+
+.social-linkedin a {
+    color: #000; /* LinkedIn color */
+}
+
+.social-github a {
+    color: #000; /* GitHub color */
+}
+
+.social-email a {
+    color: #000;  /* Email color */
+}
+
+.social-twitter a {
+    color: #000;  /* Twitter color */
+}
+
+.social-reddit a {
+    color: #000;  /* Reddit color */
+}

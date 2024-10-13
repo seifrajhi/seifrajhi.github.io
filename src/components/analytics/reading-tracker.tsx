@@ -8,7 +8,7 @@ import useReadRepository, {
 export enum ContentTypes {
   BLOG = "blog",
   THOUGHT = "thought",
-  LAB = "lab",
+  CV = "cv",
 }
 
 interface Props {

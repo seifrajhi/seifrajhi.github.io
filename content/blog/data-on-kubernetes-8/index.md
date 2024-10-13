@@ -381,7 +381,7 @@ TiDB offers a modern solution to the challenges of running traditional databases
 
 **The end ✌🏻**
 
-_**Keep Learning !! Keep Sharing !! 🔰**_
+<h1 align="center">🔰 Keep Learning !! Keep Sharing !! 🔰</h1>
 
 
 **📻🧡 References:**
@@ -395,4 +395,4 @@ _**Keep Learning !! Keep Sharing !! 🔰**_
 
 **📅 Stay updated**
 
-Subscribe to our newsletter for more insights on AWS cloud coomputing and containers.
+Subscribe to our newsletter for more insights on AWS cloud computing and containers.

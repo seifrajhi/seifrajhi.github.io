@@ -28,8 +28,10 @@ class BlogListPage extends Component {
           description="Technical blog about Platform engineer, data science, math and software engineering"
           keywords={[
             "technical blog",
+            "kubernetes",
+            "AWS",
             "Platform engineer blog",
-            "math",
+            "kubernetes",
             "engineering",
             "Cloud engineering",
             "Saifeddine Rajhi blog",

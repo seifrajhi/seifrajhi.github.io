@@ -4,7 +4,7 @@ import Seo from "../../components/seo/seo"
 import MainNavigation from "../../components/main-navigation"
 import CvHeader from "../../components/cv/cv-header"
 import ThemeSwitcher from "../../components/theme/theme-switcher"
-import SocialLinks from "../../components/homepage/SocialLinks"
+import CvPage from "../../components/cvpage/cvpage"
 import BreadcrumbsSnippet from "../../components/seo/breadcrumbs-snippet"
 import "./cv.css"
 
@@ -53,12 +53,11 @@ const PlatformEngineerCV = () => {
           </div>
           <MainNavigation space={"cv"} />
           <CvHeader position={`Senior Data Platform/SRE Engineer`} />
-          <SocialLinks showPatreon={false} />
+          <CvPage showPatreon={false} />
         </header>
         <div className="cv-content">
           <div className="cv-content-column additional-column">
             <section itemScope itemType="http://schema.org/ItemList">
-               <br></br>
               <dl className="notop-margin">
                 <dt>
                   <h2 className="notop-margin">
@@ -540,4 +539,3 @@ const PlatformEngineerCV = () => {
 }
 
 export default PlatformEngineerCV
-

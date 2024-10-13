@@ -255,8 +255,8 @@ Don't expect everything to work automagically, and invest some time in making yo
 
 **The end ✌🏻**
 
-_**Keep Learning !! Keep Sharing !! 🔰**_
+<h1 align="center">🔰 Keep Learning !! Keep Sharing !! 🔰</h1>
 
 **📅 Stay updated**
 
-Subscribe to our newsletter for more insights on AWS cloud coomputing and containers.
+Subscribe to our newsletter for more insights on AWS cloud computing and containers.

@@ -5,6 +5,7 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import MainNavigation from "../main-navigation"
 import ThemeSwitcher from "../theme/theme-switcher"
 import ReadingTracker, { ContentTypes } from "../analytics/reading-tracker"
+import ViewPageHeader from "../theme/view-page-header"
 
 import "./thought.css"
 import "../theme/content.css"
@@ -24,7 +25,11 @@ const Thought = (props) => {
   return (
     <article className="thought-wrapper">
       <header>
-      <figure className="cover">
+        <ViewPageHeader spaceTitle="Thoughts" spaceLink="/thoughts/" />
+        <br></br>
+        <MainNavigation space={"thoughts"} />
+        <br></br>
+        <figure className="cover">
           <div className="cover-filter">
             <GatsbyImage
               className="cover cover-image"
@@ -38,7 +43,7 @@ const Thought = (props) => {
             dangerouslySetInnerHTML={{ __html: coverCredits }}
           />
         </figure>
-        <MainNavigation space={"thoughts"} />
+        
         <h1>{title}</h1>
         <div data-nosnippet="" className="thought-details">
           <time className="thought-createdat" dateTime={publishedFullDate}>
@@ -56,9 +61,9 @@ const Thought = (props) => {
       </header>
       <div className="thought-divider" />
       <ul data-nosnippet="" className="thought-tags">
-          {keywords.map((keyword) => (
-            <li key={`tag-${keyword}`}>{keyword}</li>
-          ))}
+        {keywords.map((keyword) => (
+          <li key={`tag-${keyword}`}>{keyword}</li>
+        ))}
       </ul>
       <div className="thought-divider" />
       <ReadingTracker contentType={ContentTypes.THOUGHT}>

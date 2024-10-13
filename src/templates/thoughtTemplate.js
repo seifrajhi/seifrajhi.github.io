@@ -6,6 +6,8 @@ import ThoughtNavigation from "../components/thoughts/thought-navigation"
 import Layout from "../components/theme/layout"
 import Footer from "../components/footer"
 import Seo from "../components/seo/seo"
+import MainNavigation from "../components/main-navigation"
+import ViewPageHeader from "../components/theme/view-page-header"
 import NewsletterForm from "../components/blog/newsletter-form"
 import ShareBlock from "../components/thoughts/share-block"
 import BreadcrumbsSnippet from "../components/seo/breadcrumbs-snippet"
@@ -51,8 +53,7 @@ export default function Template({
         keywords={keywords}
         meta={[]}
       />
-      <div className="thoughts-title">
-        <Link to="/thoughts/">Thoughts</Link>
+      <div className="thought-header">
       </div>
       <main>
         <Thought

@@ -166,4 +166,3 @@ Today we went through many different concepts, so let’s summarize the most imp
 **📅 Stay updated**
 
 Subscribe to our newsletter for more insights on engineering management and leadership.
-

@@ -41,6 +41,69 @@ const config: GatsbyConfig = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-fusejs`,
+      options: {
+        query: `
+          {
+            allMarkdownRemark {
+              nodes {
+                id
+                rawMarkdownBody
+                frontmatter {
+                  title
+                  path
+                }
+              }
+            }
+          }
+        `,
+        keys: ['title', 'body', 'path'],
+        normalizer: ({ data }: { data: { allMarkdownRemark: { nodes: { id: string, rawMarkdownBody: string, frontmatter: { title: string, path: string } }[] } } }) =>
+          data.allMarkdownRemark.nodes.map((node) => ({
+            id: node.id,
+            title: node.frontmatter.title,
+            body: node.rawMarkdownBody,
+            path: node.frontmatter.path
+          })),
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-local-search',
+      options: {
+        name: 'pages',
+        engine: 'flexsearch',
+        engineOptions: 'speed',
+        query: `
+          {
+            allMarkdownRemark {
+              edges {
+                node {
+                  id
+                  frontmatter {
+                    path
+                    title
+                  }
+                  rawMarkdownBody
+                }
+              }
+            }
+          }
+        `,
+        ref: 'id',
+        index: ['title', 'body'],
+        store: ['id', 'path', 'title'],
+        normalizer: ({ data }: { data: { allMarkdownRemark: { edges: { node: { id: string, frontmatter: { path: string, title: string }, rawMarkdownBody: string } }[] } } }) =>
+          data.allMarkdownRemark.edges.map(({ node }) => ({
+            id: node.id,
+            path: node.frontmatter.path,
+            title: node.frontmatter.title,
+            body: node.rawMarkdownBody,
+          })),
+      },
+    },
+
+
+    {
       resolve: `gatsby-plugin-feed`,
       options: {
         query: `

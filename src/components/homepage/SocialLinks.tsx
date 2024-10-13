@@ -132,9 +132,6 @@ const SocialLinks = ({
         <li className="social-item social-Goodreads">
           <OutboundLink
             rel="me"
-            itemProp="url"
-            eventCategory="social"
-            eventAction="click"
             eventLabel="StackOverflow"
             href="https://www.goodreads.com/user/show/176103378-saifeddine"
             title="Saifeddine Rajhi on Goodreads"

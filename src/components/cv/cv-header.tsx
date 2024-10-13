@@ -7,7 +7,7 @@ type Props = {
   position: string
 }
 
-const CvHeader = ({ position }: Props): JSX.Element => {
+const cvHeader = ({ position }: Props): JSX.Element => {
   return (
     <div className="cv-header-wrapper">
       <div className="logo">
@@ -27,4 +27,4 @@ const CvHeader = ({ position }: Props): JSX.Element => {
   )
 }
 
-export default CvHeader
+export default cvHeader

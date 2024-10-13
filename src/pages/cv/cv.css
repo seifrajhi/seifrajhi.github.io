@@ -185,6 +185,7 @@ body.dark {
     }
 }
 
+
 @media print {
     body.dark {
         --nameColor: var(--red);
@@ -244,4 +245,8 @@ body.dark {
     .cv .other-projects-link {
         display: block;
     }
+    @page {
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
 }  

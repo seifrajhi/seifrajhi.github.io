@@ -1,3 +1,4 @@
+
 /** Theme variables **/
 
 body {
@@ -78,8 +79,7 @@ body.dark {
         padding-left: 1rem;
         padding-right: 1rem;
         width: auto;
-
-}
+    }
 }
 
 @media (max-width: 820px) {
