@@ -383,8 +383,6 @@ Further reading on Kubernetes, EKS, and Boto3:
 
 > 💡 Thank you for Reading !! 🙌🏻😁📃, see you in the next blog.🤘  _**Until next time 🎉**_
 
-
-
 🚀 Thank you for sticking up till the end. If you have any questions/feedback regarding this blog feel free to connect with me:
 
 **♻️ LinkedIn:** https://www.linkedin.com/in/rajhi-saif/
@@ -398,5 +396,3 @@ Further reading on Kubernetes, EKS, and Boto3:
 **📅 Stay updated**
 
 Subscribe to our newsletter for more insights on AWS cloud computing and containers.
-password: test
-
