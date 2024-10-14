@@ -111,7 +111,7 @@ ul.blog-tags li {
 
 .blog-wrapper .content-wrapper {
     display: grid;
-    grid-template-columns: 1fr 43rem 1fr;
+    grid-template-columns: 1fr 50rem 1fr;
     margin: auto 0;
     padding: 1rem;
 }

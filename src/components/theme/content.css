@@ -134,9 +134,3 @@ body.dark {
     text-shadow: none;
     opacity: 0.9;
 }
-.blog-wrapper .content-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 45% 1fr; /* Adjust the middle column to 80% */
-    margin: auto 0;
-    padding: 1rem;
-}
