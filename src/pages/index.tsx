@@ -23,7 +23,7 @@ const shuffleArray = (strings: string[]) =>
 
 const titles: string[] = shuffleArray([
   "DevOps Engineer 🛠",
-  "AWS GEEK ",
+  "AWS GEEK ☁️",
   "Python Enthusiast 🐍",
   "Container Nerd 🧠 🐳",
   "Data Platform Engineer 📊",

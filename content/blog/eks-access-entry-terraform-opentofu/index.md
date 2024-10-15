@@ -216,7 +216,6 @@ aws eks associate-access-policy --cluster-name <CLUSTER_NAME> \
     <p>Changing the <b>authentication_mode</b> is a one-way operation. You can switch from <b>CONFIG_MAP</b> to <b>API_AND_CONFIG_MAP</b>, and then to <b>API</b>, but you cannot revert these changes.</p>
 </div>
 
-
 ### Combining EKS API with Kubernetes RBAC
 
 The EKS API does not replace Kubernetes RBAC but works alongside it. For example, you can create a cluster access entry and then use Kubernetes RBAC to assign permissions:

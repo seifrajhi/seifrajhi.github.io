@@ -702,3 +702,8 @@ https://github.com/knight42/kopilot
 https://github.com/devinjeon/kubectl-gpt
 
 https://github.com/robusta-dev/holmesgpt
+
+
+**📅 Stay updated**
+
+Subscribe to our newsletter for more insights on AWS cloud computing and containers.
