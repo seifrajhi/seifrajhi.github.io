@@ -19,7 +19,7 @@ coverCredits: 'Photo by Saifeddine Rajhi'
 
 > **A Guide to Network Management in Kubernetes 🕸**
 
-## 📌 Overview:
+## 📌 Overview
 
 Kubernetes networking is a complex and fascinating topic, with many moving parts. `Kube-Proxy` and `CNI` are two essential components of Kubernetes networking, working together to enable excellent communication between various components.
 
@@ -417,6 +417,20 @@ enriched with the best debugging tool available (Hubble) and the best developer 
 Kubernetes networking is powered by two vital components: Kube-Proxy and CNI.
 
 Kube-Proxy maintains network rules and forwards traffic to Pods, while CNI provides a common interface to the underlying network. These components are essential for running containerized applications on Kubernetes.
+
+<br>
+
+**_Until next time, つづく 🎉_**
+
+> 💡 Thank you for Reading !! 🙌🏻😁📃, see you in the next blog.🤘  _**Until next time 🎉**_
+
+🚀 Thank you for sticking up till the end. If you have any questions/feedback regarding this blog feel free to connect with me:
+
+**♻️ LinkedIn:** https://www.linkedin.com/in/rajhi-saif/
+
+**♻️ X/Twitter:** https://x.com/rajhisaifeddine
+
+**The end ✌🏻**
 
 <h1 align="center">🔰 Keep Learning !! Keep Sharing !! 🔰</h1>
 

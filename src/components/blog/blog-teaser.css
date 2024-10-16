@@ -45,7 +45,7 @@ body.dark {
     color: var(--thoughtNewBadgeColor);
     font-weight: bold;
     text-align: center;
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-family: monospace;
     display: flex;
     justify-content: center;
