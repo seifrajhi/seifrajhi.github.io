@@ -59,7 +59,7 @@ Create a `xray-values.yaml` file, see the default values in values.yaml:
 ```yaml
 serviceAccount:
   annotations: 
-    eks.amazonaws.com/role-arn: arn:aws:iam::*********:role/XRayAccessRole
+    eks.amazonaws.com/role-arn: arn:aws:iam::<ACCOUNT_ID>:role/XRayAccessRole
     name: aws-xray
 xray:
   region: eu-west-1
