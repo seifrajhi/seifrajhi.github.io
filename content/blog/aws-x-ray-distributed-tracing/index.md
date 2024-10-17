@@ -83,10 +83,10 @@ Install the chart into the cluster, this will create a DaemonSet and a Service:
 $ helm -n xray install aws-xray okgolove/aws-xray -f xray-values.yaml
 ```
 
-This will deploy the X-Ray DaemonSet to the EKS cluster. The X-Ray daemon will be deployed to each worker node in the EKS cluster. 
+This will deploy the X-Ray DaemonSet to the EKS cluster. The X-Ray daemon will be deployed to each worker node in the EKS cluster.
 For reference, see the example implementation used in this module.
 
-### Checking X-Ray in action:
+### Checking X-Ray in action
 
 
 The AWS X-Ray SDKs are used to instrument your microservices. When using the DaemonSet in the example implementation, you need to configure it to point to `aws-xray.xray:2000`.
@@ -144,7 +144,8 @@ Next, go to the traces section in the AWS Management Console to view the executi
 
 ![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/9mdd2ry811mz9kn200s4.png)
 
-If you click on the link on the left in the Trace list section you will see the overall execution time for the request (0.5ms for the x-ray-sample-front-k8s which wraps other segments and subsegments), as well as a breakdown of the individual segments in the request. 
+If you click on the link on the left in the Trace list section you will see the overall execution time for the request (0.5ms for the x-ray-sample-front-k8s which wraps other segments and subsegments), as well as a breakdown of the individual segments in the request.
+
 In this visualization, you can see the front-end and back-end segments and a subsegment named x-ray-sample-back-k8s-gen In the back-end service source code, we instrumented a subsegment that surrounds a random number generator.
 
 In the Go example, the main segment is initialized in the xray.Handler helper, which in turn sets all necessary information in the http.Request context struct, so that it can be used when initializing the subsegment.

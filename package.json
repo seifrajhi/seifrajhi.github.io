@@ -99,7 +99,7 @@
     ],
     "license": "MIT",
     "scripts": {
-        "deploy": "rm -rf .cache && rm -rf public && yarn run build && gh-pages-clean && gh-pages -d public -b main -m \":gem: Revamp: Modernize site with new features, fresh blogs, and enhanced UI/UX\"",
+        "deploy": "rm -rf .cache && rm -rf public && yarn run build && gh-pages-clean && gh-pages -d public -b main -m \":art: Add new blog posts about Kubernetes, EKS, and AWS, making the content more engaging.\"",
         "build": "rm -rf .cache && rm -rf public && GATSBY_ENV=production gatsby build --prefix-paths",
         "develop": "GATSBY_ENV=development gatsby develop",
         "cleanup": "rm -rf .cache && rm -rf public && gatsby clean",
