@@ -231,7 +231,7 @@ Here, routes for Kubernetes workers undergo dynamic updates at the operating sys
 
 ## 🐝 CNI with Cilium
 
-[alt text](./cilium.png)
+![alt text](./cilium.png)
 
 
 [Cilium](https://www.solo.io/topics/cilium/) is an open-source project that enables networking, security, and observability for Kubernetes clusters and other containerized environments.
