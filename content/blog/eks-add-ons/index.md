@@ -539,8 +539,6 @@ In a world where cloud-native technologies are constantly evolving, efficient cl
 
 By automating the deployment and maintenance of critical components, AWS empowers users to optimize their time and resources, making it easier than ever to harness the full potential of Kubernetes on the cloud.
 
-I hope this post gave you a better understanding of how to manage application secrets.
-
 **References:**
 
 - [Installation Guide - AWS Load Balancer Controller](https://kubernetes-sigs.github.io/aws-load-balancer-controller/v2.6/deploy/installation/)

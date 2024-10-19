@@ -171,7 +171,7 @@ Follow the best practices compiled in these lists and you'll have taken the most
 - [Kubernetes Security Documentation](https://kubernetes.io/docs/tasks/administer-cluster/securing-a-cluster/)
 - [OWASP Kubernetes Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Kubernetes_Security_Cheat_Sheet.html)
 - [YouTube: Kubernetes Security](https://youtu.be/oBf5lrmquYI)
-- 
+
 <br>
 
 **_Until next time, つづく 🎉_**

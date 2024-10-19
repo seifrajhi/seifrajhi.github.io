@@ -205,6 +205,7 @@ For more information, visit the [Outdated GitHub repository](https://github.com/
 While we've highlighted eleven particularly useful plugins above, it's worth noting that krew actually boasts an impressive library of 206 different plugins! each and every plugin in the krew collection has been carefully curated and is a valuable addition to the Kubernetes community.
 
 In fact, you may find that some of the lesser-known plugins are even more beneficial to your specific use case. Nevertheless, the eleven plugins we've covered here are certainly worth checking out, as they offer a user-friendly and convenient way to enhance your kubectl experience.
+
 <br>
 
 **_Until next time, つづく 🎉_**
