@@ -18,6 +18,7 @@ coverCredits: 'Photo by Saifeddine Rajhi'
 > **AWS EKS-Kubeconfig Connection 🐋**
 
 ## 📌 Introduction
+
 One of the key challenges of using EKS is authentication. EKS uses IAM to provide authentication to your K8s cluster. However, IAM tokens can be difficult to manage and use.
 
 [Kubeconfig](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/) is a configuration file that stores information about K8s clusters, including their API server endpoints, certificates, and authentication information. Kubeconfig can be used to authenticate with EKS clusters, making it a more convenient and secure option than IAM tokens. This blog post will discuss how to use kubeconfig to authenticate with EKS clusters. We will also cover the basics of kubeconfig and how it works.

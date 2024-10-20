@@ -232,6 +232,7 @@ const IndexPage = (): JSX.Element => {
               <div className="title">
                 <ReactRotatingText items={titles} />
               </div>
+              <br></br>
               <MainNavigation space={"homepage"} />
               <SocialLinks showPatreon={true} iconSize="sm" />
               <div className="theme-switcher">

@@ -1,3 +1,16 @@
+/** Theme variables **/
+
+body {
+  --searchNavigationLinkColor: var(--red);
+  --allPostsNavigationLinkColor: var(--black);
+}
+
+body.dark {
+  --searchNavigationLinkColor: var(--pink);
+  --allPostsNavigationLinkColor: var(--white);
+}
+
+
 * {
     border: 0;
     box-sizing: border-box;
@@ -19,7 +32,7 @@
   .search-btn:after {
     transition: all 0.25s ease-out;
   }
-  
+
   .search-bar input,
   .search-btn {
     width: 3em;
@@ -45,7 +58,7 @@
   .search-bar input {
     background: transparent;
     border-radius: 1.5em;
-    box-shadow: 0 0  0 0.5em #171717 inset;
+    box-shadow: 0 0  0 0.5em var(--searchNavigationLinkColor) inset;
     padding: 0.75em;
     transform: translate(0.55em, 0.55em) scale(0.75);
     transform-origin: 100% 0;
@@ -62,12 +75,12 @@
   .search-bar input:valid {
     background: #fff;
     border-radius: 3.375em 0 0 3.375em;
-    box-shadow: 0 0 0 0.1em #d9d9d9 inset;
+    box-shadow: 0 0 0 0.1em var(--searchNavigationLinkColor) inset;
     transform: scale(1);
   }
   
   .search-btn {
-    background: #171717;
+    background: var(--searchNavigationLinkColor);
     border-radius: 1 1.75em 1.75em 0 / 0 3.5em 3.5em 0;
     padding: 0.85em;
     position: relative;
@@ -113,7 +126,7 @@
   /* Active state */
   .search-bar input:focus + .search-btn,
   .search-bar input:valid + .search-btn {
-    background: #2762f3;
+    background:var(--searchNavigationLinkColor);
     border-radius: 0 0.375em 0.375em 0;
     transform: scale(1);
   }
@@ -128,7 +141,7 @@
   .search-bar input:focus + .search-btn:hover,
   .search-bar input:valid + .search-btn:hover,
   .search-bar input:valid:not(:focus) + .search-btn:focus {
-    background: #0c48db;
+    background: var(--searchNavigationLinkColor);
   }
   
   .search-bar input:focus + .search-btn:active,
@@ -142,11 +155,11 @@
     }
     .search-bar input:focus,
     .search-bar input:valid {
-      background: #3d3d3d;
+      background:var(--searchNavigationLinkColor);
       box-shadow: 0 0 0 3.1em #3d3d3d inset;
     }
     .search-btn {
-      background: #f1f1f1;
+      background: var(--searchNavigationLinkColor);
     }
   }
   
