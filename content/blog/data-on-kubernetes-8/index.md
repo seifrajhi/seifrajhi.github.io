@@ -383,7 +383,6 @@ TiDB offers a modern solution to the challenges of running traditional databases
 
 <h1 align="center">🔰 Keep Learning !! Keep Sharing !! 🔰</h1>
 
-
 **📻🧡 References:**
 
 - https://docs.pingcap.com/tidb/stable

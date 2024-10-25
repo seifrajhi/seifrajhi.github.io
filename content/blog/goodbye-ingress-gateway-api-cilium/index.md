@@ -15,9 +15,6 @@ coverCredits: 'Photo by Saifeddine Rajhi'
 
 > **Transitioning from ingress to Gateway API and Cilium for modern traffic management**
 
-## 📌 Introduction
-
-
 ## ☸️ Introduction
 
 In the dynamic world of Kubernetes, managing ingress traffic efficiently and securely has always been a crucial challenge. However, a groundbreaking solution has emerged, promising to transform the way we handle traffic routing within Kubernetes clusters. Meet the [Gateway API](https://gateway-api.sigs.k8s.io/): a long-term replacement for Kubernetes Ingress that brings a wealth of benefits to operators, including role-based access control, portability, and extensibility.

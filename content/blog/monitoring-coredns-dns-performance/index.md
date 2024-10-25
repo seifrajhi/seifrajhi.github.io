@@ -120,9 +120,9 @@ terraform {
 To run the Terraform code, execute:
 
 ```sh
-$ terraform init
-$ terraform plan
-$ terraform apply
+# terraform init
+# terraform plan
+# terraform apply
 ```
 
 ### 🖥️ Create a Default Grafana Workspace
@@ -247,7 +247,7 @@ module "vpc" {
 }
 ```
 
-#### `versions.tf`
+#### versions.tf
 
 ```hcl
 terraform {
@@ -264,10 +264,10 @@ terraform {
 
 To run this code, execute:
 
-```sh
-$ terraform init
-$ terraform plan
-$ terraform apply
+```shell
+# terraform init
+# terraform plan
+# terraform apply
 ```
 
 ### 🚀 Deploying Prometheus Ethtool Exporter

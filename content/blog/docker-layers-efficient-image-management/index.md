@@ -69,7 +69,7 @@ Implementing caching mechanisms and exploring various tools like Dive, Docker In
 
 <br><br>
 
-> 💡 Thank you for Reading !! 🙌🏻😁📃, see you in the next blog.🤘  _**Until next time 🎉**_
+> 💡 Thank you for Reading !! 🙌🏻😁📃, see you in the next blog.🤘  **_Until next time 🎉_**
 
 🚀 Thank you for sticking up till the end. If you have any questions/feedback regarding this blog feel free to connect with me:
 
