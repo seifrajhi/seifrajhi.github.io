@@ -3,7 +3,7 @@ id: 5118f0ec750ed36470456ac4
 path: "/blog/cyclops-kubernetes-developer-friendly-tool/"
 date: "2024-10-26 22:22:00"
 published: true
-title: "Building Container Images in Kubernetes Cluster with Kaniko"
+title: "Turning Kubernetes into a Developer-Friendly Platform with Cyclops ⛵️"
 cover: "./cyclops-cover.png"
 excerpt: "Turning Kubernetes into a Developer-Friendly Platform with Cyclops."
 keywords:
@@ -14,7 +14,7 @@ keywords:
 coverCredits: 'Photo by Saifeddine Rajhi'
 ---
 
-> **Turning Kubernetes into a Developer-Friendly Platform with Cyclops ☸️**
+> **simplifying containerized application management on kubernetes ⭐️**
 
 ## 📌 Introduction
 
