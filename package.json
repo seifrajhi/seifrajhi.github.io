@@ -99,7 +99,7 @@
     ],
     "license": "MIT",
     "scripts": {
-        "deploy": "rm -rf .cache && rm -rf public && yarn run build && gh-pages-clean && gh-pages -d public -b main -m \":atom: Infused blog with top-notch insights on Kubernetes and AWS EKS 🍉📌\"",
+        "deploy": "rm -rf .cache && rm -rf public && yarn run build && gh-pages-clean && gh-pages -d public -b main -m \"🧬Uploaded new blog posts on Kubernetes and AWS EKS with fresh insights🍉\"",
         "build": "rm -rf .cache && rm -rf public && GATSBY_ENV=production gatsby build --prefix-paths",
         "develop": "GATSBY_ENV=development gatsby develop",
         "cleanup": "rm -rf .cache && rm -rf public && gatsby clean",
