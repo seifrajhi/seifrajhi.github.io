@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 import "./main-navigation.css"
 
-export type Spaces = "homepage" | "blog" | "thoughts"| "cv" | "404"
+export type Spaces = "homepage" | "blog" | "thoughts"| "cv" | "talks" | "404"
 
 interface Props {
   space: Spaces
@@ -33,6 +33,11 @@ const MainNavigation = ({ space }: Props): JSX.Element => {
         <li>
           <Link to="/cv/platform-engineer/" title="Review My Resume">
             cv
+          </Link>
+        </li>
+        <li>
+          <Link to="/talks/" title="My public talks">
+            talks
           </Link>
         </li>
       </ul>

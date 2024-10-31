@@ -1,0 +1,68 @@
+/**
+** talk View Page
+**/
+
+body {
+    --talkQuoteColor: var(--red);
+}
+
+body.dark {
+    --talkQuoteColor: var(--pink);
+}
+
+.talk-wrapper,
+.talk-viexw-page .talk-sidebar {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 43rem;
+}
+
+@media (max-width: 767px) {
+    .talk-wrapper {
+        display: block;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        width: auto;
+    }
+}
+
+.talk-view-page .talks-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+@media (max-width: 575px) {
+    .talk-view-page .talks-title {
+        font-size: 2rem;
+    }
+}
+
+.talk-view-page .talk-divider {
+    clear: both;
+}
+
+.talk-view-page .talk-content {
+    margin-top: 2rem;
+}
+
+.talk-view-page .talk-author-wrapper {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.talk-view-page .talk-navigation-wrapper {
+    margin-bottom: 2rem;
+}
+
+.talk-view-page hr {
+    border: none;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.talk-view-page hr::before {
+    letter-spacing: 0.6em;
+    text-indent: 0.6em;
+    content: "***";
+}

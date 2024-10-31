@@ -1,0 +1,83 @@
+body {
+    --thoughtTeaserHeaderLinkColor: var(--red);
+
+    --thoughtNewBadgeColor: var(--white);
+    --thoughtNewBadgeBgColor: var(--red);
+    --thoughtReadBadgeBgColor: var(--regentGray);
+}
+
+body.dark {
+    --thoughtTeaserHeaderLinkColor: var(--pink);
+
+    --thoughtNewBadgeColor: var(--midnight);
+    --thoughtNewBadgeBgColor: var(--pink);
+    --thoughtReadBadgeBgColor: var(--grey)
+}
+
+
+/** talk Item Styles **/
+
+.talk-item {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.talk-item h2 {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    margin-top: 0;
+}
+
+.talk-item h2 a {
+    color: var(--thoughtTeaserHeaderLinkColor);
+}
+
+.talk-item p.talk-digest {
+    font-size: 1rem;
+    line-height: 1.6rem;
+    margin-bottom: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.talk-item .talk-details {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.talk-createdat {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.talk-item .talk-details .unread-badge {
+    color: var(--thoughtNewBadgeColor);
+    font-weight: bold;
+    font-family: monospace;
+    padding: 5px;
+    background-color: var(--thoughtReadBadgeBgColor);
+    border-radius: 5px;
+}
+
+.talk-item .talk-header {
+    display: block;
+    position: relative;
+}
+.talk-item .talk-header .new-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: var(--thoughtNewBadgeBgColor);
+    padding: 5px;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    color: var(--thoughtNewBadgeColor);
+    font-weight: bold;
+    text-align: center;
+    font-size: 1rem;
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center
+}

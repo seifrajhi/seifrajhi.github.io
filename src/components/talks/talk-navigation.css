@@ -1,0 +1,37 @@
+/** Theme variables **/
+
+body {
+    --TalkNavigationLinkColor: var(--red);
+    --allTalksNavigationLinkColor: var(--black);
+}
+
+body.dark {
+    --TalkNavigationLinkColor: var(--pink);
+    --allTalksNavigationLinkColor: var(--white);
+}
+
+
+/** talk Navigation Styles **/
+
+.talk-navigation-wrapper {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.talknavigation .nav-links {
+    padding: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.talk-navigation .nav-links a {
+    color: var(--TalkNavigationLinkColor);
+    display: block;
+    font-weight: bold;
+    margin-bottom: calc(1.75rem / 2);
+    text-decoration: none;
+}
+
+.talk-navigation a.all-talks {
+    color: var(--allTalksNavigationLinkColor);
+}

@@ -10,6 +10,7 @@ import ReactRotatingText from "react-rotating-text";
 import MainNavigation from "../components/main-navigation";
 import BlogTeaser from "../components/blog/blog-teaser";
 import ThoughtTeaser from "../components/thoughts/thought-teaser";
+import TalkTeaser from "../components/talks/talk-teaser";
 import SearchBar from "../components/search/search";
 import LinkComponent from "../components/search/LinkComponent";
 import { useFlexSearch } from "react-use-flexsearch";

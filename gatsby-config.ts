@@ -136,7 +136,7 @@ const config: GatsbyConfig = {
               {
                 allMarkdownRemark(
                   filter: {
-                    fileAbsolutePath: { regex: "/(blog|thoughts)/" }
+                    fileAbsolutePath: { regex: "/(blog|thoughts|talks)/" }
                     frontmatter: { published: { eq: true } }
                   }
                   sort: { frontmatter: { date: DESC } }

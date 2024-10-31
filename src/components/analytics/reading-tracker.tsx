@@ -9,6 +9,7 @@ export enum ContentTypes {
   BLOG = "blog",
   THOUGHT = "thought",
   CV = "cv",
+  TALK = "talk"
 }
 
 interface Props {

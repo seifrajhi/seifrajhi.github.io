@@ -11,6 +11,7 @@ const ThoughtAuthor = (): JSX.Element => {
           <Logo />
         </div>
       </div>
+      <br></br>
       <div className="name">• Saifeddine Rajhi •</div>
       <p className="thought-section-descr">
         My thoughts, pieces of advice and personal & professional life experience <br />

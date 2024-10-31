@@ -18,7 +18,6 @@
         "@tensorflow/tfjs": "^4.21.0",
         "disqus-react": "^1.1.5",
         "element-react": "^1.4.34",
-        "fusejs":"^1.4.3",
         "gatsby": "^5.13.7",
         "gatsby-plugin-canonical-urls": "^5.13.1",
         "gatsby-plugin-dark-mode": "^1.1.0",
@@ -99,7 +98,7 @@
     ],
     "license": "MIT",
     "scripts": {
-        "deploy": "rm -rf .cache && rm -rf public && yarn run build && gh-pages-clean && gh-pages -d public -b main -m \"🧬Uploaded new blog posts on Kubernetes and AWS EKS with fresh insights🍉\"",
+        "deploy": "rm -rf .cache && rm -rf public && yarn run build && gh-pages-clean && gh-pages -d public -b main -m \"🧊 Added new Kubernetes and AWS EKS posts, plus a talks section 🍉\"",
         "build": "rm -rf .cache && rm -rf public && GATSBY_ENV=production gatsby build --prefix-paths",
         "develop": "GATSBY_ENV=development gatsby develop",
         "cleanup": "rm -rf .cache && rm -rf public && gatsby clean",

@@ -1,7 +1,7 @@
 ---
 id: 623dfab8422e6980e24c8da7
 path: "/blog/eks-upgrade-guide/"
-date: "2024-10-17 21:30:00"
+date: "2024-10-31 21:30:00"
 published: true
 title: "EKS cluster upgrades: A Step-by-Step guide to a secure Process"
 cover: "./eks-upg-cover.jpg"
