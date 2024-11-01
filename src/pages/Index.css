@@ -200,6 +200,10 @@ body.dark {
     display: flex;
 }
 
+.homepagev2 .recent-talks {
+    display: flex;
+}
+
 .homepagev2 .recent-thoughts .thought-item {
     width: 33.33%;
     padding-right: 1rem;
@@ -207,12 +211,29 @@ body.dark {
     margin-bottom: 1rem;
 }
 
+.homepagev2 .recent-talks .talk-item {
+    width: 33.33%;
+    padding-right: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+
 .homepagev2 .recent-thoughts .thought-item h2 {
+    font-size: 1.3rem;
+}
+
+.homepagev2 .recent-talks .talk-item h2 {
     font-size: 1.3rem;
 }
 
 .homepagev2 .recent-thoughts .thought-item .cover,
 .homepagev2 .recent-thoughts .thought-item .cover-filter {
+    max-height: 200px;
+}
+
+.homepagev2 .recent-talks .talk-item .cover,
+.homepagev2 .recent-talks .talk-item .cover-filter {
     max-height: 200px;
 }
 
@@ -228,7 +249,9 @@ body.dark {
     .homepagev2 .mylife .recent-thoughts {
         flex-direction: column;
     }
-
+    .homepagev2 .mylife .recent-talks {
+        flex-direction: column;
+    }
     .homepagev2 .mylife .recent-posts .blog-item .article-header {
         max-width: 100%;
     }
@@ -238,6 +261,10 @@ body.dark {
     }
 
     .homepagev2 .recent-thoughts .thought-item {
+        padding-right: 0;
+        width: 100%;
+    }
+    .homepagev2 .recent-talks .talk-item {
         padding-right: 0;
         width: 100%;
     }

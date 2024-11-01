@@ -14,8 +14,7 @@ const TalkAuthor = (): JSX.Element => {
       <br></br>
       <div className="name">• Saifeddine Rajhi •</div>
       <p className="talk-section-descr">
-        My talks, pieces of advice and personal & professional life experience <br />
-        that will help you to <strong>overcome</strong> your life struggles
+        Sharing my tech journey and insights in a <strong>fun</strong> and <strong>engaging</strong> way, making complex topics easy to understand and apply.
       </p>
     </div>
   )

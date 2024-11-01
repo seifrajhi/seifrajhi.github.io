@@ -32,6 +32,8 @@ const BlogPost = (props) => {
               className="cover cover-image"
               image={cover}
               alt={title}
+              objectFit="fill" 
+              objectPosition="center" 
             />
           </div>
           <figcaption

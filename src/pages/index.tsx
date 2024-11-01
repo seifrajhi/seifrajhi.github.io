@@ -24,7 +24,9 @@ const shuffleArray = (strings: string[]) =>
 
 const titles: string[] = shuffleArray([
   "DevOps Engineer 🛠",
+  "Containers and Kubernetes tinkerer 🪛",
   "AWS GEEK ☁️",
+  "AWS community builder 👷",
   "Python Enthusiast 🐍",
   "Container Nerd 🧠 🐳",
   "Data Platform Engineer 📊",
@@ -55,8 +57,7 @@ const titles: string[] = shuffleArray([
 ]);
 
 const IndexPage = (): JSX.Element => {
-
-    const { recentPosts, recentThoughts, localSearchPages } = useStaticQuery(
+    const { recentPosts, recentThoughts, recentTalks, localSearchPages } = useStaticQuery(
       graphql`
         query {
           localSearchPages {
@@ -119,9 +120,38 @@ const IndexPage = (): JSX.Element => {
               }
             }
           }
+          recentTalks: allMarkdownRemark(
+            sort: { order: DESC, fields: [frontmatter___date] }
+            limit: 3
+            filter: {
+              fileAbsolutePath: { regex: "/(talks)/" }
+              frontmatter: { published: { eq: true } }
+            }
+          ) {
+            edges {
+              node {
+                timeToRead
+                frontmatter {
+                  id
+                  humanDate: date(formatString: "MMM D, YYYY")
+                  fullDate: date(formatString: "YYYY-MM-DD")
+                  path
+                  title
+                  keywords
+                  excerpt
+                  cover {
+                    childImageSharp {
+                      gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
       `
     )
+    
 
    
     const { search } = typeof window !== 'undefined' ? window.location : { search: '' };
@@ -327,6 +357,41 @@ const IndexPage = (): JSX.Element => {
               <div className="all-button-wrapper">
                 <a className="read-all-button" href={"/thoughts/"}>
                   Read All Thoughts
+                </a>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h2 className="activity-title">Speak & Inspire</h2>
+            <div>
+              <p>
+              I love geeking out about tech and sharing my journey through public speaking. I've given talks on all things AWS, Containers, Cloud, Kubernetes, Platform Engineering, Networking and Automation.
+              </p>
+              <br></br>
+              <p>
+              My mission? To spark curiosity and spread knowledge. Whether it's at conferences, webinars, or meetups, I break down complex topics into bite-sized, digestible pieces, making tech fun and accessible for everyone.
+              </p>
+              <div className="recent-talks">
+                {recentTalks.edges.map(
+                  ({ node: { timeToRead, frontmatter } }) => (
+                    <TalkTeaser
+                      key={frontmatter.id}
+                      id={frontmatter.id}
+                      title={frontmatter.title}
+                      url={frontmatter.path}
+                      timeToRead={timeToRead}
+                      publishedHumanDate={frontmatter.humanDate}
+                      publishedFullDate={frontmatter.fullDate}
+                      excerpt={frontmatter.excerpt}
+                      cover={frontmatter.cover.childImageSharp.gatsbyImageData}
+                      keywords={frontmatter.keywords}
+                    />
+                  )
+                )}
+              </div>
+              <div className="all-button-wrapper">
+                <a className="read-all-button" href={"/talks/"}>
+                  Check All my Talks
                 </a>
               </div>
             </div>
