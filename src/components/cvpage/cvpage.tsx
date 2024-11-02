@@ -6,6 +6,7 @@ import { faXTwitter} from "@fortawesome/free-brands-svg-icons/faXTwitter"
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons/faLinkedinIn"
 import { OutboundLink } from "gatsby-plugin-google-gtag"
 import { faRedditAlien } from "@fortawesome/free-brands-svg-icons/faRedditAlien"
+import { faBluesky } from "@fortawesome/free-brands-svg-icons/faBluesky"
 import "./SocialLinks.css"
 
 export type IconSize =
@@ -78,6 +79,21 @@ const CvPage = ({
             <span>Email</span>
           </OutboundLink>
         </li>
+        <li className="social-item social-bluesky">
+          <OutboundLink
+            rel="me"
+            itemProp="url"
+            eventCategory="bluesky"
+            eventAction="click"
+            eventLabel="social"
+            href="https://bsky.app/profile/saifrajhi.bsky.social"
+            title="Saifeddine Rajhi on Bluesky Social"
+            target="blank"
+          >
+            <FontAwesomeIcon icon={faBluesky}  size={iconSize} />
+            <span>Bluesky Social</span>
+          </OutboundLink>
+        </li>
         <li className="social-item social-X/Twitter">
           <OutboundLink
             rel="me"
@@ -86,7 +102,7 @@ const CvPage = ({
             eventAction="click"
             eventLabel="X/Twitter"
             href="https://x.com/RajhiSaifeddine"
-            title="Saifeddine Rajhi on X/X/Twitter"
+            title="Saifeddine Rajhi on X/Twitter"
             target="blank"
           >
             <FontAwesomeIcon icon={faXTwitter}  size={iconSize} />

@@ -11,6 +11,7 @@ import { faGoodreads } from  "@fortawesome/free-brands-svg-icons/faGoodreads"
 import { faOsi } from "@fortawesome/free-brands-svg-icons/faOsi"
 import { faChartLine } from "@fortawesome/free-solid-svg-icons/faChartLine"
 import { faRss } from "@fortawesome/free-solid-svg-icons/faRss"
+import { faBluesky } from "@fortawesome/free-brands-svg-icons/faBluesky"
 import "./SocialLinks.css"
 
 export type IconSize =
@@ -83,6 +84,21 @@ const SocialLinks = ({
             <span>Email</span>
           </OutboundLink>
         </li>
+        <li className="social-item social-bluesky">
+          <OutboundLink
+            rel="me"
+            itemProp="url"
+            eventCategory="bluesky"
+            eventAction="click"
+            eventLabel="social"
+            href="https://bsky.app/profile/saifrajhi.bsky.social"
+            title="Saifeddine Rajhi on Bluesky Social"
+            target="blank"
+          >
+            <FontAwesomeIcon icon={faBluesky} beat size={iconSize} />
+            <span>Bluesky Social</span>
+          </OutboundLink>
+        </li>
         <li className="social-item social-X/Twitter">
           <OutboundLink
             rel="me"
@@ -91,7 +107,7 @@ const SocialLinks = ({
             eventAction="click"
             eventLabel="X/Twitter"
             href="https://x.com/RajhiSaifeddine"
-            title="Saifeddine Rajhi on X/X/Twitter"
+            title="Saifeddine Rajhi on X/Twitter"
             target="blank"
           >
             <FontAwesomeIcon icon={faXTwitter} beat size={iconSize} />
