@@ -4,7 +4,7 @@ path: "/blog/k8s-dynamic-resource-allocation-dra/"
 date: "2024-11-02 14:00:00"
 published: true
 title: "Dynamic Resource Allocation in Kubernetes"
-cover: "./dra.png"
+cover: "./image.png"
 excerpt: "An in-depth look at Dynamic Resource Allocation (DRA) in Kubernetes and its importance in modern environments"
 keywords:
   - Dynamic Resource Allocation
@@ -18,6 +18,7 @@ coverCredits: 'Photo by Saifeddine Rajhi'
 ## 📚 Introduction
 
 Dynamic Resource Allocation (DRA) is a new API for requesting resources in Kubernetes, introduced to enable networking technologies. This blog post explores the concept of DRA, its importance, and how it enhances resource management in Kubernetes.
+
 
 ## What is Dynamic Resource Allocation (DRA)?
 
