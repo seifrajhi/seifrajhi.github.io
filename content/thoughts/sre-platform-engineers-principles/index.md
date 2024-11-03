@@ -1,6 +1,6 @@
 ---
 id: 1c990c025a1d98f0adcc7837
-path: "/thoughts/sre-platform-engineers-principles"
+path: "/thoughts/sre-platform-engineers-principles/"
 date: "2024-11-02 21:00:00"
 published: true
 title: "Excellent Principles for SRE and Platform Engineers"
