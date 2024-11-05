@@ -75,7 +75,7 @@ const BlogTeaser = (props) => {
     <article className="blog-item" ref={teaserRef}>
       <Link className="article-header" to={url}>
         <div className="cover-filter">
-          <GatsbyImage className="cover" image={cover} alt={title} />
+          <GatsbyImage className="cover" objectFit="fill"  image={cover} alt={title} />
         </div>
         {isNew ? (
           <div
