@@ -9,6 +9,7 @@ excerpt: "Join the AWS Women’s User Group Tunisia for an insightful session on
 keywords:
   - AWS SDKs
   - Cloud Management
+  - boto3
   - Automation
   - AWS
   - Women in Tech
