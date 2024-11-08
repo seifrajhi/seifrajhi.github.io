@@ -18,23 +18,25 @@ coverCredits: 'Photo by Saifeddine Rajhi'
 
 ## 🐋 Introduction
 
-[Docker](https://www.docker.com/) and [Sysdig](https://sysdig.com/), two leading providers of cloud-native solutions, have announced a new partnership to accelerate and secure cloud-native application delivery. The partnership integrates Sysdig runtime insights into Docker Scout, providing developers with actionable insights to prioritize risk and improve their security posture.
+[Docker](https://www.docker.com/) and [Sysdig](https://sysdig.com/) are teaming up to make cloud-native app delivery faster and safer. This partnership brings Sysdig's runtime insights into Docker Scout, giving developers useful information to manage risks and boost security.
 
-This integration is a significant development for the cloud-native community, as it brings together two of the most widely used tools for container security and application delivery. Sysdig is known for its ability to provide deep visibility into containerized environments, while Docker Scout is a newly launched tool that helps developers to identify and fix security vulnerabilities in their container images.
+This collaboration is important for the cloud-native community because it combines two popular tools for container security and app delivery. Sysdig provides deep visibility into container environments, while Docker Scout helps find and fix security issues in container images.
 
-By combining the strengths of these two tools, Sysdig and Docker are making it easier for developers to secure their cloud-native applications throughout the entire software development lifecycle. This is especially important in today's fast-paced and ever-changing threat landscape.
+By merging these tools, Sysdig and Docker are helping developers secure their cloud-native apps throughout the development process. This is crucial in today's fast-moving and constantly changing threat landscape.
+
+> TL;DR: [Docker Scout](https://www.docker.com/products/docker-scout/) is a set of software supply chain features integrated into Docker's user interfaces and CLI. These features offer comprehensive visibility into the structure and security of container images.
 
 ## 🥅 Goals and Objectives
 
-In this blog post, we will discuss the new partnership between Sysdig and Docker, and how it will help developers to accelerate and secure cloud-native application delivery.
+In this blog post, we'll explore the new partnership between Sysdig and Docker and how it helps developers speed up and secure cloud-native app delivery.
 
 ![scout](./docker.png)
 
 ## ☸️ Sysdig Runtime Insights and Docker Scout
 
-Sysdig and Docker have jointly announced an integration at [DockerCon](https://www.dockercon.com/), [merging Sysdig runtime insights with Docker Scout](https://www.docker.com/press-release/announces-new-local-cloud-products-to-accelerate-delivery-of-secure-apps/). This collaboration aims to aid developers in prioritizing risk assessment within their CLI and simplify vulnerability identification in container-based applications. Docker Scout, an event-based tool, enhances the development process by providing integrations with Sysdig, JFrog Artifactory, AWS ECR, BastionZero, GitHub, GitLab, CircleCI, and Jenkins, optimizing DevSecOps workflows.
+Sysdig and Docker have announced an integration at [DockerCon](https://www.dockercon.com/), [merging Sysdig runtime insights with Docker Scout](https://www.docker.com/press-release/announces-new-local-cloud-products-to-accelerate-delivery-of-secure-apps/). This collaboration helps developers prioritize risk assessment within their CLI and simplifies vulnerability identification in container-based applications. Docker Scout, an event-based tool, enhances the development process by providing integrations with Sysdig, JFrog Artifactory, AWS ECR, BastionZero, GitHub, GitLab, CircleCI, and Jenkins, optimizing DevSecOps workflows.
 
-Eric Carter, a senior product marketing manager at Sysdig, underscores the significance of Docker Scout as a conduit for Sysdig's container image insights through its cloud-native application protection platform (CNAPP).
+Eric Carter, a senior product marketing manager at Sysdig, highlights the importance of Docker Scout as a conduit for Sysdig's container image insights through its cloud-native application protection platform (CNAPP).
 
 During DockerCon, Docker, Inc. made [Docker Scout](https://docs.docker.com/scout/) generally available, marking a pivotal moment in streamlining the developer's inner-loop process for creating container-based applications. The goal is to improve developer productivity, reduce post-deployment vulnerabilities, and expedite image creation, potentially saving developers up to an hour per day per project.
 
@@ -66,11 +68,49 @@ A Software Bill of Materials (SBOM) is key when shifting security left. SBOMs pr
 
 Docker Scout is a tool that helps Docker users manage container security. It provides a unified software analysis view to help users understand their image composition, correlates security risks with the image's SBOM, and gives contextual remediation advice. Sysdig is a container security platform that provides runtime insights into containerized applications. It can be integrated with Docker Scout to provide additional information about CVE data and in-use vulnerabilities.
 
+#### Installation
+
+The Docker Scout CLI plugin comes pre-installed with Docker Desktop.
+
+If you run Docker Engine without Docker Desktop, Docker Scout doesn't come pre-installed, but you can install it as a standalone binary.
+
+**Installation script**
+
+To install the latest version of the plugin, run the following commands:
+
+```shell
+curl -fsSL https://raw.githubusercontent.com/docker/scout-cli/main/install.sh -o install-scout.sh
+```
+
+**Container image**
+
+The Docker Scout CLI plugin is also available as [a container image](https://hub.docker.com/r/docker/scout-cli). Use the docker/scout-cli to run docker scout commands without installing the CLI plugin on your host.
+
+```shell
+ docker run -it \
+  -e DOCKER_SCOUT_HUB_USER=<your Docker Hub user name> \
+  -e DOCKER_SCOUT_HUB_PASSWORD=<your Docker Hub PAT>  \
+  docker/scout-cli <command>
+```
+
+**GitHub Action**
+The Docker Scout CLI plugin is also available as a [GitHub action](https://github.com/docker/scout-action). You can use it in your GitHub workflows to automatically analyze images and evaluate policy compliance with each push.
+
+Docker Scout also integrates with many more CI/CD tools, such as Jenkins, GitLab, and Azure DevOps.
+
+For more details how to install the scout CLI, follow the steps in the [documentation](https://docs.docker.com/scout/install/)
+
 #### Use Case 1: CVE Data and In-Use Vulnerabilities
 
 Docker Scout can get CVE information from the SBOM, but it does not know which packages are actually in use. The Sysdig integration allows developers to see which CVE data impacts in-use packages, so they can prioritize remediation efforts.
 
-![cve](./cve.png)
+Run the below command:
+
+```shell
+docker scout cves nginx
+```
+
+![alt text](./image.png)
 
 Vulnerabilities are ordered and summarized by priority, from the highest (CRITICAL) to the lowest (LOW). With the Sysdig integration, developers also get information about whether a vulnerability impacts in-use packages or not.
 
@@ -80,7 +120,13 @@ Vulnerabilities are ordered and summarized by priority, from the highest (CRITIC
 
 At software development time, it is important to have visibility into the differences between the code being developed and the code that is deployed in production. Docker Scout can be used to compare a local image to an image that is currently running in a cluster, and to identify any vulnerabilities that exist in the newer image but not in the older image. This information can then be used to prioritize remediation efforts and to minimize security blind spots in production. In addition to identifying new vulnerabilities, the "compare" approach can also be used to identify packages that are no longer in use. These packages can then be removed from the image, which can help to reduce the attack surface and make the image more lean and efficient.
 
-![compare](./compare.png)
+The below command can perform the comparison:
+
+```shell
+docker scout compare nginx:1.27.2 nginx:1.26.2
+```
+
+![alt text](./image-1.png)
 
 #### Use Case 3: View Image Insights in Your CI/CD Pipeline
 
