@@ -344,8 +344,6 @@ If you're interested in contributing to HardenEKS, we invite you to review our [
 
 HardenEKS maintains a [publicly accessible roadmap](https://github.com/aws-samples/hardeneks/wiki) outlining the planned features for upcoming versions. We encourage users to actively participate by creating GitHub issues, thus influencing the direction and priorities of HardenEKS's development journey.
 
-![Contribute to HardenEKS](./contribute.png)
-![HardenEKS Roadmap](./roadmap.png)
 
 ## 🔚 Conclusion
 
