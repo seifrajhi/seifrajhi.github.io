@@ -17,7 +17,7 @@ coverCredits: 'Photo by Saifeddine Rajhi'
 
 ## Introduction
 
-Welcome to this guide on setting up Welcome to this guide on setting up [Kubernetes 1.31](https://kubernetes.io/blog/2024/08/13/kubernetes-v1-31-release/) with the [containerd v2](https://github.com/containerd/containerd/releases/tag/v2.0.0) runtime and [Cilium](https://isovalent.com/blog/post/cilium-1-16/) for networking. This guide is designed to be a comprehensive reference for professionals worldwide, ensuring a robust and efficient container orchestration environment with advanced networking capabilities.
+Welcome to this guide on setting up [Kubernetes 1.31](https://kubernetes.io/blog/2024/08/13/kubernetes-v1-31-release/) with the [containerd v2](https://github.com/containerd/containerd/releases/tag/v2.0.0) runtime and [Cilium](https://isovalent.com/blog/post/cilium-1-16/) for networking. This guide is designed to be a comprehensive reference for professionals worldwide, ensuring a robust and efficient container orchestration environment with advanced networking capabilities.
 
 This guide is designed to be a comprehensive reference for professionals worldwide, ensuring an efficient container orchestration environment with advanced networking capabilities.
 
