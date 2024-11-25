@@ -1,0 +1,42 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18.20.4'
+
+      - name: Install Yarn
+        run: npm install -g yarn
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Install gh-pages-clean and gh-pages
+        run: yarn add gh-pages-clean gh-pages --dev
+
+      - name: Clean cache and public directories
+        run: |
+          rm -rf public
+      - name: Build project
+        run: yarn run build
+
+      - name: Clean gh-pages
+        run: yarn gh-pages-clean
+
+      - name: Deploy to GitHub Pages
+        run: "yarn gh-pages -d public -b main -m \":space_invader: Add GH Actions workflows 🍉\""
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
