@@ -209,8 +209,7 @@ Error from server (Forbidden): configmaps is forbidden: \
   in the namespace "default": \
   {"reasons":[{"policy":"label-enforcement-policy1","position":{
       "filename":"label-enforcement-policy","offset":671,"line":21,"column":1}}]}
-
-Sure, continuing from where we left off:
+```
 
 ```sh
 $ kubectl create configmap sample-config --from-literal=k1=v1
