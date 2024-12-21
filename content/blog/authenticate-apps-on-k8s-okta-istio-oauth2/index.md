@@ -44,12 +44,12 @@ From using Istio for [OpenID Connect (OIDC)](https://openid.net/) authentication
 
 ### Technologies Used
 
-- ![AWS EKS](https://img.icons8.com/color/48/000000/amazon-web-services.png) AWS EKS Kubernetes
-- ![Istio](https://img.icons8.com/color/48/000000/istio.png) Istio
-- ![OAuth2-Proxy](https://img.icons8.com/color/48/000000/oauth.png) OAuth2-Proxy
-- ![Helm](https://img.icons8.com/color/48/000000/helm.png) Helm
-- ![Okta](https://img.icons8.com/color/48/000000/okta.png) Okta
-- ![Grafana](https://img.icons8.com/color/48/000000/grafana.png) [Grafana](https://grafana.com/)
+- AWS EKS Kubernetes
+- Istio
+- OAuth2-Proxy
+- Helm
+- Okta
+- [Grafana](https://grafana.com/)
 
 ## Setup Okta Application for OAuth2-Proxy
 
@@ -79,7 +79,7 @@ helm install --values oauth2-proxy-values.yaml oauth2-proxy oauth2-proxy/oauth2-
 
 Where `oauth2-proxy-values.yaml`:
 
-```yaml
+```shell
 config:
   clientID: xx
   clientSecret: xx

@@ -26,7 +26,6 @@ module.exports = async ({ actions, graphql, reporter }) => {
               date
             }
             excerpt
-            html
           }
         }
       }
