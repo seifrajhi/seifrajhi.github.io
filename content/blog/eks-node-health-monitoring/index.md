@@ -13,17 +13,16 @@ keywords:
   - Node Health Monitoring
   - Auto-Repair
   - Cloud Computing
-coverCredits: 'Photo by AWS'
+coverCredits: 'Photo by Saifeddine Rajhi'
 ---
 
-## Overiew of Nnde health monitoring and auto-repair for Amazon EKS
+## Overiew of Node health monitoring and auto-repair for Amazon EKS
 
 Amazon Elastic Kubernetes Service (Amazon EKS) continues to innovate beyond re:Invent with [the introduction of Node Health Monitoring and Auto-Repair](https://aws.amazon.com/about-aws/whats-new/2024/12/node-health-monitoring-auto-repair-amazon-eks/).
 
 This groundbreaking feature is designed to automatically monitor and repair EC2 instances (nodes) in your Kubernetes clusters, ensuring your infrastructure remains at peak performance.
 
 This is particularly beneficial for workloads using accelerated instances for machine learning.
-
 
 ![alt text](eks-node-health-monitoring.png)
 
